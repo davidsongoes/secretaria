@@ -143,19 +143,19 @@
                                 <div class="col-lg-10">
                                     <div class="tabs-container">
                                         <ul class="nav nav-tabs">
-                                            <li class=""><a data-toggle="tab" href="#tab-1" aria-expanded="false">Dados Pessoais</a></li>
+                                            <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true">Dados Pessoais</a></li>
                                             <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Área Acadêmica</a></li>
                                             <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">Área Militar</a></li>
                                             <li class=""><a data-toggle="tab" href="#tab-4" aria-expanded="false">Área Técnica</a></li>
                                             <li class=""><a data-toggle="tab" href="#tab-5" aria-expanded="false">SubTurmas</a></li>
                                             <li class=""><a data-toggle="tab" href="#tab-6" aria-expanded="false">Justiça e Disciplina</a></li>
-                                            <li class="active"><a data-toggle="tab" href="#tab-7" aria-expanded="true">Saúde</a></li>
+                                            <li class=""><a data-toggle="tab" href="#tab-7" aria-expanded="false">Saúde</a></li>
                                             <li id="tab-8-label" class=""><a data-toggle="tab" href="#tab-8" aria-expanded="false" style="color: #18a689;">Estrangeiro</a>
                                             </li>
                                         </ul>
                                         <div class="tab-content">
                                             <!--Dados Pessoais-->
-                                            <div id="tab-1" class="tab-pane">
+                                            <div id="tab-1" class="tab-pane active">
                                                 <div class="panel-body">
                                                     <div class="container-fluid animated fadeIn">
                                                         <div class="row">
@@ -4470,7 +4470,7 @@
                                                 </div>
                                             </div>
                                             <!--Saúde-->
-                                            <div id="tab-7" class="tab-pane active">
+                                            <div id="tab-7" class="tab-pane">
                                                 <div class="panel-body">
                                                     <div class="container-fluid animated fadeIn">
                                                         <div class="row">
@@ -4545,30 +4545,63 @@
                                             <!--Estrangeiro-->
                                             <div id="tab-8" class="tab-pane">
                                                 <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="col-lg-12"></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12"></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12"></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12"></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12"></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12"></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <a class="btn btn-default btn-responsive" href="#"><i
-                                                                    class="fa fa-times"></i> Cancelar</a>
-                                                            <a class="btn btn-primary btn-responsive" href="#"><i
-                                                                    class="fa fa-check"></i> Salvar</a>
+                                                    <div class="container-fluid animated fadeIn">
+                                                        <div class="row">
+                                                            <div class="ibox float-e-margins">
+                                                                <div class="ibox-title">
+                                                                    <h5>Estrangeiro</h5>
+                                                                    <div class="ibox-tools">
+                                                                        <a class="collapse-link">
+                                                                            <i class="fa fa-chevron-up"></i>
+                                                                        </a>
+                                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                                            <i class="fa fa-wrench"></i>
+                                                                        </a>
+                                                                        <ul class="dropdown-menu dropdown-user">
+                                                                            <li><a href="#">Config option 1</a>
+                                                                            </li>
+                                                                            <li><a href="#">Config option 2</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ibox-content">
+                                                                    <div class="row">
+                                                                        <form role="form">
+                                                                            <!--Primeira Linha-->
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="discente_estrangeiro_pais_origem"
+                                                                                               class="">País de Origem</label>
+                                                                                        <input disabled type="text" placeholder="País de Origem"
+                                                                                               id="discente_estrangeiro_pais_origem"
+                                                                                               class="form-control" value="Brasil">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="discente_estrangeiro_nota_exame_admissao"
+                                                                                               class="">Nota no Exame de Admissão</label>
+                                                                                        <input disabled type="text" placeholder="Nota no Exame de Admissão"
+                                                                                               id="discente_estrangeiro_nota_exame_admissao"
+                                                                                               class="form-control" value="10,0000">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="discente_estrangeiro_numero_acordo_emaer"
+                                                                                               class="">Número Acordo EMAER</label>
+                                                                                        <input disabled type="text" placeholder="Número Acordo EMAER"
+                                                                                               id="discente_estrangeiro_numero_acordo_emaer"
+                                                                                               class="form-control" value="99999999-99/EMAER">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
