@@ -24,3 +24,14 @@
 .nav-tabs > li.active > a:focus {
     color: #18a689 !important;
 }
+
+.align-centro {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.container-align {
+    position: relative;
+    height: 14rem;
+}
