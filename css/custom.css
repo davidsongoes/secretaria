@@ -31,7 +31,7 @@
     left:50%;
     transform: translate(-50%,-50%);
 }
-.container-align {
+.container-align-botao-enviar-aviso {
     position: relative;
-    height: 14rem;
+    height: 25rem;
 }
