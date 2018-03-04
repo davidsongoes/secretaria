@@ -48,6 +48,12 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -121,6 +127,51 @@
         <div class="wrapper wrapper-content animated fadeIn">
             <!--início conteúdo-->
             <div class="container-fluid animated fadeIn">
+                <!--Certificados/Diplomas/Históricos Escolares-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Certificados/Diplomas/Históricos Escolares</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p class="text-center"><strong>Certificado de Conclusão do CAP</strong></p>
+                                            <p class="text-center"><a onclick="imprimirDocumento('Certificado de Conclusão do CAP')"><i class="fa fa-file-pdf-o big-icon"></i></a></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="text-center"><strong>Certificado de Conclusão do CFOAV</strong></p>
+                                        <p class="text-center"><a onclick="imprimirDocumento('Certificado de Conclusão do CFOAV')"><i class="fa fa-file-pdf-o big-icon"></i></a></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="text-center"><strong>Histórico Escolar CFOINT</strong></p>
+                                        <p class="text-center"><a onclick="imprimirDocumento('Histórico Escolar CFOINT')"><i class="fa fa-file-pdf-o big-icon"></i></a></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="text-center"><strong>Diploma do CCEM</strong></p>
+                                        <p class="text-center"><a onclick="imprimirDocumento('Diploma do CCEM')"><i class="fa fa-file-pdf-o big-icon"></i></a></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--Histórico de Cursos-->
                 <div class="row">
                     <div class="col-lg-12">
@@ -253,7 +304,6 @@
                                                 <th>Grau Final<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                 <th>Classificação<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                 <th>Ações</th>
-                                                <th></th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -287,7 +337,7 @@
                                                                             <button type="button" class="close" data-dismiss="modal"><span
                                                                                     aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                                                             </button>
-                                                                            <h4 class="modal-title">Cadastrar Histórico de Curso</h4>
+                                                                            <h4 class="modal-title">Editar Histórico de Curso</h4>
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <!--Formulário de cadastro do histórico-->
@@ -507,7 +557,7 @@
                                                                             <button type="button" class="close" data-dismiss="modal"><span
                                                                                     aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                                                             </button>
-                                                                            <h4 class="modal-title">Cadastrar Histórico de Curso</h4>
+                                                                            <h4 class="modal-title">Editar Histórico de Curso</h4>
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <!--Formulário de cadastro do histórico-->
@@ -717,7 +767,7 @@
                                                                             <button type="button" class="close" data-dismiss="modal"><span
                                                                                     aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                                                             </button>
-                                                                            <h4 class="modal-title">Cadastrar Histórico de Curso</h4>
+                                                                            <h4 class="modal-title">Editar Histórico de Curso</h4>
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <!--Formulário de cadastro do histórico-->
@@ -927,7 +977,7 @@
                                                                             <button type="button" class="close" data-dismiss="modal"><span
                                                                                     aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                                                             </button>
-                                                                            <h4 class="modal-title">Cadastrar Histórico de Curso</h4>
+                                                                            <h4 class="modal-title">Editar Histórico de Curso</h4>
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <!--Formulário de cadastro do histórico-->
@@ -2560,6 +2610,72 @@
                         </div>
                     </div>
                 </div>
+                <!--Avisos Histórico-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins ">
+                            <div class="ibox-title">
+                                <h5>Avisos Históricos</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>Data e Hora do envio<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                            <th>Prioridade<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                            <th>Assunto<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                            <th>Mensagem<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                            <th>Destinatários Escrita<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                            <th>Enviado por<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                            <th>Ações</i></a></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>14/02/2009 20:52</td>
+                                            <td>Normal</td>
+                                            <td>Pesquisa de Opinião</td>
+                                            <td>A Pesquisa de opinião do segundo bimestre encontra-se disponível na aba Avaliação</td>
+                                            <td>Discentes, Docentes</td>
+                                            <td>CL Anderson Ghuerren Costa</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <div class="col-lg-12">
+                                                        <div class="input-group-sm">
+                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Ações <span
+                                                                    class="caret"></span></button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#"><i class="fa fa-print"></i> Imprimir</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="footer">
@@ -2629,6 +2745,9 @@
 
 <!-- iCheck -->
 <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- Sweet alert -->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.chosen-select').chosen({width: "100%"});
@@ -2652,11 +2771,184 @@
             forceParse: false,
             autoclose: true
         });
+
+        //Gráfico e Tabela Desempenho Acadêmico - Ações
+
+        $('#grafico-desempenho-cap').hide();
+        $('#table-desempenho-cap').hide();
+
+        $('#grafico-desempenho-ccem').hide();
+        $('#table-desempenho-ccem').hide();
+
+        $('#radio-grafico-desempenho-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV');
+            $('#grafico-desempenho-cfoav').show();
+            $('#table-desempenho-cfoav').show();
+
+            $('#grafico-desempenho-cap').hide();
+            $('#table-desempenho-cap').hide();
+
+            $('#grafico-desempenho-ccem').hide();
+            $('#table-desempenho-ccem').hide();
+        });
+
+        $('#radio-grafico-desempenho-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP');
+            $('#grafico-desempenho-cfoav').hide();
+            $('#table-desempenho-cfoav').hide();
+
+            $('#grafico-desempenho-cap').show();
+            $('#table-desempenho-cap').show();
+
+            $('#grafico-desempenho-ccem').hide();
+            $('#table-desempenho-ccem').hide();
+        });
+
+        $('#radio-grafico-desempenho-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM');
+            $('#grafico-desempenho-cfoav').hide();
+            $('#table-desempenho-cfoav').hide();
+
+            $('#grafico-desempenho-cap').hide();
+            $('#table-desempenho-cap').hide();
+
+            $('#grafico-desempenho-ccem').show();
+            $('#table-desempenho-ccem').show();
+
+        });
+
+        //    Tabela Cadastro Tutor - Curso | Turma
+
+        $('#tabela-turma-tutor-cap').hide();
+        $('#tabela-turma-tutor-ccem').hide();
+
+        $('#radio-tabela-curso-tutor-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV Tutor');
+            $('#tabela-turma-tutor-cfoav').show();
+            $('#tabela-turma-tutor-cap').hide();
+            $('#tabela-turma-tutor-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP Tutor');
+            $('#tabela-turma-tutor-cfoav').hide();
+            $('#tabela-turma-tutor-cap').show();
+            $('#tabela-turma-tutor-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM Tutor');
+            $('#tabela-turma-tutor-cfoav').hide();
+            $('#tabela-turma-tutor-cap').hide();
+            $('#tabela-turma-tutor-ccem').show();
+        });
+
+        //    Tabela Editar Tutor1 - Curso | Turma
+
+        $('#tabela-turma-tutor1-cfoav').hide();
+        $('#tabela-turma-tutor1-ccem').hide();
+
+        $('#radio-tabela-curso-tutor1-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV Tutor');
+            $('#tabela-turma-tutor1-cfoav').show();
+            $('#tabela-turma-tutor1-cap').hide();
+            $('#tabela-turma-tutor1-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor1-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP Tutor');
+            $('#tabela-turma-tutor1-cfoav').hide();
+            $('#tabela-turma-tutor1-cap').show();
+            $('#tabela-turma-tutor1-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor1-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM Tutor');
+            $('#tabela-turma-tutor1-cfoav').hide();
+            $('#tabela-turma-tutor1-cap').hide();
+            $('#tabela-turma-tutor1-ccem').show();
+        });
+
+        //    Tabela Editar Tutor2 - Curso | Turma
+
+        $('#tabela-turma-tutor2-cfoav').hide();
+        $('#tabela-turma-tutor2-cap').hide();
+
+        $('#radio-tabela-curso-tutor2-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV Tutor');
+            $('#tabela-turma-tutor2-cfoav').show();
+            $('#tabela-turma-tutor2-cap').hide();
+            $('#tabela-turma-tutor2-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor2-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP Tutor');
+            $('#tabela-turma-tutor2-cfoav').hide();
+            $('#tabela-turma-tutor2-cap').show();
+            $('#tabela-turma-tutor2-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor2-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM Tutor');
+            $('#tabela-turma-tutor2-cfoav').hide();
+            $('#tabela-turma-tutor2-cap').hide();
+            $('#tabela-turma-tutor2-ccem').show();
+        });
+
+        //    Tabela Cadastro Subturma - Curso | Turma
+
+        $('#tabela-turma-subturma-cap').hide();
+        $('#tabela-turma-subturma-ccem').hide();
+
+        $('#radio-tabela-curso-subturma-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV Tutor');
+            $('#tabela-turma-subturma-cfoav').show();
+            $('#tabela-turma-subturma-cap').hide();
+            $('#tabela-turma-subturma-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-subturma-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP Tutor');
+            $('#tabela-turma-subturma-cfoav').hide();
+            $('#tabela-turma-subturma-cap').show();
+            $('#tabela-turma-subturma-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-subturma-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM Tutor');
+            $('#tabela-turma-subturma-cfoav').hide();
+            $('#tabela-turma-subturma-cap').hide();
+            $('#tabela-turma-subturma-ccem').show();
+        });
+
+        
     });
+
+    function actionRowTutor(switchTutor, trTutor) {
+        var idSwitch = '#' + switchTutor;
+        var idTrTutor = '#' + trTutor;
+        if ($(idSwitch).is(':checked') == true) {
+            $(idTrTutor).removeClass('danger');
+            $(idTrTutor).addClass('success');
+        } else {
+            $(idTrTutor).removeClass('success');
+            $(idTrTutor).addClass('danger');
+        }
+
+    }
+    
+    function imprimirDocumento(mensagem) {
+            swal({
+                title: mensagem,
+                text: "Impresso com sucesso!",
+                type: "success"
+            });
+    }
+
 </script>
 
 <!-- ChartJS-->
 <script src="js/plugins/chartJs/Chart.min.js"></script>
-<script src="js/demo/chartjs-demo-discente.js"></script>
+<script src="js/demo/chartjs-demo-area-aluno-desempenho-academico.js"></script>
 </body>
 </html>
