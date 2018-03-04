@@ -52,6 +52,10 @@
     <!-- Sweet Alert -->
     <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
+    <!--FullCalendar-->
+    <link href="css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+    <link href="css/plugins/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print'>
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -3379,22 +3383,30 @@
                                                                         <!--Segunda Linha-->
                                                                         <div class="row">
                                                                             <div class="col-md-3">
-                                                                                <div class="form-group" id="secretaria_area_aluno_veiculo_ano_fabricacao">
-                                                                                    <label class="col-lg-4 control-label">Ano de Fabricação</label>
+                                                                                <div class="form-group"
+                                                                                     id="secretaria_area_aluno_veiculo_ano_fabricacao">
+                                                                                    <label class="col-lg-4 control-label">Ano
+                                                                                        de Fabricação</label>
                                                                                     <div class="input-group date">
                                                                         <span class="input-group-addon"><i
                                                                                 class="fa fa-calendar"></i></span><input
-                                                                                            type="text" class="form-control" value="">
+                                                                                            type="text"
+                                                                                            class="form-control"
+                                                                                            value="">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-3">
-                                                                                <div class="form-group" id="secretaria_area_aluno_veiculo_ano_modelo">
-                                                                                    <label class="col-lg-4 control-label">Ano do Modelo</label>
+                                                                                <div class="form-group"
+                                                                                     id="secretaria_area_aluno_veiculo_ano_modelo">
+                                                                                    <label class="col-lg-4 control-label">Ano
+                                                                                        do Modelo</label>
                                                                                     <div class="input-group date">
                                                                         <span class="input-group-addon"><i
                                                                                 class="fa fa-calendar"></i></span><input
-                                                                                            type="text" class="form-control" value="">
+                                                                                            type="text"
+                                                                                            class="form-control"
+                                                                                            value="">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -3468,7 +3480,8 @@
                                                                     class="caret"></span></button>
                                                             <ul class="dropdown-menu">
                                                                 <li><a href="#" data-toggle="modal"
-                                                                       data-target="#modalEditarVeiculo"><i class="fa fa-pencil"></i> Atualizar
+                                                                       data-target="#modalEditarVeiculo"><i
+                                                                        class="fa fa-pencil"></i> Atualizar
                                                                     Dados</a></li>
                                                                 <li><a><i class="fa fa-trash"></i> Remover Dados</a>
                                                                 </li>
@@ -3504,7 +3517,8 @@
                                                                                                placeholder="Placa"
                                                                                                id="secretaria_area_aluno_editar_veiculo_placa"
                                                                                                class="form-control text-uppercase"
-                                                                                               data-mask="aaa-9999" value="XXX-0000">
+                                                                                               data-mask="aaa-9999"
+                                                                                               value="XXX-0000">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-md-3">
@@ -3515,9 +3529,11 @@
                                                                                             <select id="secretaria_area_aluno_editar_veiculo_fabricante"
                                                                                                     class="chosen-select"
                                                                                                     tabindex="2">
-                                                                                                <option value="">Selecione
+                                                                                                <option value="">
+                                                                                                    Selecione
                                                                                                 </option>
-                                                                                                <option value="fiat" selected>Fiat
+                                                                                                <option value="fiat"
+                                                                                                        selected>Fiat
                                                                                                 </option>
                                                                                                 <option value="chevrolet">
                                                                                                     Chevrolet
@@ -3534,7 +3550,8 @@
                                                                                                 <option value="toyota">
                                                                                                     Toyota
                                                                                                 </option>
-                                                                                                <option value="jeep">Jeep
+                                                                                                <option value="jeep">
+                                                                                                    Jeep
                                                                                                 </option>
                                                                                             </select>
                                                                                         </div>
@@ -3547,63 +3564,80 @@
                                                                                         <input type="text"
                                                                                                placeholder="Modelo"
                                                                                                id="secretaria_area_aluno_editar_veiculo_modelo"
-                                                                                               class="form-control" value="Palio Weekend">
+                                                                                               class="form-control"
+                                                                                               value="Palio Weekend">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-md-3">
                                                                                     <div class="form-group">
-                                                                                        <div class="fileinput fileinput-exists" data-provides="fileinput">
-                                                                                            <label class="">Anexar arquivo
+                                                                                        <div class="fileinput fileinput-exists"
+                                                                                             data-provides="fileinput">
+                                                                                            <label class="">Anexar
+                                                                                                arquivo
                                                                                                 (CRLV e CNH no mesmo
                                                                                                 arquivo)</label>
-                                                                                            <div class="row" style="margin-left: 1px;">
-                                                                                                                                                    <span class="btn btn-default btn-file"><span class="fileinput-new">Anexar arquivo</span>
-    <span class="fileinput-exists">Alterar</span><input type="hidden" value="" name=""><input type="file" name="..."></span>
+                                                                                            <div class="row"
+                                                                                                 style="margin-left: 1px;">
+                                                                                                                                                    <span class="btn btn-default btn-file"><span
+                                                                                                                                                            class="fileinput-new">Anexar arquivo</span>
+    <span class="fileinput-exists">Alterar</span><input type="hidden" value="" name=""><input type="file"
+                                                                                              name="..."></span>
                                                                                                 <span class="fileinput-filename">CRLV e CNH.pdf</span>
-                                                                                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
+                                                                                                <a href="#"
+                                                                                                   class="close fileinput-exists"
+                                                                                                   data-dismiss="fileinput"
+                                                                                                   style="float: none">×</a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                     <!--<div class="form-group">-->
-                                                                                        <!--<div class="fileinput fileinput-new"-->
-                                                                                             <!--data-provides="fileinput">-->
-                                                                                            <!--<label class="">Anexar arquivo-->
-                                                                                                <!--(CRLV e CNH no mesmo-->
-                                                                                                <!--arquivo)</label>-->
-                                                                                            <!--<div class="row"-->
-                                                                                                 <!--style="margin-left: 1px;">-->
-                                                                                                                                                    <!--<span class="btn btn-default btn-file"><span-->
-                                                                                                                                                            <!--class="fileinput-new">Anexar arquivo</span>-->
-    <!--<span class="fileinput-exists">Alterar</span><input type="file" name="..."/></span>-->
-                                                                                                <!--<span class="fileinput-filename"></span>-->
-                                                                                                <!--<a href="#"-->
-                                                                                                   <!--class="close fileinput-exists"-->
-                                                                                                   <!--data-dismiss="fileinput"-->
-                                                                                                   <!--style="float: none">×</a>-->
-                                                                                            <!--</div>-->
-                                                                                        <!--</div>-->
+                                                                                    <!--<div class="fileinput fileinput-new"-->
+                                                                                    <!--data-provides="fileinput">-->
+                                                                                    <!--<label class="">Anexar arquivo-->
+                                                                                    <!--(CRLV e CNH no mesmo-->
+                                                                                    <!--arquivo)</label>-->
+                                                                                    <!--<div class="row"-->
+                                                                                    <!--style="margin-left: 1px;">-->
+                                                                                    <!--<span class="btn btn-default btn-file"><span-->
+                                                                                    <!--class="fileinput-new">Anexar arquivo</span>-->
+                                                                                    <!--<span class="fileinput-exists">Alterar</span><input type="file" name="..."/></span>-->
+                                                                                    <!--<span class="fileinput-filename"></span>-->
+                                                                                    <!--<a href="#"-->
+                                                                                    <!--class="close fileinput-exists"-->
+                                                                                    <!--data-dismiss="fileinput"-->
+                                                                                    <!--style="float: none">×</a>-->
+                                                                                    <!--</div>-->
+                                                                                    <!--</div>-->
                                                                                     <!--</div>-->
                                                                                 </div>
                                                                             </div>
                                                                             <!--Segunda Linha-->
                                                                             <div class="row">
                                                                                 <div class="col-md-3">
-                                                                                    <div class="form-group" id="secretaria_area_aluno_editar_veiculo_ano_fabricacao">
-                                                                                        <label class="col-lg-4 control-label">Ano de Fabricação</label>
+                                                                                    <div class="form-group"
+                                                                                         id="secretaria_area_aluno_editar_veiculo_ano_fabricacao">
+                                                                                        <label class="col-lg-4 control-label">Ano
+                                                                                            de Fabricação</label>
                                                                                         <div class="input-group date">
                                                                         <span class="input-group-addon"><i
                                                                                 class="fa fa-calendar"></i></span><input
-                                                                                                type="text" class="form-control" value="2009">
+                                                                                                type="text"
+                                                                                                class="form-control"
+                                                                                                value="2009">
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-md-3">
-                                                                                    <div class="form-group" id="secretaria_area_aluno_editar_veiculo_ano_modelo">
-                                                                                        <label class="col-lg-4 control-label">Ano do Modelo</label>
+                                                                                    <div class="form-group"
+                                                                                         id="secretaria_area_aluno_editar_veiculo_ano_modelo">
+                                                                                        <label class="col-lg-4 control-label">Ano
+                                                                                            do Modelo</label>
                                                                                         <div class="input-group date">
                                                                         <span class="input-group-addon"><i
                                                                                 class="fa fa-calendar"></i></span><input
-                                                                                                type="text" class="form-control" value="2010">
+                                                                                                type="text"
+                                                                                                class="form-control"
+                                                                                                value="2010">
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -3642,6 +3676,97 @@
                         </div>
                     </div>
                 </div>
+                <!--Previsão de Rancho-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins ">
+                            <div class="ibox-title">
+                                <h5>Previsão de Rancho</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-title">
+                                                <h5>Refeições</h5>
+                                                <div class="ibox-tools">
+                                                    <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                    <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div id='external-events'>
+                                                    <p>Arraste a refeição para o calendário para marcar</p>
+                                                    <div class='external-event red-bg'>Café da Manhã</div>
+                                                    <div class='external-event navy-bg'>Almoço</div>
+                                                    <div class='external-event yellow-bg'>Jantar</div>
+                                                    <div class='external-event blue-bg'>Ceia</div>
+                                                    <!--<p class="m-t">-->
+                                                        <!--<input type='checkbox' id='drop-remove' class="i-checks"/> <label for='drop-remove'>remove after drop</label>-->
+                                                    <!--</p>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-title">
+                                                <h5>Calendário</h5>
+                                                <div class="ibox-tools">
+                                                    <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                    <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div id="calendar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -3654,6 +3779,7 @@
 
 
 <!-- Mainly scripts -->
+<script src="js/plugins/fullcalendar/moment.min.js"></script>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -3711,6 +3837,14 @@
 
 <!-- Sweet alert -->
 <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+<!-- Full Calendar -->
+<script src="js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="js/plugins/fullcalendar/pt.js"></script>
+
+<!--FullCalendar Rancho-->
+<script src="js/demo/fullcalendar-rancho.js"></script>
+
 <script>
     $(document).ready(function () {
         $('.chosen-select').chosen({width: "100%"});
