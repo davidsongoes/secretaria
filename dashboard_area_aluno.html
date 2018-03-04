@@ -3288,7 +3288,7 @@
                                                             <button type="button" class="close"
                                                                     data-dismiss="modal"><span
                                                                     aria-hidden="true">&times;</span><span
-                                                                    class="sr-only">Close</span>
+                                                                    class="sr-only">Fechar</span>
                                                             </button>
                                                             <h4 class="modal-title">Cadastrar Veículo</h4>
                                                         </div>
@@ -3467,11 +3467,169 @@
                                                                 Ações <span
                                                                     class="caret"></span></button>
                                                             <ul class="dropdown-menu">
-                                                                <li><a href="#"><i class="fa fa-pencil"></i> Atualizar
+                                                                <li><a href="#" data-toggle="modal"
+                                                                       data-target="#modalEditarVeiculo"><i class="fa fa-pencil"></i> Atualizar
                                                                     Dados</a></li>
                                                                 <li><a><i class="fa fa-trash"></i> Remover Dados</a>
                                                                 </li>
                                                             </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Modal Editar Veículo-->
+                                                <div class="modal inmodal fade" id="modalEditarVeiculo" tabindex="-1"
+                                                     role="dialog" aria-hidden="true">
+                                                    <div class="modal-dialog modal-responsive">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close"
+                                                                        data-dismiss="modal"><span
+                                                                        aria-hidden="true">&times;</span><span
+                                                                        class="sr-only">Fechar</span>
+                                                                </button>
+                                                                <h4 class="modal-title">Editar Veículo</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <!--Formulário de cadastro do veículo-->
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <form role="form">
+                                                                            <!--Primeira Linha-->
+                                                                            <div class="row">
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label for="secretaria_area_aluno_editar_veiculo_placa"
+                                                                                               class="">Placa</label>
+                                                                                        <input type="text"
+                                                                                               placeholder="Placa"
+                                                                                               id="secretaria_area_aluno_editar_veiculo_placa"
+                                                                                               class="form-control text-uppercase"
+                                                                                               data-mask="aaa-9999" value="XXX-0000">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label for="secretaria_area_aluno_editar_veiculo_fabricante"
+                                                                                               class="">Fabricante</label>
+                                                                                        <div>
+                                                                                            <select id="secretaria_area_aluno_editar_veiculo_fabricante"
+                                                                                                    class="chosen-select"
+                                                                                                    tabindex="2">
+                                                                                                <option value="">Selecione
+                                                                                                </option>
+                                                                                                <option value="fiat" selected>Fiat
+                                                                                                </option>
+                                                                                                <option value="chevrolet">
+                                                                                                    Chevrolet
+                                                                                                </option>
+                                                                                                <option value="volkswagen">
+                                                                                                    Volkswagen
+                                                                                                </option>
+                                                                                                <option value="nissan">
+                                                                                                    Nissan
+                                                                                                </option>
+                                                                                                <option value="honda">
+                                                                                                    Honda
+                                                                                                </option>
+                                                                                                <option value="toyota">
+                                                                                                    Toyota
+                                                                                                </option>
+                                                                                                <option value="jeep">Jeep
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label for="secretaria_area_aluno_editar_veiculo_modelo"
+                                                                                               class="">Modelo</label>
+                                                                                        <input type="text"
+                                                                                               placeholder="Modelo"
+                                                                                               id="secretaria_area_aluno_editar_veiculo_modelo"
+                                                                                               class="form-control" value="Palio Weekend">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <div class="fileinput fileinput-exists" data-provides="fileinput">
+                                                                                            <label class="">Anexar arquivo
+                                                                                                (CRLV e CNH no mesmo
+                                                                                                arquivo)</label>
+                                                                                            <div class="row" style="margin-left: 1px;">
+                                                                                                                                                    <span class="btn btn-default btn-file"><span class="fileinput-new">Anexar arquivo</span>
+    <span class="fileinput-exists">Alterar</span><input type="hidden" value="" name=""><input type="file" name="..."></span>
+                                                                                                <span class="fileinput-filename">CRLV e CNH.pdf</span>
+                                                                                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!--<div class="form-group">-->
+                                                                                        <!--<div class="fileinput fileinput-new"-->
+                                                                                             <!--data-provides="fileinput">-->
+                                                                                            <!--<label class="">Anexar arquivo-->
+                                                                                                <!--(CRLV e CNH no mesmo-->
+                                                                                                <!--arquivo)</label>-->
+                                                                                            <!--<div class="row"-->
+                                                                                                 <!--style="margin-left: 1px;">-->
+                                                                                                                                                    <!--<span class="btn btn-default btn-file"><span-->
+                                                                                                                                                            <!--class="fileinput-new">Anexar arquivo</span>-->
+    <!--<span class="fileinput-exists">Alterar</span><input type="file" name="..."/></span>-->
+                                                                                                <!--<span class="fileinput-filename"></span>-->
+                                                                                                <!--<a href="#"-->
+                                                                                                   <!--class="close fileinput-exists"-->
+                                                                                                   <!--data-dismiss="fileinput"-->
+                                                                                                   <!--style="float: none">×</a>-->
+                                                                                            <!--</div>-->
+                                                                                        <!--</div>-->
+                                                                                    <!--</div>-->
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--Segunda Linha-->
+                                                                            <div class="row">
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group" id="secretaria_area_aluno_editar_veiculo_ano_fabricacao">
+                                                                                        <label class="col-lg-4 control-label">Ano de Fabricação</label>
+                                                                                        <div class="input-group date">
+                                                                        <span class="input-group-addon"><i
+                                                                                class="fa fa-calendar"></i></span><input
+                                                                                                type="text" class="form-control" value="2009">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group" id="secretaria_area_aluno_editar_veiculo_ano_modelo">
+                                                                                        <label class="col-lg-4 control-label">Ano do Modelo</label>
+                                                                                        <div class="input-group date">
+                                                                        <span class="input-group-addon"><i
+                                                                                class="fa fa-calendar"></i></span><input
+                                                                                                type="text" class="form-control" value="2010">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3"></div>
+                                                                            </div>
+                                                                            <!--Botão Cadastrar Veículo-->
+                                                                            <div class="row">
+                                                                                <div class="col-lg-12">
+                                                                                    <div class="form-group"
+                                                                                         style="float: right;">
+                                                                                        <a class="btn btn-primary btn-responsive"
+                                                                                           href="#"><i
+                                                                                                class="fa fa-pencil"></i>
+                                                                                            Editar Veículo</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-white"
+                                                                        data-dismiss="modal">Fechar
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3587,7 +3745,7 @@
         }).datepicker('setDate', 'today');
 
         //Editar Ano de fabricação do veículo
-        $('#secretaria_area_aluno_veiculo_ano_fabricacao .input-group.date').datepicker({
+        $('#secretaria_area_aluno_editar_veiculo_ano_fabricacao .input-group.date').datepicker({
             todayBtn: "linked",
             language: 'pt',
             format: 'yyyy',
@@ -3596,10 +3754,10 @@
             viewMode: "years",
             minViewMode: "years",
             autoclose: true
-        }).datepicker('setDate', 'today');
+        });
 
         //Editar Ano do modelo do veículo
-        $('#secretaria_area_aluno_veiculo_ano_modelo .input-group.date').datepicker({
+        $('#secretaria_area_aluno_editar_veiculo_ano_modelo .input-group.date').datepicker({
             todayBtn: "linked",
             language: 'pt',
             format: 'yyyy',
@@ -3608,7 +3766,7 @@
             viewMode: "years",
             minViewMode: "years",
             autoclose: true
-        }).datepicker('setDate', 'today');
+        });
 
         //Gráfico e Tabela Desempenho Acadêmico - Ações
 
