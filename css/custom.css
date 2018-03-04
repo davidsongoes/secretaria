@@ -44,3 +44,11 @@
     letter-spacing: -10px;
     margin-bottom: 0;
 }
+
+.cafe-manha {
+    padding: 4px 6px;
+    background-color: #b32e2f;
+    /* background color */
+    border-color: #b32e2f;
+    /* border color */
+}
