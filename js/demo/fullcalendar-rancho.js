@@ -6,7 +6,6 @@ $(document).ready(function () {
     $('#external-events div.external-event').each(function () {
 
         // store data so the calendar knows to render an event upon drop
-
         $(this).data('event', {
             title: $.trim($(this).text()), // use the element's text as the event title
             stick: true // maintain when user navigates (see docs on the renderEvent method)
@@ -36,6 +35,7 @@ $(document).ready(function () {
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
         },
+        displayEventTime: false,
         editable: true,
         droppable: true, // this allows things to be dropped onto the calendar
         drop: function () {
@@ -46,6 +46,32 @@ $(document).ready(function () {
             }
         },
         eventRender: function (event, element) {
+            if (event.title == 'Café da Manhã'){
+                element.css({
+                    'background-color':'#ed5565',
+                    'color':'#ffffff',
+                    'border-color': '#ed5565'
+
+                });
+            }if (event.title == 'Almoço'){
+                element.css({
+                    'background-color':'#1ab394',
+                    'color':'#ffffff',
+                    'border-color': '#1ab394'
+                });
+            }if (event.title == 'Jantar'){
+                element.css({
+                    'background-color':'#f8ac59',
+                    'color':'#ffffff',
+                    'border-color': '#f8ac59'
+                });
+            }if (event.title == 'Ceia'){
+                element.css({
+                    'background-color':'#1c84c6',
+                    'color':'#ffffff',
+                    'border-color': '#1c84c6'
+                });
+            }
             element.append("<span class='closeon'>X</span>");
             element.find(".closeon").click(function () {
                 $('#calendar').fullCalendar('removeEvents', event._id);
@@ -53,48 +79,9 @@ $(document).ready(function () {
         },
         events: [
             {
-                title: 'All Day Event',
-                start: new Date(y, m, 1)
-            },
-            {
-                title: 'Long Event',
-                start: new Date(y, m, d - 5),
-                end: new Date(y, m, d - 2)
-            },
-            {
-                id: 999,
-                title: 'Repeating Event',
-                start: new Date(y, m, d - 3, 16, 0),
-                allDay: false
-            },
-            {
-                id: 999,
-                title: 'Repeating Event',
-                start: new Date(y, m, d + 4, 16, 0),
-                allDay: false
-            },
-            {
-                title: 'Meeting',
-                start: new Date(y, m, d, 10, 30),
-                allDay: false
-            },
-            {
-                title: 'Lunch',
-                start: new Date(y, m, d, 12, 0),
-                end: new Date(y, m, d, 14, 0),
-                allDay: false
-            },
-            {
-                title: 'Birthday Party',
-                start: new Date(y, m, d + 1, 19, 0),
-                end: new Date(y, m, d + 1, 22, 30),
-                allDay: false
-            },
-            {
-                title: 'Click for Google',
-                start: new Date(y, m, 28),
-                end: new Date(y, m, 29),
-                url: 'http://google.com/'
+                title: 'Almoço',
+                start: new Date(),
+                color: '#1ab394'
             }
         ]
     });
