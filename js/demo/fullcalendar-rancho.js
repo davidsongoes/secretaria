@@ -80,8 +80,38 @@ $(document).ready(function () {
         events: [
             {
                 title: 'Almoço',
-                start: new Date(),
+                start: '2018-03-05',
                 color: '#1ab394'
+            },
+            {
+                title: 'Café da Manhã',
+                start: '2018-03-05',
+                color: "#ed5565"
+            },
+            {
+                title: 'Café da Manhã',
+                start: '2018-03-06',
+                color: "#ed5565"
+            },
+            {
+                title: 'Café da Manhã',
+                start: '2018-03-07',
+                color: "#ed5565"
+            },
+            {
+                title: 'Ceia',
+                start: '2018-03-07',
+                color: "#1c84c6"
+            },
+            {
+                title: 'Café da Manhã',
+                start: '2018-03-08',
+                color: "#ed5565"
+            },
+            {
+                title: 'Jantar',
+                start: '2018-03-09',
+                color: "#f8ac59"
             }
         ]
     });
