@@ -3590,25 +3590,6 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <!--<div class="form-group">-->
-                                                                                    <!--<div class="fileinput fileinput-new"-->
-                                                                                    <!--data-provides="fileinput">-->
-                                                                                    <!--<label class="">Anexar arquivo-->
-                                                                                    <!--(CRLV e CNH no mesmo-->
-                                                                                    <!--arquivo)</label>-->
-                                                                                    <!--<div class="row"-->
-                                                                                    <!--style="margin-left: 1px;">-->
-                                                                                    <!--<span class="btn btn-default btn-file"><span-->
-                                                                                    <!--class="fileinput-new">Anexar arquivo</span>-->
-                                                                                    <!--<span class="fileinput-exists">Alterar</span><input type="file" name="..."/></span>-->
-                                                                                    <!--<span class="fileinput-filename"></span>-->
-                                                                                    <!--<a href="#"-->
-                                                                                    <!--class="close fileinput-exists"-->
-                                                                                    <!--data-dismiss="fileinput"-->
-                                                                                    <!--style="float: none">×</a>-->
-                                                                                    <!--</div>-->
-                                                                                    <!--</div>-->
-                                                                                    <!--</div>-->
                                                                                 </div>
                                                                             </div>
                                                                             <!--Segunda Linha-->
@@ -3886,6 +3867,412 @@
                         </div>
                     </div>
                 </div>
+                <!--Calendário de Aulas-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins ">
+                            <div class="ibox-title">
+                                <h5>Calendário de Aulas</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form-inline" role="form">
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="secretaria_area_aluno_calendario_curso"
+                                                           class="">Curso</label>
+                                                    <div>
+                                                        <select id="secretaria_area_aluno_calendario_curso"
+                                                                class="chosen-select"
+                                                                tabindex="2">
+                                                            <option value="">
+                                                                Selecione
+                                                            </option>
+                                                            <option value="cfoav"
+                                                            >CFOAV
+                                                            </option>
+                                                            <option value="cap">
+                                                                CAP
+                                                            </option>
+                                                            <option value="ccem">
+                                                                CCEM
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="secretaria_area_aluno_calendario_turma"
+                                                           class="">Turma</label>
+                                                    <div>
+                                                        <select id="secretaria_area_aluno_calendario_turma"
+                                                                class="chosen-select"
+                                                                tabindex="2">
+                                                            <option value="">
+                                                                Selecione
+                                                            </option>
+                                                            <option value="2001"
+                                                            >2001
+                                                            </option>
+                                                            <option value="2003">
+                                                                2003
+                                                            </option>
+                                                            <option value="2008">
+                                                                2008
+                                                            </option>
+                                                            <option value="2017">
+                                                                2017
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="secretaria_area_aluno_calendario_subturma"
+                                                           class="">Subturma</label>
+                                                    <div>
+                                                        <select id="secretaria_area_aluno_calendario_subturma"
+                                                                class="chosen-select"
+                                                                tabindex="2">
+                                                            <option value="">
+                                                                Selecione
+                                                            </option>
+                                                            <option value="turma_a"
+                                                            >Turma A
+                                                            </option>
+                                                            <option value="turma_b">
+                                                                Turma B
+                                                            </option>
+                                                            <option value="turma_c">
+                                                                Turma C
+                                                            </option>
+                                                            <option value="turma_d">
+                                                                Turma D
+                                                            </option>
+                                                            <option value="futebol">
+                                                                Futebol
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="secretaria_area_aluno_calendario_tipo"
+                                                           class="">Tipo</label>
+                                                    <div>
+                                                        <select id="secretaria_area_aluno_calendario_tipo"
+                                                                class="chosen-select"
+                                                                tabindex="2">
+                                                            <option value="">
+                                                                Selecione
+                                                            </option>
+                                                            <option value="aula"
+                                                            >Aula
+                                                            </option>
+                                                            <option value="prova">
+                                                                Prova
+                                                            </option>
+                                                            <option value="prova_pratica">
+                                                                Prova Prática
+                                                            </option>
+                                                            <option value="dce">
+                                                                DCE
+                                                            </option>
+                                                            <option value="estudo_obrigatorio">
+                                                                Estudo Obrigatório
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="secretaria_area_aluno_calendario_local"
+                                                           class="">Local</label>
+                                                    <div>
+                                                        <select id="secretaria_area_aluno_calendario_local"
+                                                                class="chosen-select"
+                                                                tabindex="2">
+                                                            <option value="">
+                                                                Selecione
+                                                            </option>
+                                                            <option value="sala_1"
+                                                            >Sala 1
+                                                            </option>
+                                                            <option value="sala_2">
+                                                                Sala 2
+                                                            </option>
+                                                            <option value="auditorio">
+                                                                Auditório
+                                                            </option>
+                                                            <option value="cinema">
+                                                                Cinema
+                                                            </option>
+                                                            <option value="filmoteca">
+                                                                Filmoteca
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="secretaria_area_aluno_calendario_professor"
+                                                           class="">Professor</label>
+                                                    <div>
+                                                        <select id="secretaria_area_aluno_calendario_professor"
+                                                                class="chosen-select"
+                                                                tabindex="2">
+                                                            <option value="">
+                                                                Selecione
+                                                            </option>
+                                                            <option value="adauto"
+                                                            >Adauto
+                                                            </option>
+                                                            <option value="miqueias">
+                                                                Miqueias
+                                                            </option>
+                                                            <option value="santana">
+                                                                Santana
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="row">
+                                    <!--Calendário-->
+                                    <div class="col-md-5">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-title">
+                                                <h5>Calendário</h5>
+                                                <div class="ibox-tools">
+                                                    <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                    <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div id="calendarAulas"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Aulas-->
+                                    <div class="col-md-4">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-title">
+                                                <h5>Aulas</h5>
+                                                <div class="ibox-tools">
+                                                    <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                    <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div class="row table-responsive">
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Data</th>
+                                                            <th>Subturma</th>
+                                                            <th>Evento</th>
+                                                            <th>Tipo</th>
+                                                            <th>Local</th>
+                                                            <th>Professor</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>05/03/2018 09:00</td>
+                                                            <td>Turma A</td>
+                                                            <td>Matemática 1</td>
+                                                            <td>Aula</td>
+                                                            <td>Sala 1</td>
+                                                            <td>Professor Adauto</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>05/03/2018 10:00</td>
+                                                            <td>Turma A</td>
+                                                            <td>Matemática 1</td>
+                                                            <td>Prova</td>
+                                                            <td>Sala 1</td>
+                                                            <td>Professor Adauto</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>05/03/2018 11:00</td>
+                                                            <td>Turma A</td>
+                                                            <td>Matemática</td>
+                                                            <td>Prova</td>
+                                                            <td>Sala 1</td>
+                                                            <td>Professor Adauto</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>05/03/2018 13:00</td>
+                                                            <td>Futebol</td>
+                                                            <td>Treino</td>
+                                                            <td>EF</td>
+                                                            <td>Quadra Poliesportiva</td>
+                                                            <td>Professor Miqueias</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Faltas-->
+                                    <div class="col-md-3">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-title">
+                                                <h5>Faltas</h5>
+                                                <div class="ibox-tools">
+                                                    <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                    <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div class="row table-responsive">
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Data</th>
+                                                            <th>Tipo</th>
+                                                            <th>Status</th>
+                                                            <th>Ação</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>05/03/2018 13:30</td>
+                                                            <td>Matemática</td>
+                                                            <td><label class="label label-warning">Pendente</label></td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="input-group-sm">
+                                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Ações <span
+                                                                                    class="caret"></span></button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a><i class="fa fa-pencil"></i> Justificar</a></li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>02/03/2018 13:30</td>
+                                                            <td>Português</td>
+                                                            <td><label class="label label-primary">Deferida</label></td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="input-group-sm">
+                                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Ações <span
+                                                                                    class="caret"></span></button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a><i class="fa fa-search"></i> Detalhar</a></li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>01/03/2018 10:30</td>
+                                                            <td>Sistemas Operacionais</td>
+                                                            <td><label class="label label-danger">Indeferida</label></td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="input-group-sm">
+                                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Ações <span
+                                                                                    class="caret"></span></button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a><i class="fa fa-search"></i> Detalhar</a></li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -3963,6 +4350,9 @@
 
 <!--FullCalendar Rancho-->
 <script src="js/demo/fullcalendar-rancho.js"></script>
+
+<!--FullCalendar Aulas-->
+<script src="js/demo/fullcalendar-aulas.js"></script>
 
 <script>
     $(document).ready(function () {
