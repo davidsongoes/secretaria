@@ -3890,6 +3890,7 @@
                             </div>
                             <div class="ibox-content">
                                 <div class="row">
+                                    <!--Dropboxes-->
                                     <div class="col-md-12">
                                         <form class="form-inline" role="form">
                                             <div class="col-md-2">
@@ -4216,9 +4217,172 @@
                                                                             <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Ações <span
                                                                                     class="caret"></span></button>
                                                                             <ul class="dropdown-menu">
-                                                                                <li><a><i class="fa fa-pencil"></i> Justificar</a></li>
-
+                                                                                <li><a href="#" data-toggle="modal"
+                                                                                       data-target="#modalJusticarFalta"><i
+                                                                                        class="fa fa-pencil"></i> Justificar</a></li>
                                                                             </ul>
+                                                                        </div>
+                                                                        <!--Modal Jusficar Falta - Pendente-->
+                                                                        <div class="modal inmodal fade" id="modalJusticarFalta" tabindex="-1"
+                                                                             role="dialog" aria-hidden="true">
+                                                                            <div class="modal-dialog modal-lg">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <button type="button" class="close"
+                                                                                                data-dismiss="modal"><span
+                                                                                                aria-hidden="true">&times;</span><span
+                                                                                                class="sr-only">Fechar</span>
+                                                                                        </button>
+                                                                                        <h4 class="modal-title">Justificar Falta</h4>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <!--Formulário de justificativa-->
+                                                                                        <div class="container-fluid">
+                                                                                            <div class="row">
+                                                                                                <form role="form">
+                                                                                                    <!--Primeira Linha-->
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label for="comment">Justificativa</label>
+                                                                                                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <div class="fileinput fileinput-new"
+                                                                                                                     data-provides="fileinput">
+                                                                                                                    <label class="">Anexar
+                                                                                                                        arquivo</label>
+                                                                                                                    <div class="row"
+                                                                                                                         style="margin-left: 1px;">
+                                                                                                                                                    <span class="btn btn-default btn-file"><span
+                                                                                                                                                            class="fileinput-new">Anexar arquivo</span>
+    <span class="fileinput-exists">Alterar</span><input type="file" name="..."/></span>
+                                                                                                                        <span class="fileinput-filename"></span>
+                                                                                                                        <a href="#"
+                                                                                                                           class="close fileinput-exists"
+                                                                                                                           data-dismiss="fileinput"
+                                                                                                                           style="float: none">×</a>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label for="secretaria_area_aluno_editar_veiculo_modelo"
+                                                                                                                       class="">Status</label>
+                                                                                                                <p><label class="label label-warning">Pendente</label></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <!--Botão Enviar Justificativa-->
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-lg-12">
+                                                                                                            <div class="form-group"
+                                                                                                                 style="float: right;">
+                                                                                                                <a class="btn btn-primary btn-responsive"
+                                                                                                                   href="#"><i
+                                                                                                                        class="fa fa-plus"></i>
+                                                                                                                    Salvar Justificativa</a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </form>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-white"
+                                                                                                data-dismiss="modal">Fechar
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>06/03/2018 16:30</td>
+                                                            <td>Educação Física</td>
+                                                            <td><label class="label label-success">Em Análise</label></td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <div class="col-lg-12">
+                                                                        <div class="input-group-sm">
+                                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Ações <span
+                                                                                    class="caret"></span></button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a href="#" data-toggle="modal"
+                                                                                       data-target="#modalJusticarFaltaEmAnalise"><i
+                                                                                        class="fa fa-pencil"></i> Detalhar</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!--Modal Jusficar Falta - Em Análise-->
+                                                                        <div class="modal inmodal fade" id="modalJusticarFaltaEmAnalise" tabindex="-1"
+                                                                             role="dialog" aria-hidden="true">
+                                                                            <div class="modal-dialog modal-lg">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <button type="button" class="close"
+                                                                                                data-dismiss="modal"><span
+                                                                                                aria-hidden="true">&times;</span><span
+                                                                                                class="sr-only">Fechar</span>
+                                                                                        </button>
+                                                                                        <h4 class="modal-title">Detalhes da Justificativa</h4>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <!--Formulário de justificativa-->
+                                                                                        <div class="container-fluid">
+                                                                                            <div class="row">
+                                                                                                <form role="form">
+                                                                                                    <!--Primeira Linha-->
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label for="comment">Justificativa</label>
+                                                                                                                <textarea class="form-control" rows="5" id="comment2" disabled>Conforme anexo, comprovo minha falta na Aula de Educação Física por motivos de saúde.</textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <div class="fileinput fileinput-exists"
+                                                                                                                     data-provides="fileinput">
+                                                                                                                    <label class="">Anexar Arquivo                                                                                                                        arquivo
+                                                                                                                        </label>
+                                                                                                                    <div class="row"
+                                                                                                                         style="margin-left: 1px;">
+                                                                                                                        <input type="hidden" value="" name=""></span>
+                                                                                                                        <span class="fileinput-filename">dispensa_atividades_físicas.pdf</span>
+                                                                                                                        <a href="#"
+                                                                                                                           class="close fileinput-exists"
+                                                                                                                           data-dismiss="fileinput"
+                                                                                                                           style="float: none"></a>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label
+                                                                                                                       class="">Status</label>
+                                                                                                                <p><label class="label label-success">Em Análise</label></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </form>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-white"
+                                                                                                data-dismiss="modal">Fechar
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -4235,9 +4399,83 @@
                                                                             <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Ações <span
                                                                                     class="caret"></span></button>
                                                                             <ul class="dropdown-menu">
-                                                                                <li><a><i class="fa fa-search"></i> Detalhar</a></li>
-
+                                                                                <li><a href="#" data-toggle="modal"
+                                                                                       data-target="#modalDetalharJusticativaFaltaDeferida"><i
+                                                                                        class="fa fa-search"></i> Detalhar</a></li>
                                                                             </ul>
+                                                                        </div>
+                                                                        <!--Modal Detalhar Jusficativa Falta - Deferida-->
+                                                                        <div class="modal inmodal fade" id="modalDetalharJusticativaFaltaDeferida" tabindex="-1"
+                                                                             role="dialog" aria-hidden="true">
+                                                                            <div class="modal-dialog modal-responsive">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <button type="button" class="close"
+                                                                                                data-dismiss="modal"><span
+                                                                                                aria-hidden="true">&times;</span><span
+                                                                                                class="sr-only">Fechar</span>
+                                                                                        </button>
+                                                                                        <h4 class="modal-title">Detalhes da Justificativa</h4>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <!--Formulário de justificativa-->
+                                                                                        <div class="container-fluid">
+                                                                                            <div class="row">
+                                                                                                <form role="form">
+                                                                                                    <!--Primeira Linha-->
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label for="comment">Justificativa</label>
+                                                                                                                <textarea class="form-control" rows="5" id="comment0" disabled>Conforme anexo, comprovo minha falta na Aula de Matemática, no dia 05/03/2018 às 13:30, por estar em consulta médica no Posto de Saúde do CA.</textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <div class="fileinput fileinput-exists"
+                                                                                                                     data-provides="fileinput">
+                                                                                                                    <label class="">Anexar Arquivo
+                                                                                                                       </label>
+                                                                                                                    <div class="row"
+                                                                                                                         style="margin-left: 1px;">
+                                                                                                                        <span class="fileinput-filename">Comparecimento_posto_saude.pdf</span>
+                                                                                                                        <a href="#"
+                                                                                                                           class="close fileinput-exists"
+                                                                                                                           data-dismiss="fileinput"
+                                                                                                                           style="float: none"></a>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <!--Segunda Linha-->
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label for="comment">Parecer Secretaria</label>
+                                                                                                                <textarea class="form-control" rows="5" id="comment1" disabled>Documentação de comprobação da justificativa de falta aceita e de acordo com os detalhes da falta.
+                                                                                                                </textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label for="secretaria_area_aluno_editar_veiculo_modelo"
+                                                                                                                       class="">Status</label>
+                                                                                                                <p><label class="label label-primary">Deferida</label></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </form>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-white"
+                                                                                                data-dismiss="modal">Fechar
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -4254,10 +4492,84 @@
                                                                             <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Ações <span
                                                                                     class="caret"></span></button>
                                                                             <ul class="dropdown-menu">
-                                                                                <li><a><i class="fa fa-search"></i> Detalhar</a></li>
-
+                                                                                <li><a href="#" data-toggle="modal"
+                                                                                       data-target="#modalDetalharJusticativaFaltaIndeferida"><i
+                                                                                        class="fa fa-search"></i> Detalhar</a></li>
                                                                             </ul>
                                                                         </div>
+                                                                        <!--Modal Detalhar Jusficativa Falta - Indeferida-->
+                                                                        <div class="modal inmodal fade" id="modalDetalharJusticativaFaltaIndeferida" tabindex="-1"
+                                                                             role="dialog" aria-hidden="true">
+                                                                            <div class="modal-dialog modal-responsive">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <button type="button" class="close"
+                                                                                                data-dismiss="modal"><span
+                                                                                                aria-hidden="true">&times;</span><span
+                                                                                                class="sr-only">Fechar</span>
+                                                                                        </button>
+                                                                                        <h4 class="modal-title">Detalhes da Justificativa</h4>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <!--Formulário de justificativa-->
+                                                                                        <div class="container-fluid">
+                                                                                            <div class="row">
+                                                                                                <form role="form">
+                                                                                                    <!--Primeira Linha-->
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label for="comment">Justificativa</label>
+                                                                                                                <textarea class="form-control" rows="5" id="comment3" disabled>Conforme anexo, comprovo minha falta na Aula de Sistemas Operacionais, no dia 01/03/2018 às 10:30, por estar no esquadrão.</textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <div class="fileinput fileinput-exists"
+                                                                                                                     data-provides="fileinput">
+                                                                                                                    <label class="">Anexar Arquivo
+                                                                                                                        </label>
+                                                                                                                    <div class="row"
+                                                                                                                         style="margin-left: 1px;">
+                                                                                                                        <span class="fileinput-filename">chamada_aluno_de_dia.pdf</span>
+                                                                                                                        <a href="#"
+                                                                                                                           class="close fileinput-exists"
+                                                                                                                           data-dismiss="fileinput"
+                                                                                                                           style="float: none"></a>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <!--Segunda Linha-->
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label for="comment">Parecer Secretaria</label>
+                                                                                                                <textarea class="form-control" rows="5" id="comment4" disabled>Arquivo em anexo não é aceito como justificativa de falta. favor entrar em contato com a secretaria.
+                                                                                                                </textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="">Status</label>
+                                                                                                                <p><label class="label label-danger">Indeferida</label></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </form>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-white"
+                                                                                                data-dismiss="modal">Fechar
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
                                                                     </div>
                                                                 </div>
                                                             </td>
