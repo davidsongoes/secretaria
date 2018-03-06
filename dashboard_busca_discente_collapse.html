@@ -47,6 +47,9 @@
 
     <link href="css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
 
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -1558,8 +1561,17 @@
 
 <!-- iCheck -->
 <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- Toastr script -->
+<script src="js/plugins/toastr/toastr.min.js"></script>
+
 <script>
     $(document).ready(function () {
+
+        //Notificação
+        toastr.options.progressBar= true;
+        toastr.options.closeButton= true;
+        toastr['warning']('Em desenvolvimento', 'Página Protótipo');
 
         $('#checkbox_nome_completo').change(function () {
             alert('oi');
