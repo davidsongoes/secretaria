@@ -49,6 +49,9 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
     <!-- Sweet Alert -->
     <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
@@ -56,8 +59,13 @@
     <link href="css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
     <link href="css/plugins/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print'>
 
+    <!--CKEditor-->
+    <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -282,105 +290,266 @@
                                                                 </div>
                                                             </div>
                                                             <div class="ibox-content">
-                                                                <!--Botão Imprimir Idiomas-->
                                                                 <div class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <div class="form-group" style="float: right;">
-                                                                            <a class="btn btn-primary btn-responsive"
-                                                                               href=""><i class="fa fa-print"></i>
-                                                                                Imprimir idiomas</a>
+                                                                    <!--dropboxes da seleção da classe-->
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label for="docente_selecao_classe_curso"
+                                                                                   class="">Curso</label>
+                                                                            <div>
+                                                                                <select id="docente_selecao_classe_curso"
+                                                                                        class="chosen-select"
+                                                                                        tabindex="2">
+                                                                                    <option value="">
+                                                                                        Selecione
+                                                                                    </option>
+                                                                                    <option value="cfoav"
+                                                                                    >CFOAV
+                                                                                    </option>
+                                                                                    <option value="cap">
+                                                                                        CAP
+                                                                                    </option>
+                                                                                    <option value="ccem">
+                                                                                        CCEM
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="docente_selecao_classe_turma"
+                                                                                   class="">Turma</label>
+                                                                            <div>
+                                                                                <select id="docente_selecao_classe_turma"
+                                                                                        class="chosen-select"
+                                                                                        tabindex="2">
+                                                                                    <option value="">
+                                                                                        Selecione
+                                                                                    </option>
+                                                                                    <option value="2001"
+                                                                                    >2001
+                                                                                    </option>
+                                                                                    <option value="2003">
+                                                                                        2003
+                                                                                    </option>
+                                                                                    <option value="2008">
+                                                                                        2008
+                                                                                    </option>
+                                                                                    <option value="2017">
+                                                                                        2017
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="docente_selecao_classe_subturma"
+                                                                                   class="">Subturma</label>
+                                                                            <div>
+                                                                                <select id="docente_selecao_classe_subturma"
+                                                                                        class="chosen-select"
+                                                                                        tabindex="2">
+                                                                                    <option value="">
+                                                                                        Selecione
+                                                                                    </option>
+                                                                                    <option value="turma_a"
+                                                                                    >Turma A
+                                                                                    </option>
+                                                                                    <option value="turma_b">
+                                                                                        Turma B
+                                                                                    </option>
+                                                                                    <option value="turma_c">
+                                                                                        Turma C
+                                                                                    </option>
+                                                                                    <option value="turma_d">
+                                                                                        Turma D
+                                                                                    </option>
+                                                                                    <option value="futebol">
+                                                                                        Futebol
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <div id="datetimepicker12"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--tabela das aulas da subturma-->
+                                                                    <div class="col-md-9">
+                                                                        <div class="row table-responsive">
+                                                                            <table class="table table-striped">
+                                                                                <thead>
+                                                                                <tr>
+                                                                                    <th></th>
+                                                                                    <th>Data/Hora<a
+                                                                                            style="float: right;"><i
+                                                                                            class="fa fa-sort"></i></a></th>
+                                                                                    <th>Curso<a
+                                                                                            style="float: right;"><i
+                                                                                            class="fa fa-sort"></i></a></th>
+                                                                                    <th>Turma<a
+                                                                                            style="float: right;"><i
+                                                                                            class="fa fa-sort"></i></a></th>
+                                                                                    <th>Subturma<a
+                                                                                            style="float: right;"><i
+                                                                                            class="fa fa-sort"></i></a></th>
+                                                                                    <th>Matéria<a style="float: right;"><i
+                                                                                            class="fa fa-sort"></i></a></th>
+                                                                                    <th>Tipo<a style="float: right;"><i
+                                                                                            class="fa fa-sort"></i></a></th>
+                                                                                </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="i-checks"><label
+                                                                                                class="">
+                                                                                            <div class="icheckbox_square-green"
+                                                                                                 style="position: relative;">
+                                                                                                <input id=""
+                                                                                                       value=""
+                                                                                                       style="position: absolute; opacity: 0;"
+                                                                                                       type="checkbox">
+                                                                                                <ins class="iCheck-helper"
+                                                                                                     style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                                                                                            </div>
+                                                                                            <i></i></label></div>
+                                                                                    </td>
+                                                                                    <td>05/03/2018 09:00</td>
+                                                                                    <td>CFOAV</td>
+                                                                                    <td>2016</td>
+                                                                                    <td>Turma E</td>
+                                                                                    <td>Matemática 1</td>
+                                                                                    <td>Aula</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="i-checks"><label
+                                                                                                class="">
+                                                                                            <div class="icheckbox_square-green"
+                                                                                                 style="position: relative;">
+                                                                                                <input id=""
+                                                                                                       value=""
+                                                                                                       style="position: absolute; opacity: 0;"
+                                                                                                       type="checkbox">
+                                                                                                <ins class="iCheck-helper"
+                                                                                                     style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                                                                                            </div>
+                                                                                            <i></i></label></div>
+                                                                                    </td>
+                                                                                    <td>05/03/2018 10:00</td>
+                                                                                    <td>CFOINT</td>
+                                                                                    <td>2016</td>
+                                                                                    <td>Turma F</td>
+                                                                                    <td>Matemática 1</td>
+                                                                                    <td>Aula</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="i-checks"><label
+                                                                                                class="">
+                                                                                            <div class="icheckbox_square-green"
+                                                                                                 style="position: relative;">
+                                                                                                <input id=""
+                                                                                                       value=""
+                                                                                                       style="position: absolute; opacity: 0;"
+                                                                                                       type="checkbox">
+                                                                                                <ins class="iCheck-helper"
+                                                                                                     style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                                                                                            </div>
+                                                                                            <i></i></label></div>
+                                                                                    </td>
+                                                                                    <td>05/03/2018 14:00</td>
+                                                                                    <td>CFOINF</td>
+                                                                                    <td>2016</td>
+                                                                                    <td>Turma E</td>
+                                                                                    <td>Matemática 1</td>
+                                                                                    <td>Aula</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="i-checks"><label
+                                                                                                class="">
+                                                                                            <div class="icheckbox_square-green"
+                                                                                                 style="position: relative;">
+                                                                                                <input id=""
+                                                                                                       value=""
+                                                                                                       style="position: absolute; opacity: 0;"
+                                                                                                       type="checkbox">
+                                                                                                <ins class="iCheck-helper"
+                                                                                                     style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                                                                                            </div>
+                                                                                            <i></i></label></div>
+                                                                                    </td>
+                                                                                    <td>05/03/2018 16:00</td>
+                                                                                    <td>CFOAV</td>
+                                                                                    <td>2016</td>
+                                                                                    <td>Turma E</td>
+                                                                                    <td>Matemática 1</td>
+                                                                                    <td>Prova</td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <!--Tabela de Idiomas-->
-                                                                <div class="row table-responsive">
-                                                                    <table class="table table-striped">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th>Idiomas<a style="float: right;"><i
-                                                                                    class="fa fa-sort"></i></a></th>
-                                                                            <th>Compreensão Oral<a
-                                                                                    style="float: right;"><i
-                                                                                    class="fa fa-sort"></i></a></th>
-                                                                            <th>Compreensão Escrita<a
-                                                                                    style="float: right;"><i
-                                                                                    class="fa fa-sort"></i></a></th>
-                                                                            <th>Expressão Oral<a
-                                                                                    style="float: right;"><i
-                                                                                    class="fa fa-sort"></i></a></th>
-                                                                            <th>Expressão Escrita<a
-                                                                                    style="float: right;"><i
-                                                                                    class="fa fa-sort"></i></a></th>
-                                                                            <th>Diploma<a style="float: right;"><i
-                                                                                    class="fa fa-sort"></i></a></th>
-                                                                            <th>Validade<a style="float: right;"><i
-                                                                                    class="fa fa-sort"></i></a></th>
-                                                                            <th>Ações</i></a></th>
-                                                                            <th></th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td>Inglês</td>
-                                                                            <td>B2</td>
-                                                                            <td>B2</td>
-                                                                            <td>B2l</td>
-                                                                            <td>B2</td>
-                                                                            <td>TOEFL</td>
-                                                                            <td>30/12/2019</td>
-                                                                            <td>
-                                                                                <div class="form-group">
-                                                                                    <div class="col-lg-12">
-                                                                                        <div class="input-group-sm">
-                                                                                            <button data-toggle="dropdown"
-                                                                                                    class="btn btn-white dropdown-toggle"
-                                                                                                    type="button">Ações
-                                                                                                <span
-                                                                                                        class="caret"></span>
-                                                                                            </button>
-                                                                                            <ul class="dropdown-menu">
-                                                                                                <li><a href="#"><i
-                                                                                                        class="fa fa-search"></i>
-                                                                                                    Detalhar</a></li>
-                                                                                                <!--<li><a><i class="fa fa-pencil"></i> Editar</a></li>-->
-                                                                                            </ul>
-                                                                                        </div>
+                                                                <!--Textarea Diário-->
+                                                                <div class="row">
+                                                                    <div class="form-group">
+                                                                        <label>Diário (Alterações, Matéria lecionada e etc)</label>
+                                                                        <textarea name="editor1"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                </br>
+                                                                <!--Checkbox/Dropdown/Botão Criar Diário de Classe-->
+                                                                <div class="row">
+                                                                    <div class="col-md-03">
+                                                                        <form class="form-inline" role="form">
+                                                                            <div class="col-md-4">
+                                                                                <div class="i-checks"><label
+                                                                                        class="">
+                                                                                    <div class="icheckbox_square-green"
+                                                                                         style="position: relative;">
+                                                                                        <input id="houveAlteracaoProfessor"
+                                                                                               value=""
+                                                                                               style="position: absolute; opacity: 0;"
+                                                                                               type="checkbox">
+                                                                                        <ins class="iCheck-helper"
+                                                                                             style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                                                                                    </div>
+                                                                                    <i></i> Houve alteraçãode Professor?</label></div>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <div id="dropdownProfessor" class="form-group">
+                                                                                    <label for="secretaria_area_docente_professor"
+                                                                                           class="">Professor</label>
+                                                                                    <div>
+                                                                                        <select id="secretaria_area_docente_professor"
+                                                                                                class="chosen-select"
+                                                                                                tabindex="2">
+                                                                                            <option value="">
+                                                                                                Selecione
+                                                                                            </option>
+                                                                                            <option value="adauto"
+                                                                                            >Adauto
+                                                                                            </option>
+                                                                                            <option value="miqueias">
+                                                                                                Miqueias
+                                                                                            </option>
+                                                                                            <option value="santana">
+                                                                                                Santana
+                                                                                            </option>
+                                                                                        </select>
                                                                                     </div>
                                                                                 </div>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>Espanhol</td>
-                                                                            <td>B1</td>
-                                                                            <td>B1</td>
-                                                                            <td>B2l</td>
-                                                                            <td>B1</td>
-                                                                            <td>Instituto Cervantes</td>
-                                                                            <td>30/10/2017</td>
-                                                                            <td>
-                                                                                <div class="form-group">
-                                                                                    <div class="col-lg-12">
-                                                                                        <div class="input-group-sm">
-                                                                                            <button data-toggle="dropdown"
-                                                                                                    class="btn btn-white dropdown-toggle"
-                                                                                                    type="button">Ações
-                                                                                                <span
-                                                                                                        class="caret"></span>
-                                                                                            </button>
-                                                                                            <ul class="dropdown-menu">
-                                                                                                <li><a href="#"><i
-                                                                                                        class="fa fa-search"></i>
-                                                                                                    Detalhar</a></li>
-                                                                                                <!--<li><a><i class="fa fa-pencil"></i> Editar</a></li>-->
-
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group" style="float: right;">
+                                                                                    <a class="btn btn-primary btn-responsive" data-toggle="modal"
+                                                                                       data-target="#modalCriarDiarioClasse" href=""><i class="fa fa-plus"></i>
+                                                                                        Gravar Diário de Classe</a>
+                                                                                </div>                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="col-md-03"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -457,9 +626,9 @@
                                                                                     <div class="icheckbox_square-green"
                                                                                          style="position: relative;">
                                                                                         <input class="check"
-                                                                                                value=""
-                                                                                                style="position: absolute; opacity: 0;"
-                                                                                                type="checkbox">
+                                                                                               value=""
+                                                                                               style="position: absolute; opacity: 0;"
+                                                                                               type="checkbox">
                                                                                         <ins class="iCheck-helper"
                                                                                              style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
                                                                                     </div>
@@ -474,9 +643,9 @@
                                                                                     <div class="icheckbox_square-green"
                                                                                          style="position: relative;">
                                                                                         <input class="check"
-                                                                                                value=""
-                                                                                                style="position: absolute; opacity: 0;"
-                                                                                                type="checkbox">
+                                                                                               value=""
+                                                                                               style="position: absolute; opacity: 0;"
+                                                                                               type="checkbox">
                                                                                         <ins class="iCheck-helper"
                                                                                              style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
                                                                                     </div>
@@ -491,9 +660,9 @@
                                                                                     <div class="icheckbox_square-green"
                                                                                          style="position: relative;">
                                                                                         <input class="check"
-                                                                                                value=""
-                                                                                                style="position: absolute; opacity: 0;"
-                                                                                                type="checkbox">
+                                                                                               value=""
+                                                                                               style="position: absolute; opacity: 0;"
+                                                                                               type="checkbox">
                                                                                         <ins class="iCheck-helper"
                                                                                              style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
                                                                                     </div>
@@ -508,9 +677,9 @@
                                                                                     <div class="icheckbox_square-green"
                                                                                          style="position: relative;">
                                                                                         <input class="check"
-                                                                                                value=""
-                                                                                                style="position: absolute; opacity: 0;"
-                                                                                                type="checkbox">
+                                                                                               value=""
+                                                                                               style="position: absolute; opacity: 0;"
+                                                                                               type="checkbox">
                                                                                         <ins class="iCheck-helper"
                                                                                              style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
                                                                                     </div>
@@ -2715,7 +2884,7 @@
                         <div class="ibox-content">
                             <div class="row">
                                 <!--Refeições-->
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="ibox float-e-margins">
                                         <div class="ibox-title">
                                             <h5>Refeições</h5>
@@ -2749,7 +2918,7 @@
                                     </div>
                                 </div>
                                 <!--Calendário-->
-                                <div class="col-md-6">
+                                <div class="col-md-7">
                                     <div class="ibox float-e-margins">
                                         <div class="ibox-title">
                                             <h5>Calendário</h5>
@@ -2979,7 +3148,6 @@
                                                     </select>
                                                 </div>
                                             </div>
-
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
@@ -3010,7 +3178,6 @@
                                                     </select>
                                                 </div>
                                             </div>
-
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
@@ -3925,9 +4092,34 @@
 <!--FullCalendar Aulas-->
 <script src="js/demo/fullcalendar-aulas.js"></script>
 
+<!-- Toastr script -->
+<script src="js/plugins/toastr/toastr.min.js"></script>
+
 <script>
     $(document).ready(function () {
 
+        //Notificação
+        toastr.options.progressBar= true;
+        toastr.options.closeButton= true;
+        toastr['warning']('Em desenvolvimento', 'Página Protótipo');
+
+        //Checkbox Houve alteração de Professor
+        $('#dropdownProfessor').hide();
+        $('#houveAlteracaoProfessor').on('ifChecked' ,function (event) {
+            $('#dropdownProfessor').show();
+        });
+
+        $('#houveAlteracaoProfessor').on('ifUnchecked' ,function (event) {
+            $('#dropdownProfessor').hide();
+        });
+
+        CKEDITOR.replace( 'editor1' );
+
+        //calendário diario de classe formulário
+        $('#datetimepicker12').datepicker({
+            inline: true,
+            sideBySide: true
+        }).datepicker('setDate', 'today');
 
         $('.chosen-select').chosen({width: "100%"});
 
@@ -3937,7 +4129,7 @@
         });
 
         //Selecionar todos Lista Presença
-        // var triggeredByChild = false;
+        var triggeredByChild = false;
 
         $('#selecionarTodosPresenca').on('ifChecked', function (event) {
             $(".check").iCheck('check');
@@ -4177,7 +4369,7 @@
 
 <!-- ChartJS-->
 <script src="js/plugins/chartJs/Chart.min.js"></script>
-<script src="js/demo/chartjs-demo-area-aluno-desempenho-academico.js"></script>
+<script src="js/demo/chartjs-demo-area-docente-desempenho-academico.js"></script>
 
 </body>
 </html>
