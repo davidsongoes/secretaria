@@ -52,3 +52,19 @@
     border-color: #b32e2f;
     /* border color */
 }
+
+.container-image {
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #6C7A89 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.box-image {
+    width: 165px !important;
+    height: 220px !important;
+    background: #fff !important;
+}
