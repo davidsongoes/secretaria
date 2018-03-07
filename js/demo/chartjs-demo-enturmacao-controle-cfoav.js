@@ -4,9 +4,9 @@ $(function () {
         return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
     };
 
-    // BARRA CFOAV
-    var barData = {
-        labels: ["2001", "2002", "2003", "2004"],
+    // Gráfico Barra CFOAV 2018
+    var barData2018 = {
+        labels: ["2015", "2016", "2017", "2018"],
         datasets: [
             {
                 label: "Vagas Edital",
@@ -14,7 +14,7 @@ $(function () {
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [160, 160, 180, 170]
+                data: [160, 160, 160, 160]
             },
             {
                 label: "Matriculados",
@@ -22,7 +22,7 @@ $(function () {
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [140, 145, 150, 160]
+                data: [145, 145, 145, 145]
             },
             {
                 label: "Liminaristas",
@@ -30,7 +30,7 @@ $(function () {
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [5, 6, 4, 4]
+                data: [6, 6, 5, 4]
             },
             {
                 label: "Desligados",
@@ -38,12 +38,28 @@ $(function () {
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [15, 9, 26,6]
+                data: [10, 10, 5, 2]
+            },
+            {
+                label: "ONA",
+                backgroundColor: randomColorGenerator(),
+                borderColor: "#000",
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [5, 5, 4, 3]
+            },
+            {
+                label: "Total",
+                backgroundColor: randomColorGenerator(),
+                borderColor: "#000",
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [130, 120, 113, 109]
             }
         ]
     };
 
-    var barOptions = {
+    var barOptions2018 = {
         scales: {
             yAxes: [{
                 ticks: {
@@ -55,50 +71,66 @@ $(function () {
     };
 
 
-    var ctx1 = document.getElementById("barEnturmacaoCfoav").getContext("2d");
-    new Chart(ctx1, {type: 'bar', data: barData, options: barOptions});
+    var ctx2018 = document.getElementById("barChartCfoav2018AgdMatricula").getContext("2d");
+    new Chart(ctx2018, {type: 'bar', data: barData2018, options: barOptions2018});
 
-//    Barra CAP
 
-    var barData2 = {
-        labels: ["2013"],
+    // Gráfico Barra CFOAV 2017
+    var barData2017 = {
+        labels: ["2014", "2015", "2016", "2017"],
         datasets: [
             {
-                label: "Liderança",
+                label: "Vagas Edital",
                 backgroundColor: randomColorGenerator(),
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [9.8430]
+                data: [160, 160, 160, 160]
             },
             {
-                label: "Gestão Pública",
+                label: "Matriculados",
                 backgroundColor: randomColorGenerator(),
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [9.1893]
+                data: [145, 145, 145, 145]
             },
             {
-                label: "Técnicas de Plataforma",
+                label: "Liminaristas",
                 backgroundColor: randomColorGenerator(),
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [9.3545]
+                data: [6, 6, 5, 4]
             },
             {
-                label: "Doutrina Militar",
+                label: "Desligados",
                 backgroundColor: randomColorGenerator(),
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [9.2047]
+                data: [10, 10, 5, 2]
+            },
+            {
+                label: "ONA",
+                backgroundColor: randomColorGenerator(),
+                borderColor: "#000",
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [5, 5, 4, 3]
+            },
+            {
+                label: "Total",
+                backgroundColor: randomColorGenerator(),
+                borderColor: "#000",
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [130, 120, 113, 109]
             }
         ]
     };
 
-    var barOptions2 = {
+    var barOptions2017 = {
         scales: {
             yAxes: [{
                 ticks: {
@@ -110,50 +142,66 @@ $(function () {
     };
 
 
-    var ctx2 = document.getElementById("barCap").getContext("2d");
-    new Chart(ctx2, {type: 'bar', data: barData2, options: barOptions2});
+    var ctx2017 = document.getElementById("barChartCfoav2017EmAndamento").getContext("2d");
+    new Chart(ctx2017, {type: 'bar', data: barData2017, options: barOptions2017});
 
-//    Barra CCEM
 
-    var barData3 = {
-        labels: ["2017", "2018"],
+// Gráfico Barra CFOAV 2017
+    var barData2016 = {
+        labels: ["2013", "2014", "2015", "2016"],
         datasets: [
             {
-                label: "Ciências Políticas",
+                label: "Vagas Edital",
                 backgroundColor: randomColorGenerator(),
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [9.1846, 8.0215]
+                data: [160, 160, 160, 160]
             },
             {
-                label: "Estrátegia e Defesa",
+                label: "Matriculados",
                 backgroundColor: randomColorGenerator(),
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [8.8819, 8.1548]
+                data: [145, 145, 145, 145]
             },
             {
-                label: "Ética",
+                label: "Liminaristas",
                 backgroundColor: randomColorGenerator(),
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [9.3011, 9.7589]
+                data: [6, 6, 5, 4]
             },
             {
-                label: "Legislação Militar",
+                label: "Desligados",
                 backgroundColor: randomColorGenerator(),
                 borderColor: "#000",
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [9.1603, 8.7587]
+                data: [10, 10, 5, 2]
+            },
+            {
+                label: "ONA",
+                backgroundColor: randomColorGenerator(),
+                borderColor: "#000",
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [5, 5, 4, 3]
+            },
+            {
+                label: "Total",
+                backgroundColor: randomColorGenerator(),
+                borderColor: "#000",
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [130, 120, 113, 109]
             }
         ]
     };
 
-    var barOptions3 = {
+    var barOptions2016 = {
         scales: {
             yAxes: [{
                 ticks: {
@@ -165,6 +213,6 @@ $(function () {
     };
 
 
-    var ctx3 = document.getElementById("barCcem").getContext("2d");
-    new Chart(ctx3, {type: 'bar', data: barData3, options: barOptions3});
+    var ctx2016 = document.getElementById("barChartCfoav2016EmAndamento").getContext("2d");
+    new Chart(ctx2016, {type: 'bar', data: barData2016, options: barOptions2016});
 });
