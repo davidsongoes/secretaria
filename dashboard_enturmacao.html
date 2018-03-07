@@ -81,11 +81,13 @@
                 </li>
                 <!--Menu lateral abaixo do perfil-->
                 <li>
-                    <a href="dashboard_area_aluno.html"><i class="fa fa-user"></i> <span class="nav-label">Área do Aluno</span> </a>
+                    <a href="dashboard_area_aluno.html"><i class="fa fa-user"></i> <span
+                            class="nav-label">Área do Aluno</span> </a>
 
                 </li>
                 <li>
-                    <a href="dashboard_area_docente.html"><i class="fa fa-user-secret"></i> <span class="nav-label">Área do Docente</span> </a>
+                    <a href="dashboard_area_docente.html"><i class="fa fa-user-secret"></i> <span class="nav-label">Área do Docente</span>
+                    </a>
 
                 </li>
                 <li class="active">
@@ -94,11 +96,13 @@
                     <ul class="nav nav-second-level">
                         <li class=""><a href="dashboard_avisos.html"><i class="fa fa-exclamation-triangle"></i> <span
                                 class="nav-label">Avisos</span></a></li>
-                        <li class=""><a href="dashboard_busca_discente.html"><i class="fa fa-users"></i> <span class="nav-label">Discente</span></a>
+                        <li class=""><a href="dashboard_busca_discente.html"><i class="fa fa-users"></i> <span
+                                class="nav-label">Discente</span></a>
                         </li>
                         <li><a href="dashboard_emissao.html"><i class="fa fa-print"></i> <span
                                 class="nav-label">Emissão de Documentos</span></a></li>
-                        <li class="active"><a href="dashboard_enturmacao.html"><i class="fa fa-cubes"></i> <span class="nav-label">Enturmação</span></a>
+                        <li class="active"><a href="dashboard_enturmacao.html"><i class="fa fa-cubes"></i> <span
+                                class="nav-label">Enturmação</span></a>
                         </li>
                     </ul>
                 </li>
@@ -116,7 +120,7 @@
             </nav>
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-10">
+            <div class="col-md-12">
                 <h2>Enturmação</h2>
                 <ol class="breadcrumb">
                     <li>
@@ -128,21 +132,14 @@
 
                 </ol>
             </div>
-            <div class="col-lg-2">
-                <div class="btn-group" style="margin-top: 30px;">
-                    <a class="btn btn-primary btn-responsive" href="dashboard_busca_cpf_discente.html"><i class="fa fa-plus"></i>
-                        Cadastrar Discente</a>
-                </div>
-            </div>
         </div>
         <div class="wrapper wrapper-content animated fadeIn">
-            <!--Resultados Gráficos-->
+            <!--Painel de Controle-->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
-
                         <div class="ibox-title">
-                            <h5>Painel de Controle / Informações Úteis (não faz parte de busca!)</h5>
+                            <h5>Painel de Controle / Informações Úteis (não faz parte da busca!)</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -160,12 +157,116 @@
                         </div>
                         <div class="ibox-content">
                             <div class="row">
+                                <!--Tabela dos Cursos-->
+                                <div class="col-md-4">
+                                    <div class="row table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>Curso</th>
+                                                <th></th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>CFOAV</td>
+                                                <td>
+                                                    <div class="i-checks"><label> <input id="radioCfoavCurso" type="radio" value="option1" name="cfoavCurso" checked> <i></i></label></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CFOINT</td>
+                                                <td>
+                                                    <div class="i-checks"><label> <input id="radioCfointCurso" type="radio" value="option1" name="cfoavCurso"> <i></i></label></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CFOINF</td>
+                                                <td>
+                                                    <div class="i-checks"><label> <input id="radioCfoinfCurso" type="radio" value="option1" name="cfoavCurso"> <i></i></label></div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--Tabela das Turmas-->
+                                <div class="col-md-4">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Turma</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="i-checks"><label> <input type="radio" value="option1" name="radioCfoavTurma"> <i></i></label></div>
+                                            </td>
+                                            <td>2018</td>
+                                            <td>AGD Matrícula</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="i-checks"><label> <input type="radio" value="option1" name="radioCfoavTurma"> <i></i></label></div>
+                                            </td>
+                                            <td>2017</td>
+                                            <td>Em andamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="i-checks"><label> <input type="radio" value="option1" name="radioCfoavTurma"> <i></i></label></div>
+                                            </td>
+                                            <td>2016</td>
+                                            <td>Em andamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="i-checks"><label> <input type="radio" value="option1" name="radioCfoavTurma"> <i></i></label></div>
+                                            </td>
+                                            <td>2015</td>
+                                            <td>Em andamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="i-checks"><label> <input type="radio" value="option1" name="radioCfoavTurma"> <i></i></label></div>
+                                            </td>
+                                            <td>2014</td>
+                                            <td>Em andamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="i-checks"><label> <input type="radio" value="option1" name="radioCfoavTurma"> <i></i></label></div>
+                                            </td>
+                                            <td>2013</td>
+                                            <td>Concluída</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--Gráficos-->
+                                <div class="col-md-4">
+                                    <div class="ibox float-e-margins">
+                                        <div class="ibox-title">
+                                            <h5>Vagas ofertadas/Vagas preenchidas</h5>
+                                        </div>
+                                        <div class="ibox-content">
+                                            <p class="text-center"><strong>CFOAV</strong></p>
+                                            <div>
+                                                <canvas id="barEnturmacaoCfoav" height="100"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--início conteúdo-->
+            <!--Painel de Busca-->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins ">
@@ -589,7 +690,8 @@
                                                     <div class="row">
                                                         <div class="col-md-3 col-md-offset-3">
                                                             <div class="form-group">
-                                                                <a class="btn btn-primary" href="dashboard_busca_discente_collapse.html"><i
+                                                                <a class="btn btn-primary"
+                                                                   href="dashboard_busca_discente_collapse.html"><i
                                                                         class="fa fa-search"></i> Buscar</a>
                                                             </div>
                                                         </div>
@@ -1159,7 +1261,8 @@
                                                         <div class="row">
                                                             <div class="col-md-3 col-md-offset-3">
                                                                 <div class="form-group">
-                                                                    <a class="btn btn-primary" href="dashboard_busca_discente_collapse.html"><i
+                                                                    <a class="btn btn-primary"
+                                                                       href="dashboard_busca_discente_collapse.html"><i
                                                                             class="fa fa-search"></i> Buscar</a>
                                                                 </div>
                                                             </div>
@@ -1192,7 +1295,8 @@
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
-                                                            <select data-placeholder="Choose a Country..." class="chosen-select" tabindex="2">
+                                                            <select data-placeholder="Choose a Country..."
+                                                                    class="chosen-select" tabindex="2">
                                                                 <option value="">Selecione</option>
                                                                 <option value="cfoav_cap_maj">CFOAV e CAP e MAJ</option>
                                                                 <option value="cfoint_asp_cap">CFOINT e ASP e CAP
@@ -1206,7 +1310,8 @@
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="btn-group">
-                                                            <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-search"></i>
+                                                            <a class="btn btn-primary btn-responsive" href="#"><i
+                                                                    class="fa fa-search"></i>
                                                                 Busca Rápida</a>
                                                         </div>
                                                     </div>
@@ -1226,7 +1331,8 @@
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="btn-group">
-                                                            <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-search"></i>
+                                                            <a class="btn btn-primary btn-responsive" href="#"><i
+                                                                    class="fa fa-search"></i>
                                                                 Salvar
                                                                 busca</a>
                                                         </div>
@@ -1241,26 +1347,25 @@
                     </div>
                 </div>
             </div>
-
             <!--Resultados Relação-->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="ibox collapsed">
+                    <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h5>Resultados - Relação</h5>
                             <div class="ibox-tools">
-                                <!--<a class="collapse-link">-->
-                                    <!--<i class="fa fa-chevron-up"></i>-->
-                                <!--</a>-->
-                                <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">-->
-                                    <!--<i class="fa fa-wrench"></i>-->
-                                <!--</a>-->
-                                <ul class="dropdown-menu dropdown-user">
-                                    <li><a href="#">Config option 1</a>
-                                    </li>
-                                    <li><a href="#">Config option 2</a>
-                                    </li>
-                                </ul>
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
                             </div>
                         </div>
                         <div class="ibox-content">
@@ -1300,27 +1405,49 @@
                                                     <div class="row">
                                                         <div class="col-lg-12">
                                                             <div class="col-lg-2">
-                                                                <div class="i-checks"><label><input id="checkbox_posto_grad" name="checkbox_posto_grad" type="checkbox" value="" checked=""
+                                                                <div class="i-checks"><label><input
+                                                                        id="checkbox_posto_grad"
+                                                                        name="checkbox_posto_grad" type="checkbox"
+                                                                        value="" checked=""
                                                                 ><i></i>Posto/Grad</label></div>
                                                             </div>
                                                             <div class="col-lg-2">
-                                                                <div class="i-checks"><label><input id="checkbox_nome_completo" name="checkbox_nome_completo" type="checkbox" value="" checked=""> <i></i>Nome Completo</label></div>
+                                                                <div class="i-checks"><label><input
+                                                                        id="checkbox_nome_completo"
+                                                                        name="checkbox_nome_completo" type="checkbox"
+                                                                        value="" checked=""> <i></i>Nome
+                                                                    Completo</label></div>
 
                                                             </div>
                                                             <div class="col-lg-2">
-                                                                <div class="i-checks"><label><input id="checkbox_curso" name="checkbox_nome_completo" type="checkbox" value="" checked=""> <i></i>Curso</label></div>
+                                                                <div class="i-checks"><label><input id="checkbox_curso"
+                                                                                                    name="checkbox_nome_completo"
+                                                                                                    type="checkbox"
+                                                                                                    value="" checked="">
+                                                                    <i></i>Curso</label></div>
 
                                                             </div>
                                                             <div class="col-lg-2">
-                                                                <div class="i-checks"><label><input id="checkbox_turma" name="checkbox_nome_completo" type="checkbox" value="" checked=""> <i></i>Turma</label></div>
+                                                                <div class="i-checks"><label><input id="checkbox_turma"
+                                                                                                    name="checkbox_nome_completo"
+                                                                                                    type="checkbox"
+                                                                                                    value="" checked="">
+                                                                    <i></i>Turma</label></div>
 
                                                             </div>
                                                             <div class="col-lg-2">
-                                                                <div class="i-checks"><label><input id="checkbox_status" name="checkbox_nome_completo" type="checkbox" value="" checked=""> <i></i>Status</label></div>
+                                                                <div class="i-checks"><label><input id="checkbox_status"
+                                                                                                    name="checkbox_nome_completo"
+                                                                                                    type="checkbox"
+                                                                                                    value="" checked="">
+                                                                    <i></i>Status</label></div>
 
                                                             </div>
                                                             <div class="col-lg-2">
-                                                                <div class="i-checks"><label><input id="checkbox_subturma" name="checkbox_nome_completo" type="checkbox" value="" > <i></i>Subturma</label></div>
+                                                                <div class="i-checks"><label><input
+                                                                        id="checkbox_subturma"
+                                                                        name="checkbox_nome_completo" type="checkbox"
+                                                                        value=""> <i></i>Subturma</label></div>
                                                             </div>
 
                                                         </div>
@@ -1339,7 +1466,8 @@
                                         <thead>
                                         <tr>
                                             <th>Posto/Grad<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                            <th>Nome Completo<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                            <th>Nome Completo<a style="float: right;"><i class="fa fa-sort"></i></a>
+                                            </th>
                                             <th>Curso<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                             <th>Turma<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                             <th>Status<a style="float: right;"><i class="fa fa-sort"></i></a></th>
@@ -1525,8 +1653,8 @@
     $(document).ready(function () {
 
         //Notificação
-        toastr.options.progressBar= true;
-        toastr.options.closeButton= true;
+        toastr.options.progressBar = true;
+        toastr.options.closeButton = true;
         toastr['warning']('Em desenvolvimento', 'Página Protótipo');
 
         $('.chosen-select').chosen({width: "100%"});
@@ -1550,11 +1678,27 @@
             forceParse: false,
             autoclose: true
         });
+
+    //    Ações Radio Buttons Painel de controle
+
+        $('#radioCfoavCurso').on('ifChecked', function (event) {
+            alert('CFOAV');
+        });
+
+        $('#radioCfointCurso').on('ifChecked', function (event) {
+            alert('CFOINT');
+        });
+
+        $('#radioCfoinfCurso').on('ifChecked', function (event) {
+            alert('CFOINF');
+        });
+
+
     });
 </script>
 
 <!-- ChartJS-->
 <script src="js/plugins/chartJs/Chart.min.js"></script>
-<script src="js/demo/chartjs-demo-discente.js"></script>
+<script src="js/demo/chartjs-demo-enturmacao.js"></script>
 </body>
 </html>
