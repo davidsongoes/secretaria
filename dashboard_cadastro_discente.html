@@ -4158,12 +4158,12 @@
                                             <div id="tab-6" class="tab-pane">
                                                 <div class="panel-body">
                                                     <div class="container-fluid animated fadeIn">
-                                                        <!--Cadastrar Nova Liminar-->
+                                                        <!--Cadastrar Decisão Provisória-->
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="ibox float-e-margins">
                                                                     <div class="ibox-title">
-                                                                        <h5>Cadastrar Nova Liminar</h5>
+                                                                        <h5>Cadastrar Decisão Provisória</h5>
                                                                         <div class="ibox-tools">
                                                                             <a class="collapse-link">
                                                                                 <i class="fa fa-chevron-up"></i>
@@ -4203,7 +4203,7 @@
                                                                                         </div>
                                                                                         <div class="col-lg-4">
                                                                                             <div class="form-group" id="data_liminar">
-                                                                                                <label class="col-lg-4 control-label">Data da Liminar</label>
+                                                                                                <label class="col-lg-4 control-label">Data da Decisão Provisória</label>
                                                                                                 <div class="input-group date">
                                                                         <span class="input-group-addon"><i
                                                                                 class="fa fa-calendar"></i></span><input
@@ -4252,9 +4252,8 @@
 
                                                                                         </div>
                                                                                         <div class="col-lg-4">
-                                                                                            <div class="form-group"><label class="col-lg-4 control-label">Tribunal</label>
-
-                                                                                                <div class="col-lg-8"><input placeholder="Tribunal" class="form-control" type="text">
+                                                                                            <div class="form-group"><label class="col-lg-4 control-label">Vara/Seção Judicial/Tribunal</label>
+                                                                                                <div class="col-lg-8"><input placeholder="Vara/Seção Judicial/Tribunal" class="form-control" type="text">
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -4288,6 +4287,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-lg-2">
+                                                                                    <!--Tabela Status da Decisão Provisória-->
                                                                                     <div class="row table-responsive">
                                                                                         <table class="table table-striped">
                                                                                             <thead>
@@ -4319,28 +4319,41 @@
                                                                                                     </div>
                                                                                                 </td>
                                                                                             </tr>
+                                                                                            <tr>
+                                                                                                <td>Confirmada</td>
+                                                                                                <td>
+                                                                                                    <div class="radio">
+                                                                                                        <input name="radio1" id="radio3" value="option1" type="radio">
+                                                                                                        <label for="radio1">
+                                                                                                        </label>
+                                                                                                    </div>
+                                                                                                </td>
+
+                                                                                            </tr>
                                                                                             </tbody>
                                                                                         </table>
                                                                                     </div>
-                                                                                    <div class="row">
-                                                                                        <div class="btn-group">
-                                                                                            <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-plus"></i>
-                                                                                                Cadastrar Liminar</a>
-                                                                                        </div>
-                                                                                    </div>
+
                                                                                 </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <!--Botão Cadastrar Decisão Provisória-->
+                                                                                    <div class="btn-group" style="float: right;">
+                                                                                        <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-plus"></i>
+                                                                                            Cadastrar Decisão Provisória</a>
+                                                                                    </div>
                                                                             </div>
                                                                         </form>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!--Histórico de Limirares-->
+                                                        <!--Histórico de Decisões Provisórias-->
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="ibox float-e-margins">
                                                                     <div class="ibox-title">
-                                                                        <h5>Histótico de Liminares</h5>
+                                                                        <h5>Histórico de Decisões Provisórias</h5>
                                                                         <div class="ibox-tools">
                                                                             <a class="collapse-link">
                                                                                 <i class="fa fa-chevron-up"></i>
@@ -4362,7 +4375,7 @@
                                                                             <div class="col-lg-12">
                                                                                 <div class="form-group" style="float: right;">
                                                                                     <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-print"></i>
-                                                                                        Imprimir Histórico de Liminares</a>
+                                                                                        Imprimir Histórico de Decisões Provisórias</a>
                                                                                     <a class="btn btn-primary btn-responsive" href="#"><i
                                                                                             class="fa fa-file-text-o"></i>
                                                                                         Exportar PDF</a>
@@ -4379,9 +4392,9 @@
                                                                                     <th>Curso<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Turma<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Nº do Processo<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Data da Liminar<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Motivo da Liminar<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Tribunal<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                                                                    <th>Data da Decisão Provisória<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                                                                    <th>Motivo da Decisão Provisória<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                                                                    <th>Vara/Seção Judicial/Tribunal<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Estado da Federação<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Status<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Ações<a style="float: right;"><i class="fa fa-sort"></i></a></th>
