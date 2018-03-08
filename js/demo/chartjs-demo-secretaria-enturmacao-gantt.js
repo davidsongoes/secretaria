@@ -10,14 +10,36 @@ $(function () {
     today = today.getTime();
 
 // THE CHART
+    Highcharts.setOptions({
+            lang: {
+                loading: 'Aguarde...',
+                months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+                shortMonths: ['Jan', 'Feb', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                exportButtonTitle: "Exportar",
+                printButtonTitle: "Imprimir",
+                rangeSelectorFrom: "De",
+                rangeSelectorTo: "Até",
+                rangeSelectorZoom: "Periodo",
+                downloadPNG: 'Download imagem PNG',
+                downloadJPEG: 'Download imagem JPEG',
+                downloadPDF: 'Download documento PDF',
+                downloadSVG: 'Download imagem SVG',
+                resetZoom: "Reset",
+                resetZoomTitle: "Reset",
+                thousandsSep: ".",
+                decimalPoint: ','
+            }
+        }
+    );
     Highcharts.ganttChart('chartGantt', {
         title: {
-            text: 'Gantt Chart Test'
+            text: 'CFOAV - CFOINT'
         },
         xAxis: {
-            currentDateIndicator: true,
-            min: today - 3 * day,
-            max: today + 18 * day
+            // currentDateIndicator: true,
+            // min: today - 60 * day,
+            // max: today + 18 * day
         },
 
         /*
@@ -31,100 +53,97 @@ $(function () {
         */
 
         series: [{
-            name: 'Offices',
+            name: 'CFOAV - 2018',
             data: [{
-                taskName: 'New offices',
-                id: 'new_offices',
-                start: today - 2 * day,
-                end: today + 14 * day
+                taskName: 'CFOAV - 2018',
+                id: 'cfoav2018',
+                start: today - 3 * day,
+                end: today + 30 * day
             }, {
-                taskName: 'Prepare office building',
+                taskName: 'Período de Inscrições - CFOAV',
                 id: 'prepare_building',
-                parent: 'new_offices',
-                start: today - (2 * day),
+                parent: 'cfoav2018',
+                start: today - (3 * day),
                 end: today + (6 * day),
                 completed: {
-                    amount: 0.2
+                    amount: 0.6
                 }
             }, {
-                taskName: 'Inspect building',
+                taskName: 'Exame de Admissão - CFOAV',
                 id: 'inspect_building',
                 dependency: 'prepare_building',
-                parent: 'new_offices',
+                parent: 'cfoav2018',
                 start: today + 6 * day,
                 end: today + 8 * day
             }, {
-                taskName: 'Passed inspection',
+                taskName: 'Exame de Aptidão Psicológica - CFOAV',
                 id: 'passed_inspection',
                 dependency: 'inspect_building',
-                parent: 'new_offices',
+                parent: 'cfoav2018',
                 start: today + 9.5 * day,
-                milestone: true
+                end: today + 11 * day
+                // milestone: true
             }, {
-                taskName: 'Relocate',
+                taskName: 'Inspeção de Saúde - CFOAV',
                 id: 'relocate',
                 dependency: 'passed_inspection',
-                parent: 'new_offices',
-                start: today + 10 * day,
-                end: today + 14 * day
+                parent: 'cfoav2018',
+                start: today + 15 * day,
+                end: today + 19 * day
             }, {
-                taskName: 'Relocate staff',
+                taskName: 'Teste de Aptidão de Condicionamento Físico - CFOAV',
                 id: 'relocate_staff',
-                parent: 'relocate',
-                start: today + 10 * day,
-                end: today + 11 * day
-            }, {
-                taskName: 'Relocate test facility',
-                dependency: 'relocate_staff',
-                parent: 'relocate',
-                start: today + 11 * day,
-                end: today + 13 * day
-            }, {
-                taskName: 'Relocate cantina',
-                dependency: 'relocate_staff',
-                parent: 'relocate',
-                start: today + 11 * day,
-                end: today + 14 * day
+                dependency: 'relocate',
+                parent: 'cfoav2018',
+                start: today + 25 * day,
+                end: today + 30 * day
             }]
         }, {
-            name: 'Product',
+            name: 'CFOINT - 2018',
             data: [{
-                taskName: 'New product launch',
-                id: 'new_product',
-                start: today - day,
-                end: today + 18 * day
+                taskName: 'CFOINT - 2018',
+                id: 'cfoint2018',
+                start: today - 3 * day,
+                end: today + 30 * day
             }, {
-                taskName: 'Development',
-                id: 'development',
-                parent: 'new_product',
-                start: today - day,
-                end: today + (11 * day),
+                taskName: 'Período de Inscrições - CFOINT',
+                id: 'prepare_building1',
+                parent: 'cfoint2018',
+                start: today - (3 * day),
+                end: today + (6 * day),
                 completed: {
-                    amount: 0.6,
-                    fill: '#e80'
+                    amount: 0.6
                 }
             }, {
-                taskName: 'Beta',
-                id: 'beta',
-                dependency: 'development',
-                parent: 'new_product',
-                start: today + 12.5 * day,
-                milestone: true
+                taskName: 'Exame de Admissão - CFOINT',
+                id: 'inspect_building1',
+                dependency: 'prepare_building1',
+                parent: 'cfoint2018',
+                start: today + 6 * day,
+                end: today + 8 * day
             }, {
-                taskName: 'Final development',
-                id: 'finalize',
-                dependency: 'beta',
-                parent: 'new_product',
-                start: today + 13 * day,
-                end: today + 17 * day
+                taskName: 'Exame de Aptidão Psicológica - CFOINT',
+                id: 'passed_inspection1',
+                dependency: 'inspect_building1',
+                parent: 'cfoint2018',
+                start: today + 9.5 * day,
+                end: today + 11 * day
+                // milestone: true
             }, {
-                taskName: 'Launch',
-                dependency: 'finalize',
-                parent: 'new_product',
-                start: today + 17.5 * day,
-                milestone: true
+                taskName: 'Inspeção de Saúde - CFOINT',
+                id: 'relocate1',
+                dependency: 'passed_inspection1',
+                parent: 'cfoint2018',
+                start: today + 15 * day,
+                end: today + 19 * day
+            }, {
+                taskName: 'Teste de Aptidão de Condicionamento Físico CFOINT',
+                id: 'relocate_staff1',
+                dependency: 'relocate1',
+                parent: 'cfoint2018',
+                start: today + 25 * day,
+                end: today + 30 * day
             }]
         }]
     });
-
 });
