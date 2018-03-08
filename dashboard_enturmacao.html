@@ -137,7 +137,7 @@
             <!--Gráfico de Gantt-->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="ibox float-e-margins">
+                    <div class="ibox" id="iboxGraficoGantt">
                         <div class="ibox-title">
                             <h5>Gráfico - Gantt</h5>
                             <div class="ibox-tools">
@@ -157,7 +157,14 @@
                         </div>
                         <div class="ibox-content">
                             <div class="row">
-                                <div id="chartGantt"></div>
+                                <div id="spinnerGantt" class="sk-spinner sk-spinner-three-bounce">
+                                    <div class="sk-bounce1"></div>
+                                    <div class="sk-bounce2"></div>
+                                    <div class="sk-bounce3"></div>
+                                </div>
+                                <div id="divGantt">
+                                    <div id="chartGantt"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -201,7 +208,8 @@
                                             <tr>
                                                 <td>CFOAV</td>
                                                 <td>
-                                                    <div class="i-checks"><label> <input id="radioCfoavCurso" type="radio" value="option1" name="cfoavCurso" checked> <i></i></label></div>
+                                                    <div class="i-checks"><label> <input id="radioCfoavCurso" type="radio" value="option1" name="cfoavCurso" checked>
+                                                        <i></i></label></div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -234,7 +242,8 @@
                                         <tbody>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoav2018" type="radio" value="option1" name="radioCfoavTurma" checked> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoav2018" type="radio" value="option1" name="radioCfoavTurma" checked>
+                                                    <i></i></label></div>
                                             </td>
                                             <td>2018</td>
                                             <td>AGD Matrícula</td>
@@ -288,42 +297,48 @@
                                         <tbody>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoint2018" type="radio" value="option1" name="radioCfointTurma" checked> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoint2018" type="radio" value="option1" name="radioCfointTurma" checked>
+                                                    <i></i></label></div>
                                             </td>
                                             <td>2018</td>
                                             <td>AGD Matrícula</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoint2017" type="radio" value="option1" name="radioCfointTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoint2017" type="radio" value="option1" name="radioCfointTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2017</td>
                                             <td>Em andamento</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoint2016" type="radio" value="option1" name="radioCfointTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoint2016" type="radio" value="option1" name="radioCfointTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2016</td>
                                             <td>Em andamento</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoint2015" type="radio" value="option1" name="radioCfointTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoint2015" type="radio" value="option1" name="radioCfointTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2015</td>
                                             <td>Em andamento</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoint2014" type="radio" value="option1" name="radioCfointTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoint2014" type="radio" value="option1" name="radioCfointTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2014</td>
                                             <td>Em andamento</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoint2013" type="radio" value="option1" name="radioCfointTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoint2013" type="radio" value="option1" name="radioCfointTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2013</td>
                                             <td>Concluída</td>
@@ -342,42 +357,48 @@
                                         <tbody>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoinf2018" type="radio" value="option1" name="radioCfoinfTurma" checked> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoinf2018" type="radio" value="option1" name="radioCfoinfTurma" checked>
+                                                    <i></i></label></div>
                                             </td>
                                             <td>2018</td>
                                             <td>AGD Matrícula</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoinf2017" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoinf2017" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2017</td>
                                             <td>Em andamento</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoinf2016" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoinf2016" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2016</td>
                                             <td>Em andamento</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoinf2015" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoinf2015" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2015</td>
                                             <td>Em andamento</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoinf2014" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoinf2014" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2014</td>
                                             <td>Em andamento</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div class="i-checks"><label> <input id="radioCfoinf2013" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label></div>
+                                                <div class="i-checks"><label> <input id="radioCfoinf2013" type="radio" value="option1" name="radioCfoinfTurma"> <i></i></label>
+                                                </div>
                                             </td>
                                             <td>2013</td>
                                             <td>Concluída</td>
@@ -1512,16 +1533,16 @@
                                 <!--Mostrar Páginas-->
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                            <label class="font-normal">Mostrar Páginas</label>
-                                            <div>
-                                                <select data-placeholder="Mostrar" class="chosen-select" tabindex="2">
-                                                    <option value="">Mostrar #5</option>
-                                                    <option value="">Mostrar #10</option>
-                                                    <option value="">Mostrar #15</option>
-                                                    <option value="">Mostrar #20</option>
-                                                    <option value="">Mostrar #100</option>
-                                                </select>
-                                            </div>
+                                        <label class="font-normal">Mostrar Páginas</label>
+                                        <div>
+                                            <select data-placeholder="Mostrar" class="chosen-select" tabindex="2">
+                                                <option value="">Mostrar #5</option>
+                                                <option value="">Mostrar #10</option>
+                                                <option value="">Mostrar #15</option>
+                                                <option value="">Mostrar #20</option>
+                                                <option value="">Mostrar #100</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--Botões-->
@@ -1735,25 +1756,29 @@
                                                     <tr>
                                                         <td>Cogitado</td>
                                                         <td>
-                                                            <div class="i-checks"><label> <input id="radioModificarStatusCogitado" type="radio" value="option1" name="modificarStatusAluno" checked> <i></i></label></div>
+                                                            <div class="i-checks"><label> <input id="radioModificarStatusCogitado" type="radio" value="option1"
+                                                                                                 name="modificarStatusAluno" checked> <i></i></label></div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>AGD Matrícula</td>
                                                         <td>
-                                                            <div class="i-checks"><label> <input id="radioModificarStatusAgdMatricula" type="radio" value="option1" name="modificarStatusAluno"> <i></i></label></div>
+                                                            <div class="i-checks"><label> <input id="radioModificarStatusAgdMatricula" type="radio" value="option1"
+                                                                                                 name="modificarStatusAluno"> <i></i></label></div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Matriculado</td>
                                                         <td>
-                                                            <div class="i-checks"><label> <input id="radioModificarStatusMatriculado" type="radio" value="option1" name="modificarStatusAluno"> <i></i></label></div>
+                                                            <div class="i-checks"><label> <input id="radioModificarStatusMatriculado" type="radio" value="option1"
+                                                                                                 name="modificarStatusAluno"> <i></i></label></div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Concluído</td>
                                                         <td>
-                                                            <div class="i-checks"><label> <input id="radioModificarStatusConcluido" type="radio" value="option1" name="modificarStatusAluno"> <i></i></label></div>
+                                                            <div class="i-checks"><label> <input id="radioModificarStatusConcluido" type="radio" value="option1"
+                                                                                                 name="modificarStatusAluno"> <i></i></label></div>
                                                         </td>
                                                     </tr>
                                                     </tbody>
@@ -1932,6 +1957,12 @@
 <script src="https://github.highcharts.com/gantt/highcharts-gantt.src.js"></script>
 
 <script>
+    window.onload = function () {
+        $('#spinnerGantt').fadeOut(300);
+
+    }
+</script>
+<script>
     $(document).ready(function () {
 
         //Notificação
@@ -1979,18 +2010,20 @@
 
             $('#tabelaTurmaCfointControle').show();
 
-            $('#tabelaTurmaCfoinfControle').hide();        });
+            $('#tabelaTurmaCfoinfControle').hide();
+        });
 
         $('#radioCfoinfCurso').on('ifChecked', function (event) {
             $('#tabelaTurmaCfoavControle').hide();
 
             $('#tabelaTurmaCfointControle').hide();
 
-            $('#tabelaTurmaCfoinfControle').show();        });
+            $('#tabelaTurmaCfoinfControle').show();
+        });
 
 
-    //    Alterna Gráfico
-    //    CFOAV
+        //    Alterna Gráfico
+        //    CFOAV
         $('#radioCfoav2018').on('ifChecked', function (event) {
             alert('GráficoCFOAV2018');
         });
@@ -2010,7 +2043,7 @@
             alert('GráficoCFOAV2013');
         });
 
-    //    CFOINT
+        //    CFOINT
         $('#radioCfoint2018').on('ifChecked', function (event) {
             alert('GráficoCFOINT2018');
         });
