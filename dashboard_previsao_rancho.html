@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | Secretaria</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+
+    <link href="css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+
+    <link href="css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <!--FullCalendar-->
+    <link href="css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+    <link href="css/plugins/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print'>
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg"/>
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong
+                                    class="font-bold">3S SIN GÓES</strong>
+                             </span> <span class="text-muted text-xs block">Developer <b
+                                    class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Perfil</a></li>
+                            <li><a href="contacts.html">Contatos</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Sair</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        E-SISTENS
+                    </div>
+                </li>
+                <!--Menu Lateral-->
+                <li class="">
+                    <a href="dashboard_area_aluno.html"><i class="fa fa-user"></i> <span class="nav-label">Área do Aluno</span> </a>
+
+                </li>
+                <li>
+                    <a href="dashboard_area_docente.html"><i class="fa fa-user-secret"></i> <span class="nav-label">Área do Docente</span> </a>
+
+                </li>
+                <li class="active">
+                    <a href=""><i class="fa fa-drivers-license"></i> <span class="nav-label">Secretaria</span> <span
+                            class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="dashboard_avisos.html"><i class="fa fa-exclamation-triangle"></i> <span
+                                class="nav-label">Avisos</span></a></li>
+                        <li><a href="dashboard_busca_discente.html"><i class="fa fa-users"></i> <span class="nav-label">Discente</span></a>
+                        </li>
+                        <li><a href="dashboard_emissao.html"><i class="fa fa-print"></i> <span
+                                class="nav-label">Emissão de Documentos</span></a></li>
+                        <li><a href="dashboard_enturmacao.html"><i class="fa fa-cubes"></i> <span class="nav-label">Enturmação</span></a>
+                        </li>
+                        <li class="active"><a href="dashboard_previsao_rancho.html"><i class="fa fa-cutlery"></i> <span class="nav-label">Previsão de Rancho</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top gray-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
+                </div>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Previsão de Rancho</h2>
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="index.html">Secretaria</a>
+                            </li>
+                            <li class="active">
+                                <strong>Previsão de Rancho</strong>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeIn">
+            <!--início conteúdo-->
+            <div class="container-fluid animated fadeIn">
+                <!--Previsão de Rancho-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins ">
+                            <div class="ibox-title">
+                                <h5>Previsão de Rancho</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <!--Calendário-->
+                                    <div class="col-md-6">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-title">
+                                                <h5>Calendário</h5>
+                                                <div class="ibox-tools">
+                                                    <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                    <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div id="calendar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Solicitações/Gráfico-->
+                                    <div class="col-md-6">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-title">
+                                                <h5>Solicitações e Gráfico</h5>
+                                                <div class="ibox-tools">
+                                                    <a class="collapse-link">
+                                                        <i class="fa fa-chevron-up"></i>
+                                                    </a>
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                    <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div class="row table-responsive">
+                                                    <table class="table table-striped">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Data</th>
+                                                        <th>Tipo</th>
+                                                        <th>Quantidade de Docentes</th>
+                                                        <th>Quantidade de Discentes</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>12/03/2018</td>
+                                                        <td>Café da Manhã</td>
+                                                        <td>15</td>
+                                                        <td>120</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12/03/2018</td>
+                                                        <td>Almoço</td>
+                                                        <td>30</td>
+                                                        <td>70</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13/03/2018</td>
+                                                        <td>Café da Manhã</td>
+                                                        <td>20</td>
+                                                        <td>78</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14/03/2018</td>
+                                                        <td>Café da Manhã</td>
+                                                        <td>35</td>
+                                                        <td>65</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15/03/2018</td>
+                                                        <td>Ceia</td>
+                                                        <td>2</td>
+                                                        <td>90</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16/03/2018</td>
+                                                        <td>Café da Manhã</td>
+                                                        <td>25</td>
+                                                        <td>70</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17/03/2018</td>
+                                                        <td>Jantar</td>
+                                                        <td>0</td>
+                                                        <td>120</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                </div>
+                                                <div>
+                                                    <p class="text-center"><strong>Março</strong></p>
+                                                    <canvas id="barChartPrevisaoRancho" height="100"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Gráfico uso do Rancho-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Gráfico - Uso do Rancho</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> E-SISTENS - FORÇA AÉREA BRASILEIRA &copy; 2018
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Mainly scripts -->
+<script src="js/plugins/fullcalendar/moment.min.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Flot -->
+<script src="js/plugins/flot/jquery.flot.js"></script>
+<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="js/plugins/flot/jquery.flot.spline.js"></script>
+<script src="js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="js/plugins/flot/jquery.flot.symbol.js"></script>
+<script src="js/plugins/flot/jquery.flot.time.js"></script>
+
+<!-- Chosen -->
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+
+<!-- Peity -->
+<script src="js/plugins/peity/jquery.peity.min.js"></script>
+<script src="js/demo/peity-demo.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Input Mask-->
+<script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+<!-- Jvectormap -->
+<script src="js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+<script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+<!-- EayPIE -->
+<script src="js/plugins/easypiechart/jquery.easypiechart.js"></script>
+
+<!-- Sparkline -->
+<script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+
+<!-- Sparkline demo data  -->
+<script src="js/demo/sparkline-demo.js"></script>
+
+<!-- Rickshaw -->
+<script src="js/plugins/rickshaw/vendor/d3.v3.js"></script>
+<script src="js/plugins/rickshaw/rickshaw.min.js"></script>
+
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- Sweet alert -->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+<!-- Full Calendar -->
+<script src="js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="js/plugins/fullcalendar/pt.js"></script>
+
+<!--FullCalendar Rancho-->
+<script src="js/demo/fullcalendar-rancho-previsao.js"></script>
+
+<!-- Toastr script -->
+<script src="js/plugins/toastr/toastr.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        //Blink <tr> aviso prioridade alta
+        var count = 0, $div = $('#trAvisoPrioridadeAlta'), interval = setInterval(function () {
+            if ($div.hasClass('warning')) {
+                $div.removeClass('warning');
+                ++count;
+            }
+            else
+                $div.addClass('warning');
+            //Caso haja necessidade de limit no Blink
+            // if (count  5) clearInterval(interval);
+        }, 300);
+
+
+        //Confirmar Ciência aviso
+        $('.checkboxCiente').on('ifChecked', function () {
+            swal({
+                title: "Ciente",
+                type: "success"
+            });
+        });
+
+        $('.checkboxCiente').on('ifUnchecked', function () {
+            swal({
+                title: "Ciente desmarcado",
+                type: "error"
+            });
+        });
+
+        //Notificação
+        toastr.options.progressBar= true;
+        toastr.options.closeButton= true;
+        toastr['warning']('Algumas funcionalidades não funcionam', 'Página Protótipo');
+
+        $('.chosen-select').chosen({width: "100%"});
+
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+
+        //Cadastrar Ano de fabricação do veículo
+        $('#secretaria_area_aluno_veiculo_ano_fabricacao .input-group.date').datepicker({
+            todayBtn: "linked",
+            language: 'pt',
+            format: 'yyyy',
+            keyboardNavigation: false,
+            forceParse: false,
+            viewMode: "years",
+            minViewMode: "years",
+            autoclose: true
+        }).datepicker('setDate', 'today');
+
+        //Cadastrar Ano do modelo do veículo
+        $('#secretaria_area_aluno_veiculo_ano_modelo .input-group.date').datepicker({
+            todayBtn: "linked",
+            language: 'pt',
+            format: 'yyyy',
+            keyboardNavigation: false,
+            forceParse: false,
+            viewMode: "years",
+            minViewMode: "years",
+            autoclose: true
+        }).datepicker('setDate', 'today');
+
+        //Editar Ano de fabricação do veículo
+        $('#secretaria_area_aluno_editar_veiculo_ano_fabricacao .input-group.date').datepicker({
+            todayBtn: "linked",
+            language: 'pt',
+            format: 'yyyy',
+            keyboardNavigation: false,
+            forceParse: false,
+            viewMode: "years",
+            minViewMode: "years",
+            autoclose: true
+        });
+
+        //Editar Ano do modelo do veículo
+        $('#secretaria_area_aluno_editar_veiculo_ano_modelo .input-group.date').datepicker({
+            todayBtn: "linked",
+            language: 'pt',
+            format: 'yyyy',
+            keyboardNavigation: false,
+            forceParse: false,
+            viewMode: "years",
+            minViewMode: "years",
+            autoclose: true
+        });
+
+        //Gráfico e Tabela Desempenho Acadêmico - Ações
+
+        $('#grafico-desempenho-cap').hide();
+        $('#table-desempenho-cap').hide();
+
+        $('#grafico-desempenho-ccem').hide();
+        $('#table-desempenho-ccem').hide();
+
+        $('#radio-grafico-desempenho-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV');
+            $('#grafico-desempenho-cfoav').show();
+            $('#table-desempenho-cfoav').show();
+
+            $('#grafico-desempenho-cap').hide();
+            $('#table-desempenho-cap').hide();
+
+            $('#grafico-desempenho-ccem').hide();
+            $('#table-desempenho-ccem').hide();
+        });
+
+        $('#radio-grafico-desempenho-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP');
+            $('#grafico-desempenho-cfoav').hide();
+            $('#table-desempenho-cfoav').hide();
+
+            $('#grafico-desempenho-cap').show();
+            $('#table-desempenho-cap').show();
+
+            $('#grafico-desempenho-ccem').hide();
+            $('#table-desempenho-ccem').hide();
+        });
+
+        $('#radio-grafico-desempenho-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM');
+            $('#grafico-desempenho-cfoav').hide();
+            $('#table-desempenho-cfoav').hide();
+
+            $('#grafico-desempenho-cap').hide();
+            $('#table-desempenho-cap').hide();
+
+            $('#grafico-desempenho-ccem').show();
+            $('#table-desempenho-ccem').show();
+
+        });
+
+        //    Tabela Cadastro Tutor - Curso | Turma
+
+        $('#tabela-turma-tutor-cap').hide();
+        $('#tabela-turma-tutor-ccem').hide();
+
+        $('#radio-tabela-curso-tutor-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV Tutor');
+            $('#tabela-turma-tutor-cfoav').show();
+            $('#tabela-turma-tutor-cap').hide();
+            $('#tabela-turma-tutor-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP Tutor');
+            $('#tabela-turma-tutor-cfoav').hide();
+            $('#tabela-turma-tutor-cap').show();
+            $('#tabela-turma-tutor-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM Tutor');
+            $('#tabela-turma-tutor-cfoav').hide();
+            $('#tabela-turma-tutor-cap').hide();
+            $('#tabela-turma-tutor-ccem').show();
+        });
+
+        //    Tabela Editar Tutor1 - Curso | Turma
+
+        $('#tabela-turma-tutor1-cfoav').hide();
+        $('#tabela-turma-tutor1-ccem').hide();
+
+        $('#radio-tabela-curso-tutor1-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV Tutor');
+            $('#tabela-turma-tutor1-cfoav').show();
+            $('#tabela-turma-tutor1-cap').hide();
+            $('#tabela-turma-tutor1-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor1-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP Tutor');
+            $('#tabela-turma-tutor1-cfoav').hide();
+            $('#tabela-turma-tutor1-cap').show();
+            $('#tabela-turma-tutor1-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor1-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM Tutor');
+            $('#tabela-turma-tutor1-cfoav').hide();
+            $('#tabela-turma-tutor1-cap').hide();
+            $('#tabela-turma-tutor1-ccem').show();
+        });
+
+        //    Tabela Editar Tutor2 - Curso | Turma
+
+        $('#tabela-turma-tutor2-cfoav').hide();
+        $('#tabela-turma-tutor2-cap').hide();
+
+        $('#radio-tabela-curso-tutor2-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV Tutor');
+            $('#tabela-turma-tutor2-cfoav').show();
+            $('#tabela-turma-tutor2-cap').hide();
+            $('#tabela-turma-tutor2-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor2-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP Tutor');
+            $('#tabela-turma-tutor2-cfoav').hide();
+            $('#tabela-turma-tutor2-cap').show();
+            $('#tabela-turma-tutor2-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-tutor2-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM Tutor');
+            $('#tabela-turma-tutor2-cfoav').hide();
+            $('#tabela-turma-tutor2-cap').hide();
+            $('#tabela-turma-tutor2-ccem').show();
+        });
+
+        //    Tabela Cadastro Subturma - Curso | Turma
+
+        $('#tabela-turma-subturma-cap').hide();
+        $('#tabela-turma-subturma-ccem').hide();
+
+        $('#radio-tabela-curso-subturma-cfoav').on('ifChecked', function (event) {
+            // alert(event.type + ' CFOAV Tutor');
+            $('#tabela-turma-subturma-cfoav').show();
+            $('#tabela-turma-subturma-cap').hide();
+            $('#tabela-turma-subturma-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-subturma-cap').on('ifChecked', function (event) {
+            // alert(event.type + ' CAP Tutor');
+            $('#tabela-turma-subturma-cfoav').hide();
+            $('#tabela-turma-subturma-cap').show();
+            $('#tabela-turma-subturma-ccem').hide();
+        });
+
+        $('#radio-tabela-curso-subturma-ccem').on('ifChecked', function (event) {
+            // alert(event.type + ' CCEM Tutor');
+            $('#tabela-turma-subturma-cfoav').hide();
+            $('#tabela-turma-subturma-cap').hide();
+            $('#tabela-turma-subturma-ccem').show();
+        });
+    });
+
+    function imprimirDocumento(mensagem) {
+        swal({
+            title: mensagem,
+            text: "Impresso com sucesso!",
+            type: "success"
+        });
+    }
+
+</script>
+
+<!-- ChartJS-->
+<script src="js/plugins/chartJs/Chart.min.js"></script>
+<script src="js/demo/chartjs-demo-rancho-previsao.js"></script>
+</body>
+</html>
