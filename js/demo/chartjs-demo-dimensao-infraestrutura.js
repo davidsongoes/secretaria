@@ -1,98 +1,223 @@
 $(function () {
-    //Cor do background aleatória
-    var randomColorGenerator = function () {
-        return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+    //Cor do background aleatória RGB
+    var randomColorGeneratorRgb = function () {
+        var graphColors1 = [];
+        var randomR = Math.floor((Math.random() * 130) + 100);
+        var randomG = Math.floor((Math.random() * 130) + 100);
+        var randomB = Math.floor((Math.random() * 130) + 100);
+
+        var graphBackground1 = "rgb("
+            + randomR + ", "
+            + randomG + ", "
+            + randomB + ")";
+        return graphBackground1;
     };
 
-    // barra 1
-    var barData = {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+
+    //Cor do background aleatória RGB por linha 1
+    var internalData1 = [65, 59, 80, 81, 56];
+
+    var graphColors1 = [];
+    var graphOutlines1 = [];
+    var hoverColor1 = [];
+
+    var internalDataLength1 = internalData1.length;
+    i = 0;
+    while (i <= internalDataLength1) {
+        var randomR = Math.floor((Math.random() * 130) + 100);
+        var randomG = Math.floor((Math.random() * 130) + 100);
+        var randomB = Math.floor((Math.random() * 130) + 100);
+
+        var graphBackground1 = "rgb("
+            + randomR + ", "
+            + randomG + ", "
+            + randomB + ")";"rgba(26,179,148,0.2)"
+        graphColors1.push(graphBackground1);
+
+        var graphOutline1 = "rgb("
+            + (randomR - 80) + ", "
+            + (randomG - 80) + ", "
+            + (randomB - 80) + ")";
+        graphOutlines1.push(graphOutline1);
+
+        var hoverColors1 = "rgb("
+            + (randomR + 25) + ", "
+            + (randomG + 25) + ", "
+            + (randomB + 25) + ")";
+        hoverColor1.push(hoverColors1);
+
+        i++;
+    };
+
+    //Cor do background aleatória RGB por linha 2
+    var internalData2 = [65, 59, 80, 81, 56];
+
+    var graphColors2 = [];
+    var graphOutlines2 = [];
+    var hoverColor2 = [];
+
+    var internalDataLength2 = internalData2.length;
+    i = 0;
+    while (i <= internalDataLength2) {
+        var randomR = Math.floor((Math.random() * 130) + 100);
+        var randomG = Math.floor((Math.random() * 130) + 100);
+        var randomB = Math.floor((Math.random() * 130) + 100);
+
+        var graphBackground2 = "rgb("
+            + randomR + ", "
+            + randomG + ", "
+            + randomB + ")";
+        graphColors2.push(graphBackground2);
+
+        var graphOutline2 = "rgb("
+            + (randomR - 80) + ", "
+            + (randomG - 80) + ", "
+            + (randomB - 80) + ")";
+        graphOutlines2.push(graphOutline2);
+
+        var hoverColors2 = "rgb("
+            + (randomR + 25) + ", "
+            + (randomG + 25) + ", "
+            + (randomB + 25) + ")";
+        hoverColor2.push(hoverColors2);
+
+        i++;
+    };
+
+
+    // Gráfico 1 - Barra
+    var barData1 = {
+        labels: ["Excelente", "Ótima", "Boa", "Ruím", "Péssima"],
+        datasets: [
+            {
+                backgroundColor: graphColors1,
+                borderColor: graphOutlines1,
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                hoverBackgroundColor: hoverColor1,
+                pointBorderColor: "#fff",
+                data: [60, 20, 10, 5, 5]
+            }
+        ]
+    };
+
+    var barOptions1 = {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    steps: 10,
+                    stepValue: 5,
+                    max: 100
+                }
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        },
+        legend: {
+            display: false
+        },
+        responsive: true
+    };
+
+
+    var ctx1 = document.getElementById("chartInfra1").getContext("2d");
+    new Chart(ctx1, {type: 'horizontalBar', data: barData1, options: barOptions1});
+
+    // Gráfico 2 - Barra
+    var barData2 = {
+        labels: ["Bastante Adequados", "Adequados", "Parcialamente Adequados", "Pouco Adequados", "Inadequados"],
         datasets: [
             {
                 label: "CFOAV",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
+                backgroundColor: randomColorGeneratorRgb(),
+                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
+                data: [60, 35, 3, 1, 1]
             },
             {
                 label: "CFOINT",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
+                backgroundColor: randomColorGeneratorRgb(),
+                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [64, 57, 48, 55, 35, 47, 60]
+                data: [72, 25, 1, 1, 1]
             },
             {
                 label: "CFOINF",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
+                backgroundColor: randomColorGeneratorRgb(),
+                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: [80, 19, 1, 0, 0]
             }
         ]
     };
 
-    var barOptions = {
+    var barOptions2 = {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    steps: 10,
+                    stepValue: 5,
+                    max: 100
+                }
+            }]
+        },
         responsive: true
     };
 
 
-    var ctx1 = document.getElementById("barChart").getContext("2d");
-    new Chart(ctx1, {type: 'bar', data: barData, options: barOptions});
+    var ctx2 = document.getElementById("chartInfra2").getContext("2d");
+    new Chart(ctx2, {type: 'horizontalBar', data: barData2, options: barOptions2});
 
-    // line 1
-    var lineData = {
-        labels: ["Turma A", "Turma B", "Turma C", "Turma D", "Turma E", "Turma F"],
-        datasets: [
-
-            {
-                label: "SIN",
-                backgroundColor: 'rgba(26, 94, 179,0.5)',
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [28, 34, 40, 19, 30, 27, 35]
-            },{
-                label: "BET",
-                backgroundColor: 'rgba(255, 218, 185, 0.5)',
-                pointBorderColor: "#fff",
-                data: [32, 25, 28, 40, 35, 27, 35]
-            }, {
-                label: "SEF",
-                backgroundColor: 'rgba(184, 255, 217, 0.5)',
-                pointBorderColor: "#fff",
-                data: [36, 30, 32, 28, 34, 27, 32]
-            }
-        ]
-    };
-
-    var lineOptions = {
-        responsive: true
-    };
-
-
-    var ctx = document.getElementById("lineChart").getContext("2d");
-    new Chart(ctx, {type: 'line', data: lineData, options: lineOptions});
-
-    // chart 1
+//    Gráfico 3 - Doughnut
     var doughnutData = {
-        labels: ["ASP", "2T", "1T"],
+        labels: ["Excelente", "Ótima", "Boa", "Ruím", "Péssima"],
         datasets: [{
-            data: [80, 50, 75],
-            backgroundColor: [randomColorGenerator(), randomColorGenerator(), randomColorGenerator()]
+            data: [80,11,8,1,0],
+            backgroundColor: [randomColorGeneratorRgb(),randomColorGeneratorRgb(),randomColorGeneratorRgb(),randomColorGeneratorRgb(), randomColorGeneratorRgb()]
         }]
-    };
+    } ;
 
 
     var doughnutOptions = {
         responsive: true
-
     };
 
 
-    var ctx4 = document.getElementById("doughnutChart").getContext("2d");
-    new Chart(ctx4, {type: 'doughnut', data: doughnutData, options: doughnutOptions});
+    var ctx3 = document.getElementById("chartInfra3").getContext("2d");
+    new Chart(ctx3, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
+
+//    Gráfico 4 - Polar
+
+    var polarData = {
+        datasets: [{
+            data: [
+                60,25,10,5
+            ],
+            backgroundColor: [randomColorGeneratorRgb(),randomColorGeneratorRgb(),randomColorGeneratorRgb(),randomColorGeneratorRgb()],
+            label: [
+                "My Radar chart"
+            ]
+        }],
+        labels: [
+            "Muito satisfatório","Satisfatório","Pouco satisfatório","Não satisfatório"
+        ]
+    };
+
+    var polarOptions = {
+        segmentStrokeWidth: 2,
+        beginAtZero: true,
+        steps: 10,
+        stepValue: 5,
+        max: 100
+
+    };
+
+    var ctx4 = document.getElementById("chartInfra4").getContext("2d");
+    new Chart(ctx4, {type: 'polarArea', data: polarData, options:polarOptions});
 
 });
