@@ -1,33 +1,29 @@
 $(function () {
-    //Cor do background aleatória RGB
+    // Cor do background aleatória RGB
     var randomColorGeneratorRgb = function (flag) {
-        graphBackground1 = "";
         var randomR = Math.floor((Math.random() * 130) + 100);
         var randomG = Math.floor((Math.random() * 130) + 100);
         var randomB = Math.floor((Math.random() * 130) + 100);
 
         if (flag == 'back') {
-            var graphBackground1 = "rgb("
+            var graphBackground4 = "rgba("
                 + randomR + ", "
                 + randomG + ", "
-                + randomB + ","
-                + 0.5 + ")";
+                + randomB + ", 0.6)";
+        }if( flag == 'borda'){
+            var graphBackground4 = "rgba("
+                + randomR + ", "
+                + randomG + ", "
+                + randomB + ", 1)";
+        }if(flag == 'ponto'){
+            var graphBackground4 = "rgba("
+                + randomR + ", "
+                + randomG + ", "
+                + randomB + ", 1)";
         }
-        if (flag == 'borda') {
-            var graphBackground1 = "rgb("
-                + randomR + ", "
-                + randomG + ", "
-                + randomB + ","
-                + 0.8 + ")";
-        }if (flag == 'ponto'){
-            var graphBackground1 = "rgb("
-                + randomR + ", "
-                + randomG + ", "
-                + randomB + ","
-                + 1 + ")";
-        }
-        return graphBackground1;
+        return graphBackground4;
     };
+
 
     //Cor do background aleatória RGB por linha 1
     var internalData1 = [65, 59, 80, 81, 56];
@@ -43,27 +39,26 @@ $(function () {
         var randomG = Math.floor((Math.random() * 130) + 100);
         var randomB = Math.floor((Math.random() * 130) + 100);
 
-        var graphBackground1 = "rgb("
+        var graphBackground1 = "rgba("
             + randomR + ", "
             + randomG + ", "
-            + randomB +", "
-            + 0.7 + ")";
+            + randomB + ", 0.4)";
         graphColors1.push(graphBackground1);
 
-        var graphOutline1 = "rgb("
+        var graphOutline1 = "rgba("
             + (randomR - 80) + ", "
             + (randomG - 80) + ", "
-            + (randomB - 80) + ")";
+            + (randomB - 80) + ", 0.7)";
         graphOutlines1.push(graphOutline1);
 
-        var hoverColors1 = "rgb("
+        var hoverColors1 = "rgba("
             + (randomR + 25) + ", "
             + (randomG + 25) + ", "
-            + (randomB + 25) + ")";
+            + (randomB + 25) + ", 1)";
         hoverColor1.push(hoverColors1);
 
         i++;
-    };
+    }
 
     //Cor do background aleatória RGB por linha 2
     var internalData2 = [65, 59, 80, 81, 56];
@@ -72,34 +67,33 @@ $(function () {
     var graphOutlines2 = [];
     var hoverColor2 = [];
 
-    var internalDataLength2 = internalData1.length;
+    var internalDataLength2 = internalData2.length;
     i = 0;
     while (i <= internalDataLength2) {
-        var randomR = Math.floor((Math.random() * 130) + 100);
-        var randomG = Math.floor((Math.random() * 130) + 100);
-        var randomB = Math.floor((Math.random() * 130) + 100);
+        var randomR1 = Math.floor((Math.random() * 130) + 100);
+        var randomG1 = Math.floor((Math.random() * 130) + 100);
+        var randomB1 = Math.floor((Math.random() * 130) + 100);
 
-        var graphBackground2 = "rgb("
-            + randomR + ", "
-            + randomG + ", "
-            + randomB +", "
-            + 0.3 + ")";
+        var graphBackground2 = "rgba("
+            + randomR1 + ", "
+            + randomG1 + ", "
+            + randomB1 + ", 0.4)";
         graphColors2.push(graphBackground2);
 
-        var graphOutline2 = "rgb("
-            + (randomR - 80) + ", "
-            + (randomG - 80) + ", "
-            + (randomB - 80) + ")";
+        var graphOutline2 = "rgba("
+            + (randomR1 - 80) + ", "
+            + (randomG1 - 80) + ", "
+            + (randomB1 - 80) + ", 0.7)";
         graphOutlines2.push(graphOutline2);
 
-        var hoverColors2 = "rgb("
-            + (randomR + 25) + ", "
-            + (randomG + 25) + ", "
-            + (randomB + 25) + ")";
+        var hoverColors2 = "rgba("
+            + (randomR1 + 25) + ", "
+            + (randomG1 + 25) + ", "
+            + (randomB1 + 25) + ", 1)";
         hoverColor2.push(hoverColors2);
 
         i++;
-    };
+    }
 
     // Gráfico 1 - Radar
     var radarData = {
@@ -108,19 +102,19 @@ $(function () {
             {
                 label: "CFOAV",
                 backgroundColor: randomColorGeneratorRgb('back'),
-                borderColor: randomColorGeneratorRgb('borda'),
+                borderColor: 'rgba(103, 106, 108, 0.4)',
                 data: [10, 30, 40, 10, 5]
             },
             {
                 label: "CFOINT",
                 backgroundColor: randomColorGeneratorRgb('back'),
-                borderColor: randomColorGeneratorRgb('borda'),
+                borderColor: 'rgba(103, 106, 108, 0.4)',
                 data: [20, 0, 40, 20, 20]
             },
             {
                 label: "CFOINF",
                 backgroundColor: randomColorGeneratorRgb('back'),
-                borderColor: randomColorGeneratorRgb('borda'),
+                borderColor: 'rgba(103, 106, 108, 0.4)',
                 data: [30, 0, 20, 10, 40]
             }
         ]
@@ -136,7 +130,7 @@ $(function () {
     // Gŕafico 2 - Barra
     var barData2 = {
         labels: [
-            "Muito satisfatório","Satisfatório","Pouco satisfatório","Não satisfatório"],
+            "Muito satisfatório", "Satisfatório", "Pouco satisfatório", "Não satisfatório"],
         datasets: [
             {
                 backgroundColor: graphColors1,
@@ -185,16 +179,16 @@ $(function () {
                 pointBackgroundColor: randomColorGeneratorRgb('ponto'),
                 pointBorderColor: "#fff",
                 data: [0, 7, 11, 13, 15, 19]
-            },{
+            }, {
                 label: "CFOINT",
                 backgroundColor: randomColorGeneratorRgb('back'),
                 pointBackgroundColor: randomColorGeneratorRgb('ponto'),
                 data: [0, 5, 9, 12, 14, 16]
-            },{
+            }, {
                 label: "CFOINF",
                 backgroundColor: randomColorGeneratorRgb('back'),
                 pointBackgroundColor: randomColorGeneratorRgb('ponto'),
-                data: [0, 8,11, 16, 20, 26]
+                data: [0, 8, 11, 16, 20, 26]
             }
         ]
     };
@@ -209,16 +203,16 @@ $(function () {
 
 
     var ctx3 = document.getElementById("chartDidatico3").getContext("2d");
-    new Chart(ctx3, {type: 'line', data: lineData, options:lineOptions});
+    new Chart(ctx3, {type: 'line', data: lineData, options: lineOptions});
 
 //    Gráfico 4 - Doughnut
     var doughnutData = {
-        labels: ["Fase 1","Fase 2","Fase 3" ],
+        labels: ["Fase 1", "Fase 2", "Fase 3"],
         datasets: [{
-            data: [50,60,45],
-            backgroundColor: [randomColorGeneratorRgb('back'),randomColorGeneratorRgb('back'),randomColorGeneratorRgb('back')]
+            data: [50, 60, 45],
+            backgroundColor: [randomColorGeneratorRgb('back'), randomColorGeneratorRgb('back'), randomColorGeneratorRgb('back')]
         }]
-    } ;
+    };
 
 
     var doughnutOptions = {
@@ -227,6 +221,6 @@ $(function () {
 
 
     var ctx4 = document.getElementById("chartDidatico4").getContext("2d");
-    new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
+    new Chart(ctx4, {type: 'doughnut', data: doughnutData, options: doughnutOptions});
 
 });
