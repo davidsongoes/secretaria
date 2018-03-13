@@ -1,279 +1,232 @@
 $(function () {
-    //Cor do background aleatória
-    var randomColorGenerator = function () {
-        return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+    //Cor do background aleatória RGB
+    var randomColorGeneratorRgb = function (flag) {
+        graphBackground1 = "";
+        var randomR = Math.floor((Math.random() * 130) + 100);
+        var randomG = Math.floor((Math.random() * 130) + 100);
+        var randomB = Math.floor((Math.random() * 130) + 100);
+
+        if (flag == 'back') {
+            var graphBackground1 = "rgb("
+                + randomR + ", "
+                + randomG + ", "
+                + randomB + ","
+                + 0.5 + ")";
+        }
+        if (flag == 'borda') {
+            var graphBackground1 = "rgb("
+                + randomR + ", "
+                + randomG + ", "
+                + randomB + ","
+                + 0.8 + ")";
+        }if (flag == 'ponto'){
+            var graphBackground1 = "rgb("
+                + randomR + ", "
+                + randomG + ", "
+                + randomB + ","
+                + 1 + ")";
+        }
+        return graphBackground1;
     };
 
-    // barra 1
-    var barData1 = {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+    //Cor do background aleatória RGB por linha 1
+    var internalData1 = [65, 59, 80, 81, 56];
+
+    var graphColors1 = [];
+    var graphOutlines1 = [];
+    var hoverColor1 = [];
+
+    var internalDataLength1 = internalData1.length;
+    i = 0;
+    while (i <= internalDataLength1) {
+        var randomR = Math.floor((Math.random() * 130) + 100);
+        var randomG = Math.floor((Math.random() * 130) + 100);
+        var randomB = Math.floor((Math.random() * 130) + 100);
+
+        var graphBackground1 = "rgb("
+            + randomR + ", "
+            + randomG + ", "
+            + randomB +", "
+            + 0.7 + ")";
+        graphColors1.push(graphBackground1);
+
+        var graphOutline1 = "rgb("
+            + (randomR - 80) + ", "
+            + (randomG - 80) + ", "
+            + (randomB - 80) + ")";
+        graphOutlines1.push(graphOutline1);
+
+        var hoverColors1 = "rgb("
+            + (randomR + 25) + ", "
+            + (randomG + 25) + ", "
+            + (randomB + 25) + ")";
+        hoverColor1.push(hoverColors1);
+
+        i++;
+    };
+
+    //Cor do background aleatória RGB por linha 2
+    var internalData2 = [65, 59, 80, 81, 56];
+
+    var graphColors2 = [];
+    var graphOutlines2 = [];
+    var hoverColor2 = [];
+
+    var internalDataLength2 = internalData1.length;
+    i = 0;
+    while (i <= internalDataLength2) {
+        var randomR = Math.floor((Math.random() * 130) + 100);
+        var randomG = Math.floor((Math.random() * 130) + 100);
+        var randomB = Math.floor((Math.random() * 130) + 100);
+
+        var graphBackground2 = "rgb("
+            + randomR + ", "
+            + randomG + ", "
+            + randomB +", "
+            + 0.3 + ")";
+        graphColors2.push(graphBackground2);
+
+        var graphOutline2 = "rgb("
+            + (randomR - 80) + ", "
+            + (randomG - 80) + ", "
+            + (randomB - 80) + ")";
+        graphOutlines2.push(graphOutline2);
+
+        var hoverColors2 = "rgb("
+            + (randomR + 25) + ", "
+            + (randomG + 25) + ", "
+            + (randomB + 25) + ")";
+        hoverColor2.push(hoverColors2);
+
+        i++;
+    };
+
+    // Gráfico 1 - Radar
+    var radarData = {
+        labels: ["A pedido", "Voo", "Ensino", "Liminar", "Saude"],
         datasets: [
             {
                 label: "CFOAV",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
+                backgroundColor: randomColorGeneratorRgb('back'),
+                borderColor: randomColorGeneratorRgb('borda'),
+                data: [10, 30, 40, 10, 5]
             },
             {
                 label: "CFOINT",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [64, 57, 48, 55, 35, 47, 60]
+                backgroundColor: randomColorGeneratorRgb('back'),
+                borderColor: randomColorGeneratorRgb('borda'),
+                data: [20, 0, 40, 20, 20]
             },
             {
                 label: "CFOINF",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                backgroundColor: randomColorGeneratorRgb('back'),
+                borderColor: randomColorGeneratorRgb('borda'),
+                data: [30, 0, 20, 10, 40]
             }
         ]
     };
 
-    var barOptions1 = {
+    var radarOptions = {
         responsive: true
     };
 
-
     var ctx1 = document.getElementById("chartDidatico1").getContext("2d");
-    new Chart(ctx1, {type: 'bar', data: barData1, options: barOptions1});
+    new Chart(ctx1, {type: 'radar', data: radarData, options: radarOptions});
 
-    // barra 2
+    // Gŕafico 2 - Barra
     var barData2 = {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+        labels: [
+            "Muito satisfatório","Satisfatório","Pouco satisfatório","Não satisfatório"],
         datasets: [
             {
-                label: "CFOAV",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
+                backgroundColor: graphColors1,
+                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
+                hoverBackgroundColor: hoverColor1,
                 pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
-                label: "CFOINT",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [64, 57, 48, 55, 35, 47, 60]
-            },
-            {
-                label: "CFOINF",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: [60, 20, 10, 10]
             }
         ]
     };
 
     var barOptions2 = {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    steps: 10,
+                    stepValue: 5,
+                    max: 100
+                }
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        },
+        legend: {
+            display: false
+        },
         responsive: true
     };
 
 
     var ctx2 = document.getElementById("chartDidatico2").getContext("2d");
-    new Chart(ctx2, {type: 'bar', data: barData2, options: barOptions2});
+    new Chart(ctx2, {type: 'horizontalBar', data: barData2, options: barOptions2});
 
-    // barra 3
-    var barData3 = {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+//    Gráfico 3 - Line
+
+    var lineData = {
+        labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"],
         datasets: [
+
             {
-                label: "CFOAV",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
+                label: "CFAOV",
+                backgroundColor: graphBackground2,
+                pointBackgroundColor: randomColorGeneratorRgb('ponto'),
                 pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
+                data: [0, 7, 11, 13, 15, 19]
+            },{
                 label: "CFOINT",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [64, 57, 48, 55, 35, 47, 60]
-            },
-            {
+                backgroundColor: randomColorGeneratorRgb('back'),
+                pointBackgroundColor: randomColorGeneratorRgb('ponto'),
+                data: [0, 5, 9, 12, 14, 16]
+            },{
                 label: "CFOINF",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                backgroundColor: randomColorGeneratorRgb('back'),
+                pointBackgroundColor: randomColorGeneratorRgb('ponto'),
+                data: [0, 8,11, 16, 20, 26]
             }
         ]
     };
 
-    var barOptions3 = {
+    var lineOptions = {
+        beginAtZero: true,
+        steps: 10,
+        stepValue: 5,
+        max: 100,
         responsive: true
     };
 
 
     var ctx3 = document.getElementById("chartDidatico3").getContext("2d");
-    new Chart(ctx3, {type: 'bar', data: barData3, options: barOptions3});
+    new Chart(ctx3, {type: 'line', data: lineData, options:lineOptions});
 
-    // barra 4
-    var barData4 = {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
-        datasets: [
-            {
-                label: "CFOAV",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
-                label: "CFOINT",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [64, 57, 48, 55, 35, 47, 60]
-            },
-            {
-                label: "CFOINF",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
-            }
-        ]
-    };
+//    Gráfico 4 - Doughnut
+    var doughnutData = {
+        labels: ["Fase 1","Fase 2","Fase 3" ],
+        datasets: [{
+            data: [50,60,45],
+            backgroundColor: [randomColorGeneratorRgb('back'),randomColorGeneratorRgb('back'),randomColorGeneratorRgb('back')]
+        }]
+    } ;
 
-    var barOptions4 = {
+
+    var doughnutOptions = {
         responsive: true
     };
 
 
     var ctx4 = document.getElementById("chartDidatico4").getContext("2d");
-    new Chart(ctx4, {type: 'bar', data: barData4, options: barOptions4});
+    new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
 
-    // barra 4
-    var barData4 = {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
-        datasets: [
-            {
-                label: "CFOAV",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
-                label: "CFOINT",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [64, 57, 48, 55, 35, 47, 60]
-            },
-            {
-                label: "CFOINF",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
-            }
-        ]
-    };
-
-    var barOptions4 = {
-        responsive: true
-    };
-
-
-    var ctx4 = document.getElementById("chartDidatico5").getContext("2d");
-    new Chart(ctx4, {type: 'bar', data: barData4, options: barOptions4});
-
-    // barra 5
-    var barData5 = {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
-        datasets: [
-            {
-                label: "CFOAV",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
-                label: "CFOINT",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [64, 57, 48, 55, 35, 47, 60]
-            },
-            {
-                label: "CFOINF",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
-            }
-        ]
-    };
-
-    var barOptions5 = {
-        responsive: true
-    };
-
-
-    var ctx5 = document.getElementById("chartDidatico5").getContext("2d");
-    new Chart(ctx5, {type: 'bar', data: barData5, options: barOptions5});
-
-    // barra 6
-    var barData6 = {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
-        datasets: [
-            {
-                label: "CFOAV",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [65, 59, 80, 81, 56, 55, 40]
-            },
-            {
-                label: "CFOINT",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [64, 57, 48, 55, 35, 47, 60]
-            },
-            {
-                label: "CFOINF",
-                backgroundColor: randomColorGenerator(),
-                borderColor: "#000",
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [28, 48, 40, 19, 86, 27, 90]
-            }
-        ]
-    };
-
-    var barOptions6 = {
-        responsive: true
-    };
-
-
-    var ctx6 = document.getElementById("chartDidatico6").getContext("2d");
-    new Chart(ctx6, {type: 'bar', data: barData6, options: barOptions6});
 });
