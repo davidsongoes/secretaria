@@ -31,7 +31,7 @@ $(function () {
         var graphBackground1 = "rgb("
             + randomR + ", "
             + randomG + ", "
-            + randomB + ")";"rgba(26,179,148,0.2)"
+            + randomB + ")";
         graphColors1.push(graphBackground1);
 
         var graphOutline1 = "rgb("
