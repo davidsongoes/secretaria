@@ -204,7 +204,7 @@ $(function () {
             ],
             backgroundColor: [randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte')],
             label: [
-                "My Radar chart"
+                "Gráfico"
             ]
         }],
         labels: [
