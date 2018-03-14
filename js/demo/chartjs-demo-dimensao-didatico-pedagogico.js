@@ -136,54 +136,54 @@ $(function () {
     new Chart(ctx1, {type: 'radar', data: radarData, options: radarOptions});
 
 
-    // Gráfico 2 - Radar
-    var radarData2 = {
-        labels: ["A pedido", "Ensino - Área Militar", "Ensino - Área Específica", "Decisão Judicial", "Saúde", "Voo"],
-        datasets: [
-            {
-                label: "1º Ano",
-                backgroundColor: randomColorGeneratorRgb('back'),
-                pointBackgroundColor: randomColorGeneratorRgb('ponto'),
-                borderColor: 'rgba(103, 106, 108, 0.4)',
-                data: [5, 6, 7, 4, 9, 0]
-            },
-            {
-                label: "2º Ano",
-                backgroundColor: randomColorGeneratorRgb('back'),
-                pointBackgroundColor: randomColorGeneratorRgb('ponto'),
-                borderColor: 'rgba(103, 106, 108, 0.4)',
-                data: [7, 5, 6, 3, 10, 0]
-            },
-            {
-                label: "3º Ano",
-                backgroundColor: randomColorGeneratorRgb('back'),
-                pointBackgroundColor: randomColorGeneratorRgb('ponto'),
-                borderColor: 'rgba(103, 106, 108, 0.4)',
-                data: [6, 4, 8, 5, 7, 10]
-            },
-            {
-                label: "4º Ano",
-                backgroundColor: randomColorGeneratorRgb('back'),
-                pointBackgroundColor: randomColorGeneratorRgb('ponto'),
-                borderColor: 'rgba(103, 106, 108, 0.4)',
-                data: [6, 4, 8, 5, 7, 6]
-            }
-        ]
-    };
+    // // Gráfico 2 - Radar
+    // var radarData2 = {
+    //     labels: ["A pedido", "Ensino - Área Militar", "Ensino - Área Específica", "Decisão Judicial", "Saúde", "Voo"],
+    //     datasets: [
+    //         {
+    //             label: "1º Ano",
+    //             backgroundColor: randomColorGeneratorRgb('back'),
+    //             pointBackgroundColor: randomColorGeneratorRgb('ponto'),
+    //             borderColor: 'rgba(103, 106, 108, 0.4)',
+    //             data: [5, 6, 7, 4, 9, 0]
+    //         },
+    //         {
+    //             label: "2º Ano",
+    //             backgroundColor: randomColorGeneratorRgb('back'),
+    //             pointBackgroundColor: randomColorGeneratorRgb('ponto'),
+    //             borderColor: 'rgba(103, 106, 108, 0.4)',
+    //             data: [7, 5, 6, 3, 10, 0]
+    //         },
+    //         {
+    //             label: "3º Ano",
+    //             backgroundColor: randomColorGeneratorRgb('back'),
+    //             pointBackgroundColor: randomColorGeneratorRgb('ponto'),
+    //             borderColor: 'rgba(103, 106, 108, 0.4)',
+    //             data: [6, 4, 8, 5, 7, 10]
+    //         },
+    //         {
+    //             label: "4º Ano",
+    //             backgroundColor: randomColorGeneratorRgb('back'),
+    //             pointBackgroundColor: randomColorGeneratorRgb('ponto'),
+    //             borderColor: 'rgba(103, 106, 108, 0.4)',
+    //             data: [6, 4, 8, 5, 7, 6]
+    //         }
+    //     ]
+    // };
+    //
+    // var radarOptions2 = {
+    //     responsive: true
+    // };
+    //
+    // var ctx2 = document.getElementById("chartDidatico2").getContext("2d");
+    // new Chart(ctx2, {type: 'radar', data: radarData2, options: radarOptions2});
 
-    var radarOptions2 = {
-        responsive: true
-    };
-
-    var ctx2 = document.getElementById("chartDidatico2").getContext("2d");
-    new Chart(ctx2, {type: 'radar', data: radarData2, options: radarOptions2});
 
 
+//    Gráfico 2 - Line
 
-//    Gráfico 3 - Line
-
-    var lineData = {
-        labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"],
+    var lineData2 = {
+        labels: ["0","Final do 1º Ano", "Final do 2º Ano", "Final do 3º Ano", "Final do 4º"],
         datasets: [
 
             {
@@ -191,71 +191,69 @@ $(function () {
                 backgroundColor: randomColorGeneratorRgb('back'),
                 pointBackgroundColor: randomColorGeneratorRgb('ponto'),
                 pointBorderColor: "#fff",
-                data: [3, 2, 2, 1, 0, 2]
+                data: [130, 110]
             }, {
                 label: "2º Ano",
                 backgroundColor: randomColorGeneratorRgb('back'),
                 pointBackgroundColor: randomColorGeneratorRgb('ponto'),
-                data: [0, 4, 1, 6, 2, 0]
+                data: [130, 115, 105]
             }, {
                 label: "3º Ano",
                 backgroundColor: randomColorGeneratorRgb('back'),
                 pointBackgroundColor: randomColorGeneratorRgb('ponto'),
-                data: [2, 1, 4, 2, 4, 1]
+                data: [130, 120, 110, 102]
             },
             {
                 label: "4º Ano",
                 backgroundColor: randomColorGeneratorRgb('back'),
                 pointBackgroundColor: randomColorGeneratorRgb('ponto'),
-                data: [1, 0, 3, 5, 3, 3]
+                data: [125, 118, 108, 105, 98]
+            },
+            {
+                label: "Meta COMGEP",
+                backgroundColor: randomColorGeneratorRgb('back'),
+                pointBackgroundColor: randomColorGeneratorRgb('ponto'),
+                data: [140, 130, 120, 110, 100]
             }
         ]
     };
 
-    var lineOptions = {
+    var lineOptions2 = {
         beginAtZero: true,
         steps: 10,
         // stepValue: 5,
-        max: 100,
+        max: 130,
         responsive: true
     };
 
 
-    var ctx3 = document.getElementById("chartDidatico3").getContext("2d");
-    new Chart(ctx3, {type: 'line', data: lineData, options: lineOptions});
+    var ctx2 = document.getElementById("chartDidatico2").getContext("2d");
+    new Chart(ctx2, {type: 'line', data: lineData2, options: lineOptions2});
 
-    // Gŕafico 4 - Barra
-    var barData2 = {
-        labels: ["Matriculados", "Formados"],
+    // Gŕafico 3 - Barra
+    var barData3 = {
+        labels: ["Matriculados", "A pedido","Decisão Judicial","Saúde", "Ensino", "Formados"],
         datasets: [
             {
-                label: "CFOAV",
+                label: "Turma 2016 - Subturma BCT",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
                 borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [130, 79]
+                data: [100, 3, 1, 3, 10, 73]
             },
             {
-                label: "CFOINT",
+                label: "Turma 2017 - Subturma BCT",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
                 borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [120, 95]
-            },
-            {
-                label: "CFOINF",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [110, 91]
+                data: [110, 4, 3, 7, 15, 81]
             }
         ]
     };
 
-    var barOptions2 = {
+    var barOptions3 = {
         scales: {
             xAxes: [{
                 ticks: {
@@ -270,8 +268,8 @@ $(function () {
     };
 
 
-    var ctx2 = document.getElementById("chartDidatico4").getContext("2d");
-    new Chart(ctx2, {type: 'horizontalBar', data: barData2, options: barOptions2});
+    var ctx3 = document.getElementById("chartDidatico3").getContext("2d");
+    new Chart(ctx3, {type: 'horizontalBar', data: barData3, options: barOptions3});
 
 // //    Gráfico 4 - Doughnut
 //     var doughnutData = {
