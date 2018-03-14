@@ -111,7 +111,6 @@ $(function () {
             {
                 label: "Militar",
                 backgroundColor: randomColorGeneratorRgb('back'),
-                // borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [30, 3, 20, 10, 8]
@@ -119,7 +118,6 @@ $(function () {
             {
                 label: "Civil",
                 backgroundColor: randomColorGeneratorRgb('back'),
-                // borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [25, 10, 16, 8, 2]
@@ -158,7 +156,6 @@ $(function () {
             {
                 label: "Militar",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [30, 3, 20, 10, 8]
@@ -166,7 +163,6 @@ $(function () {
             {
                 label: "Civil",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [25, 10, 16, 8, 2]
@@ -199,7 +195,6 @@ $(function () {
             {
                 label: "Militar",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [3, 2, 2]
@@ -207,7 +202,6 @@ $(function () {
             {
                 label: "Civil",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [2, 3, 4]
@@ -240,7 +234,6 @@ $(function () {
             {
                 label: "Militar",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [80, 120, 80]
@@ -248,7 +241,6 @@ $(function () {
             {
                 label: "Civil",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [60, 100, 60]
@@ -276,31 +268,21 @@ $(function () {
 
     // Gráfico 5 - Barra
     var barData5 = {
-        labels: ["Português", "Matemática", "Geometria"],
+        labels: ["CL Ghuerren", "1T Aline","2T Ferraz", "Prof. Dra. Fabiana", "Prof. Me. Juliano" ,  "Prof. Orlando"],
         datasets: [
             {
-                label: "Carga horária disciplina",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
+                label: "Carga Horária Efetiva",
+                backgroundColor: randomColorGeneratorRgb('ponto'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [160, 150, 130]
+                data: [300, 250, 230, 190, 170, 70]
             },
             {
-                label: "Carga horária - Militar",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
+                label: "Carga Horária Disponível",
+                backgroundColor: randomColorGeneratorRgb('ponto'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [90, 80, 80]
-            },
-            {
-                label: "Carga horária - Civil",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                pointBorderColor: "#fff",
-                data: [70, 70, 50]
+                data: [300, 255, 235, 220, 220, 150]
             }
         ]
     };
@@ -311,11 +293,16 @@ $(function () {
                 ticks: {
                     beginAtZero: true,
                     steps: 10,
-                    stepValue: 5,
-                    max: 160
+                    stepValue: 5
                 }
+            }],
+            yAxes: [{
+                stacked: true
             }]
         },
+        // legend: {
+        //     display: false
+        // },
         responsive: true
     };
 
@@ -323,14 +310,13 @@ $(function () {
     var ctx5 = document.getElementById("chartDocente5").getContext("2d");
     new Chart(ctx5, {type: 'horizontalBar', data: barData5, options: barOptions5});
 
-    // Gráfico 6 - Donut
-    var doughnutData6 = {
+    // Gráfico 6 - Barra
+    var barData6 = {
         labels: ["Matemática", "Português", "Química", "Biologia"],
         datasets: [
             {
                 label: "Carga Horária dos Professores da Disciplina",
                 backgroundColor: randomColorGeneratorRgb('ponto'),
-                // borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [145, 105, 145, 130]
@@ -338,7 +324,6 @@ $(function () {
             {
                 label: "Carga Horária Disciplina",
                 backgroundColor: randomColorGeneratorRgb('ponto'),
-                // borderColor: graphOutlines1,
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [160, 115, 165, 130]
@@ -346,7 +331,7 @@ $(function () {
         ]
     };
 
-    var doughnutOptions6 = {
+    var barOptions6 = {
         scales: {
             xAxes: [{
                 ticks: {
@@ -367,7 +352,7 @@ $(function () {
 
 
     var ctx6 = document.getElementById("chartDocente6").getContext("2d");
-    new Chart(ctx6, {type: 'horizontalBar', data: doughnutData6, options: doughnutOptions6});
+    new Chart(ctx6, {type: 'horizontalBar', data: barData6, options: barOptions6});
 
 
     //    Gráfico 6 - Doughnut
