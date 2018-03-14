@@ -1,8 +1,8 @@
 $(function () {
     // Cor do background aleatória RGB
     var randomColorGeneratorRgb = function (flag) {
-        var randomR = Math.floor((Math.random() * 130) + 100);
-        var randomG = Math.floor((Math.random() * 130) + 100);
+        var randomR = Math.floor((Math.random() * 120) + 100);
+        var randomG = Math.floor((Math.random() * 125) + 100);
         var randomB = Math.floor((Math.random() * 130) + 100);
 
         if (flag == 'back') {
@@ -10,17 +10,20 @@ $(function () {
                 + randomR + ", "
                 + randomG + ", "
                 + randomB + ", 0.4)";
-        }if( flag == 'borda'){
+        }
+        if (flag == 'borda') {
             var graphBackground4 = "rgba("
                 + randomR + ", "
                 + randomG + ", "
                 + randomB + ", 1)";
-        }if(flag == 'ponto'){
+        }
+        if (flag == 'ponto') {
             var graphBackground4 = "rgba("
                 + randomR + ", "
                 + randomG + ", "
                 + randomB + ", 1)";
-        }if(flag == 'back-forte'){
+        }
+        if (flag == 'back-forte') {
             var graphBackground4 = "rgba("
                 + randomR + ", "
                 + randomG + ", "
@@ -270,6 +273,124 @@ $(function () {
 
     var ctx4 = document.getElementById("chartDocente4").getContext("2d");
     new Chart(ctx4, {type: 'horizontalBar', data: barData4, options: barOptions4});
+
+    // Gráfico 5 - Barra
+    var barData5 = {
+        labels: ["Português", "Matemática", "Geometria"],
+        datasets: [
+            {
+                label: "Carga horária disciplina",
+                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                borderColor: graphOutlines1,
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [160, 150, 130]
+            },
+            {
+                label: "Carga horária - Militar",
+                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                borderColor: graphOutlines1,
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [90, 80, 80]
+            },
+            {
+                label: "Carga horária - Civil",
+                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                borderColor: graphOutlines1,
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [70, 70, 50]
+            }
+        ]
+    };
+
+    var barOptions5 = {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    steps: 10,
+                    stepValue: 5,
+                    max: 160
+                }
+            }]
+        },
+        responsive: true
+    };
+
+
+    var ctx5 = document.getElementById("chartDocente5").getContext("2d");
+    new Chart(ctx5, {type: 'horizontalBar', data: barData5, options: barOptions5});
+
+    // Gráfico 6 - Donut
+    var doughnutData6 = {
+        labels: ["Matemática", "Português", "Química", "Biologia"],
+        datasets: [
+            {
+                label: "Carga Horária dos Professores da Disciplina",
+                backgroundColor: randomColorGeneratorRgb('ponto'),
+                // borderColor: graphOutlines1,
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [145, 105, 145, 130]
+            },
+            {
+                label: "Carga Horária Disciplina",
+                backgroundColor: randomColorGeneratorRgb('ponto'),
+                // borderColor: graphOutlines1,
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [160, 115, 165, 130]
+            }
+        ]
+    };
+
+    var doughnutOptions6 = {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    steps: 10,
+                    stepValue: 5
+                }
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        },
+        // legend: {
+        //     display: false
+        // },
+        responsive: true
+    };
+
+
+    var ctx6 = document.getElementById("chartDocente6").getContext("2d");
+    new Chart(ctx6, {type: 'horizontalBar', data: doughnutData6, options: doughnutOptions6});
+
+
+    //    Gráfico 6 - Doughnut
+    // var doughnutData6 = {
+    //     labels: ["Matemática", "Português", "Química"],
+    //     datasets: [{
+    //         data: [150, 140, 100],
+    //         backgroundColor: [randomColorGeneratorRgb('back-forte'), randomColorGeneratorRgb('back-forte'), randomColorGeneratorRgb('back-forte'), randomColorGeneratorRgb('back-forte'), randomColorGeneratorRgb('back-forte')]
+    //     },
+    //     {
+    //         data: [130, 120,80],
+    //         backgroundColor: [randomColorGeneratorRgb('back-forte'), randomColorGeneratorRgb('back-forte'), randomColorGeneratorRgb('back-forte'), randomColorGeneratorRgb('back-forte'), randomColorGeneratorRgb('back-forte')]
+    //     }]
+    // };
+    //
+    //
+    // var doughnutOptions6 = {
+    //     responsive: true
+    // };
+    //
+    //
+    // var ctx6 = document.getElementById("chartDocente6").getContext("2d");
+    // new Chart(ctx6, {type: 'doughnut', data: doughnutData6, options: doughnutOptions6});
 
 // //    Gráfico 3 - Doughnut
 //     var doughnutData = {
