@@ -147,14 +147,20 @@ $(function () {
             {
                 label: "Exame Final",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
+                // borderColor: graphOutlines1,
                 data: [15, 20, 10, 12]
             },
             {
                 label: "Segunda época",
                 backgroundColor: randomColorGeneratorRgb('back-forte'),
-                borderColor: graphOutlines1,
+                // borderColor: graphOutlines1,
                 data: [10, 14, 7, 5]
+            },
+            {
+                label: "Reprovados",
+                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                // borderColor: graphOutlines1,
+                data: [2, 3, 2, 4]
             }
         ]
     };
@@ -197,31 +203,31 @@ $(function () {
 
 //    Gráfico 4 - Polar
 
-    var polarData = {
-        datasets: [{
-            data: [
-                60,25,10,5
-            ],
-            backgroundColor: [randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte')],
-            label: [
-                "Gráfico"
-            ]
-        }],
-        labels: [
-            "Muito satisfatório","Satisfatório","Pouco satisfatório","Não satisfatório"
-        ]
-    };
-
-    var polarOptions = {
-        segmentStrokeWidth: 2,
-        beginAtZero: true,
-        steps: 10,
-        stepValue: 5,
-        max: 100
-
-    };
-
-    var ctx4 = document.getElementById("chartDiscente4").getContext("2d");
-    new Chart(ctx4, {type: 'polarArea', data: polarData, options:polarOptions});
+    // var polarData = {
+    //     datasets: [{
+    //         data: [
+    //             60,25,10,5
+    //         ],
+    //         backgroundColor: [randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte'),randomColorGeneratorRgb('back-forte')],
+    //         label: [
+    //             "Gráfico"
+    //         ]
+    //     }],
+    //     labels: [
+    //         "Muito satisfatório","Satisfatório","Pouco satisfatório","Não satisfatório"
+    //     ]
+    // };
+    //
+    // var polarOptions = {
+    //     segmentStrokeWidth: 2,
+    //     beginAtZero: true,
+    //     steps: 10,
+    //     stepValue: 5,
+    //     max: 100
+    //
+    // };
+    //
+    // var ctx4 = document.getElementById("chartDiscente4").getContext("2d");
+    // new Chart(ctx4, {type: 'polarArea', data: polarData, options:polarOptions});
 
 });
