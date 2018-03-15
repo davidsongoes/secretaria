@@ -233,7 +233,7 @@ $(function () {
         datasets: [
             {
                 label: "Turma 2016 - Subturma BCT",
-                backgroundColor: colorFunction('lazur-high'),
+                backgroundColor: colorFunction('lazur-mid'),
                 borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
@@ -241,7 +241,7 @@ $(function () {
             },
             {
                 label: "Turma 2017 - Subturma BCT",
-                backgroundColor: colorFunction('yellow-high'),
+                backgroundColor: colorFunction('yellow-mid'),
                 borderColor: colorFunction('yellow-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
