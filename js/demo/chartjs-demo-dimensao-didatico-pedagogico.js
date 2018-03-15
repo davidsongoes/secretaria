@@ -185,24 +185,28 @@ $(function () {
             {
                 label: "1º Ano",
                 backgroundColor: colorFunction('yellow-low'),
+                borderColor: colorFunction('yellow-low'),
                 pointBackgroundColor: colorFunction('yellow-high'),
                 pointBorderColor: "#fff",
                 data: [130, 110]
             }, {
                 label: "2º Ano",
-                backgroundColor: colorFunction('red-low'),
-                pointBackgroundColor: colorFunction('red-high'),
+                backgroundColor: colorFunction('lazur-low'),
+                borderColor: colorFunction('lazur-low'),
+                pointBackgroundColor: colorFunction('lazur-high'),
                 data: [130, 115, 105]
             }, {
                 label: "3º Ano",
                 backgroundColor: colorFunction('navy-low'),
+                borderColor: colorFunction('navy-low'),
                 pointBackgroundColor: colorFunction('navy-high'),
                 data: [130, 120, 110, 102]
             },
             {
                 label: "4º Ano",
-                backgroundColor: colorFunction('lazur-low'),
-                pointBackgroundColor: colorFunction('lazur-high'),
+                backgroundColor: colorFunction('red-low'),
+                borderColor: colorFunction('red-low'),
+                pointBackgroundColor: colorFunction('red-high'),
                 data: [125, 118, 108, 105, 98]
             },
             {
