@@ -1,4 +1,41 @@
 $(function () {
+    //Cor básica
+    var colorFunction = function (flag) {
+        var color = '';
+        if (flag == 'navy-high') {
+            color = 'rgba(26,179,148,0.8)';
+        }
+        if (flag == 'navy-mid') {
+            color = 'rgba(26,179,148,0.6)';
+        }if (flag == 'navy-low') {
+            color = 'rgba(26,179,148,0.4)';
+        }if (flag == 'yellow-high') {
+            color = 'rgba(248,172,89,0.8)';
+        }if (flag == 'yellow-mid') {
+            color = 'rgba(248,172,89,0.6)';
+        }if (flag == 'yellow-low') {
+            color = 'rgba(248,172,89,0.4)';
+        }if (flag == 'lazur-high') {
+            color = 'rgba(35,198,200,0.8)';
+        }if (flag == 'lazur-mid') {
+            color = 'rgba(35,198,200,0.6)';
+        }if (flag == 'lazur-low') {
+            color = 'rgba(35,198,200,0.4)';
+        }if (flag == 'red-high') {
+            color = 'rgba(237,85,101,0.8)';
+        }if (flag == 'red-mid') {
+            color = 'rgba(237,85,101,0.6)';
+        }if (flag == 'red-low') {
+            color = 'rgba(237,85,101,0.4)';
+        }if (flag == 'gray-high') {
+            color = 'rgba(103, 106, 108,0.8)';
+        }if (flag == 'gray-mid') {
+            color = 'rgba(103, 106, 108,0.6)';
+        }if (flag == 'gray-low') {
+            color = 'rgba(103, 106, 108,0.4)';
+        }
+        return color;
+    };
     //Cor do background aleatória RGB
     var randomColorGeneratorRgb = function () {
         var graphColors1 = [];
@@ -90,10 +127,9 @@ $(function () {
         labels: ["Excelente", "Ótima", "Boa", "Ruím", "Péssima"],
         datasets: [
             {
-                backgroundColor: graphColors1,
-                borderColor: graphOutlines1,
+                backgroundColor: [colorFunction('navy-mid'),colorFunction('yellow-mid'),colorFunction('red-mid'),colorFunction('lazur-mid'),colorFunction('gray-mid')],
                 pointBackgroundColor: "rgba(26,179,148,1)",
-                hoverBackgroundColor: hoverColor1,
+                hoverBackgroundColor: 'rgba(103, 106, 108, 0.7)',
                 pointBorderColor: "#fff",
                 data: [60, 20, 10, 5, 5]
             }
@@ -130,24 +166,24 @@ $(function () {
         datasets: [
             {
                 label: "CFOAV",
-                backgroundColor: randomColorGeneratorRgb(),
-                borderColor: graphOutlines1,
+                backgroundColor: colorFunction('lazur-mid'),
+                borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [60, 35, 3, 1, 1]
             },
             {
                 label: "CFOINT",
-                backgroundColor: randomColorGeneratorRgb(),
-                borderColor: graphOutlines1,
+                backgroundColor: colorFunction('red-mid'),
+                borderColor: colorFunction('red-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [72, 25, 1, 1, 1]
             },
             {
                 label: "CFOINF",
-                backgroundColor: randomColorGeneratorRgb(),
-                borderColor: graphOutlines1,
+                backgroundColor: colorFunction('yellow-mid'),
+                borderColor: colorFunction('yellow-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [80, 19, 1, 0, 0]
@@ -178,7 +214,7 @@ $(function () {
         labels: ["Excelente", "Ótima", "Boa", "Ruím", "Péssima"],
         datasets: [{
             data: [80,11,8,1,0],
-            backgroundColor: [randomColorGeneratorRgb(),randomColorGeneratorRgb(),randomColorGeneratorRgb(),randomColorGeneratorRgb(), randomColorGeneratorRgb()]
+            backgroundColor: [colorFunction('navy-mid'),colorFunction('yellow-mid'),colorFunction('red-mid'),colorFunction('lazur-mid'),colorFunction('gray-mid')]
         }]
     } ;
 
@@ -198,10 +234,7 @@ $(function () {
             data: [
                 60,25,10,5
             ],
-            backgroundColor: [randomColorGeneratorRgb(),randomColorGeneratorRgb(),randomColorGeneratorRgb(),randomColorGeneratorRgb()],
-            label: [
-                "My Radar chart"
-            ]
+            backgroundColor: [colorFunction('navy-mid'),colorFunction('yellow-mid'),colorFunction('red-mid'),colorFunction('lazur-mid'),colorFunction('gray-mid')]
         }],
         labels: [
             "Muito satisfatório","Satisfatório","Pouco satisfatório","Não satisfatório"
