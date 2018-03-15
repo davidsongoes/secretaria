@@ -1,4 +1,41 @@
 $(function () {
+    //Cor básica
+    var colorFunction = function (flag) {
+        var color = '';
+        if (flag == 'navy-high') {
+            color = 'rgba(26,179,148,0.8)';
+        }
+        if (flag == 'navy-mid') {
+            color = 'rgba(26,179,148,0.6)';
+        }if (flag == 'navy-low') {
+            color = 'rgba(26,179,148,0.4)';
+        }if (flag == 'yellow-high') {
+            color = 'rgba(248,172,89,0.8)';
+        }if (flag == 'yellow-mid') {
+            color = 'rgba(248,172,89,0.6)';
+        }if (flag == 'yellow-low') {
+            color = 'rgba(248,172,89,0.4)';
+        }if (flag == 'lazur-high') {
+            color = 'rgba(35,198,200,0.8)';
+        }if (flag == 'lazur-mid') {
+            color = 'rgba(35,198,200,0.6)';
+        }if (flag == 'lazur-low') {
+            color = 'rgba(35,198,200,0.4)';
+        }if (flag == 'red-high') {
+            color = 'rgba(237,85,101,0.8)';
+        }if (flag == 'red-mid') {
+            color = 'rgba(237,85,101,0.6)';
+        }if (flag == 'red-low') {
+            color = 'rgba(237,85,101,0.4)';
+        }if (flag == 'gray-high') {
+            color = 'rgba(103, 106, 108,0.8)';
+        }if (flag == 'gray-mid') {
+            color = 'rgba(103, 106, 108,0.6)';
+        }if (flag == 'gray-low') {
+            color = 'rgba(103, 106, 108,0.4)';
+        }
+        return color;
+    };
     // Cor do background aleatória RGB
     var randomColorGeneratorRgb = function (flag) {
         var randomR = Math.floor((Math.random() * 120) + 100);
@@ -110,14 +147,16 @@ $(function () {
         datasets: [
             {
                 label: "Militar",
-                backgroundColor: randomColorGeneratorRgb('back'),
+                backgroundColor: colorFunction('lazur-mid'),
+                borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [30, 3, 20, 10, 8]
             },
             {
                 label: "Civil",
-                backgroundColor: randomColorGeneratorRgb('back'),
+                backgroundColor: colorFunction('yellow-mid'),
+                borderColor: colorFunction('yellow-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [25, 10, 16, 8, 2]
@@ -145,7 +184,6 @@ $(function () {
         responsive: true
     };
 
-
     var ctx1 = document.getElementById("chartDocente1").getContext("2d");
     new Chart(ctx1, {type: 'horizontalBar', data: barData1, options: barOptions1});
 
@@ -155,14 +193,16 @@ $(function () {
         datasets: [
             {
                 label: "Militar",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                backgroundColor: colorFunction('lazur-mid'),
+                borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [30, 3, 20, 10, 8]
             },
             {
                 label: "Civil",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                backgroundColor: colorFunction('yellow-mid'),
+                borderColor: colorFunction('yellow-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [25, 10, 16, 8, 2]
@@ -194,14 +234,16 @@ $(function () {
         datasets: [
             {
                 label: "Militar",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                backgroundColor: colorFunction('lazur-mid'),
+                borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [3, 2, 2]
             },
             {
                 label: "Civil",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                backgroundColor: colorFunction('yellow-mid'),
+                borderColor: colorFunction('yellow-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [2, 3, 4]
@@ -233,14 +275,16 @@ $(function () {
         datasets: [
             {
                 label: "Militar",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                backgroundColor: colorFunction('lazur-mid'),
+                borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [80, 120, 80]
             },
             {
                 label: "Civil",
-                backgroundColor: randomColorGeneratorRgb('back-forte'),
+                backgroundColor: colorFunction('yellow-mid'),
+                borderColor: colorFunction('yellow-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [60, 100, 60]
@@ -272,14 +316,16 @@ $(function () {
         datasets: [
             {
                 label: "Carga Horária Efetiva",
-                backgroundColor: randomColorGeneratorRgb('ponto'),
+                backgroundColor: colorFunction('yellow-high'),
+                borderColor: colorFunction('yellow-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [300, 250, 230, 190, 170, 70]
             },
             {
                 label: "Carga Horária Disponível",
-                backgroundColor: randomColorGeneratorRgb('ponto'),
+                backgroundColor: colorFunction('navy-high'),
+                borderColor: colorFunction('navy-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [300, 255, 235, 220, 220, 150]
@@ -316,14 +362,16 @@ $(function () {
         datasets: [
             {
                 label: "Carga Horária dos Professores da Disciplina",
-                backgroundColor: randomColorGeneratorRgb('ponto'),
+                backgroundColor: colorFunction('lazur-high'),
+                borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [145, 105, 145, 130]
             },
             {
                 label: "Carga Horária Disciplina",
-                backgroundColor: randomColorGeneratorRgb('ponto'),
+                backgroundColor: colorFunction('red-high'),
+                borderColor: colorFunction('red-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [160, 115, 165, 130]
