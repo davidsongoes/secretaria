@@ -191,9 +191,1048 @@
                                                                 </div>
                                                                 <div class="col-lg-6">
                                                                         <div class="btn-group" style="float: right;">
-                                                                            <a class="btn btn-warning btn-responsive" href="dashboard_busca_cpf_discente.html"><i class="fa fa-pencil"></i>
+                                                                            <a class="btn btn-warning btn-responsive" data-toggle="modal" data-target="#modalEditarDiscente"><i class="fa fa-pencil"></i>
                                                                                 Editar Discente</a>
                                                                         </div>
+                                                                </div>
+                                                                <!--Modal Editar Discente-->
+                                                                <div class="modal inmodal fade" id="modalEditarDiscente" tabindex="-1"
+                                                                     role="dialog" aria-hidden="true">
+                                                                    <div class="modal-dialog modal-responsive">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close"
+                                                                                        data-dismiss="modal"><span
+                                                                                        aria-hidden="true">&times;</span><span
+                                                                                        class="sr-only">Close</span>
+                                                                                </button>
+                                                                                <h4 class="modal-title">Editar Discente</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <!--Formulário de edição do status do curso-->
+                                                                                <div class="container-fluid">
+                                                                                    <div class="row">
+                                                                                        <form role="form">
+                                                                                            <div class="container-fluid">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <h4>Dados Principais</h4>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Primeira linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group"><label class="col-lg-4 control-label">Nome Completo</label>
+                                                                                                                <div class="col-lg-8"><input disabled type="text" class="form-control" value="Anderson Ghuerren Costa"></div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Nome Guerra</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    Ghuerren
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">SARAM</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    123456-7
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Segunda linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Quadro</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    QOAV
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-5">Posto/grad</dt>
+                                                                                                                <dd class="col-lg-4">
+                                                                                                                    CL
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-6">Especialidade</dt>
+                                                                                                                <dd class="col-lg-4">
+                                                                                                                    NTE
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Terceira linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Data de Praça</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    01/01/1900
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Data da Última Promoção</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    01/01/1900
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Data de Formação</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    01/01/1900
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Quarta linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Estado</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    Rio de janeiro
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Cidade</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    Rio de janeiro
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">País</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    Brasil
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Quinta linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Email</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    ghuerrenagc@fab.mil.br
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Telefone Fixo</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    (99) 9999-9999
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <dt class="col-lg-4">Telefone Celular</dt>
+                                                                                                                <dd class="col-lg-8">
+                                                                                                                    (99) 9 9999-9999
+                                                                                                                </dd>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Sexta linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <h4>Aeronavegante?</h4>
+                                                                                                            <div class="switch">
+                                                                                                                <div class="onoffswitch">
+                                                                                                                    <input class="onoffswitch-checkbox" id="switch_aeronavagante" type="checkbox">
+                                                                                                                    <label class="onoffswitch-label" for="switch_aeronavagante">
+                                                                                                                        <span class="onoffswitch-inner"></span>
+                                                                                                                        <span class="onoffswitch-switch"></span>
+                                                                                                                    </label>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <h4>Estrangeiro?</h4>
+                                                                                                            <div class="switch">
+                                                                                                                <div class="onoffswitch">
+                                                                                                                    <input class="onoffswitch-checkbox" name="switch_estrangeiro" id="switch_estrangeiro"
+                                                                                                                           type="checkbox"
+                                                                                                                           onclick="hideTabEstrangeiro('tab-8-label')">
+                                                                                                                    <label class="onoffswitch-label" for="switch_estrangeiro">
+                                                                                                                        <span class="onoffswitch-inner"></span>
+                                                                                                                        <span class="onoffswitch-switch"></span>
+                                                                                                                    </label>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <h4>Documentos</h4>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Sétima linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Número Passaporte</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input id="numero_passaporte" value="AA999999" data-mask="aa999999" placeholder=""
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group" id="data_expedicao_passaporte">
+                                                                                                                <label class="col-lg-4 control-label">Data de Expedição</label>
+                                                                                                                <div class="input-group date">
+                                                                        <span class="input-group-addon "><i
+                                                                                class="fa fa-calendar"></i></span><input
+                                                                                                                        type="text" class="form-control" value="01/01/1900">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group" id="data_validade_passaporte">
+                                                                                                                <label class="col-lg-4 control-label">Data de validade</label>
+                                                                                                                <div class="input-group date">
+                                                                        <span class="input-group-addon "><i
+                                                                                class="fa fa-calendar"></i></span><input
+                                                                                                                        type="text" class="form-control" value="01/01/1900">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Om que requeriu</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="DIRENS" placeholder="OM que requeriu" class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Oitava linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-5 control-label">Identidade Militar</label>
+                                                                                                                <div class="col-lg-7">
+                                                                                                                    <input disabled id="id_militar" value="000.000" data-mask="999.999" placeholder=""
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group" id="data_expedicao_identidade">
+                                                                                                                <label class="col-lg-4 control-label">Data de Expedição</label>
+                                                                                                                <div class="input-group date">
+                                                                        <span class="input-group-addon "><i
+                                                                                class="fa fa-calendar"></i></span><input
+                                                                                                                        type="text" class="form-control" value="01/01/1900">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="row">
+                                                                                                                <div class="form-group" id="data_validade_identidade">
+                                                                                                                    <label class="col-lg-4 control-label">Data de validade</label>
+                                                                                                                    <div class="input-group date">
+                                                                        <span class="input-group-addon "><i
+                                                                                class="fa fa-calendar"></i></span><input
+                                                                                                                            type="text" class="form-control" value="01/01/1900">
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-lg-4">
+                                                                                                                    <h4>Permanente?</h4>
+                                                                                                                </div>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <div class="switch">
+                                                                                                                        <div class="onoffswitch">
+                                                                                                                            <input class="onoffswitch-checkbox" name="switch_validade_identidade"
+                                                                                                                                   id="switch_validade_identidade" type="checkbox"
+                                                                                                                                   onclick="hideInputValidadeIdentidade('data_validade_identidade')">
+                                                                                                                            <label class="onoffswitch-label" for="switch_validade_identidade">
+                                                                                                                                <span class="onoffswitch-inner"></span>
+                                                                                                                                <span class="onoffswitch-switch"></span>
+                                                                                                                            </label>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Orgão Emissor</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input disabled value="COMAER" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">UF</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>DF</option>
+                                                                                                                        <option value="SP">SP</option>
+                                                                                                                        <option value="RJ">RJ</option>
+                                                                                                                        <option value="MT">MT</option>
+                                                                                                                        <option value="PE">PE</option>
+                                                                                                                        <option value="MA">MA</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Nona linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-5 control-label">Identidade Civil</label>
+                                                                                                                <div class="col-lg-7">
+                                                                                                                    <input disabled id="id_civil" value="00000000" placeholder="Identidade Civil"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group" id="data_expedicao_identidade_civil">
+                                                                                                                <label class="col-lg-4 control-label">Data de Expedição</label>
+                                                                                                                <div class="input-group date">
+                                                                        <span class="input-group-addon "><i
+                                                                                class="fa fa-calendar"></i></span><input
+                                                                                                                        type="text" class="form-control" value="01/01/1900">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Orgão Emissor</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input disabled value="SSP" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">UF</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>DF</option>
+                                                                                                                        <option value="SP">SP</option>
+                                                                                                                        <option value="RJ">RJ</option>
+                                                                                                                        <option value="MT">MT</option>
+                                                                                                                        <option value="PE">PE</option>
+                                                                                                                        <option value="MA">MA</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <h4>Endereço</h4>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Décima linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">Endereço</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled id="endereco_militar" value="Esplanada dos Ministérios Bloco M" placeholder="Endereço"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">Complemento</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="Anexo - 1º andar" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">UF</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>DF</option>
+                                                                                                                        <option value="SP">SP</option>
+                                                                                                                        <option value="RJ">RJ</option>
+                                                                                                                        <option value="MT">MT</option>
+                                                                                                                        <option value="PE">PE</option>
+                                                                                                                        <option value="MA">MA</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Décima Primeira linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Pais</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>Brasil</option>
+                                                                                                                        <option value="SP">Estados Unidos</option>
+                                                                                                                        <option value="RJ">Inglaterra</option>
+                                                                                                                        <option value="MT">Portugal</option>
+                                                                                                                        <option value="PE">Suécia</option>
+                                                                                                                        <option value="MA">África do Sul</option>
+
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">CEP</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="70045-900" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <h4>Pais</h4>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Pais-->
+                                                                                                <!--Pai-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Nome do Pai</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input disabled value="Anderson Ghuerren Costa" placeholder="Nome Completo"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">CPF</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled value="999999999-99" placeholder="CPF" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Telefone Fixo</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="(99) 9999-9999" placeholder="Somente números" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Telefone Celular</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="(99) 9 9999-9999" placeholder="Somente números" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">Endereço</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled id="endereco_pai" value="Esplanada dos Ministérios Bloco M" placeholder="Endereço"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">Complemento</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="Anexo - 1º andar" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">CEP</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="70045-900" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">UF</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>DF</option>
+                                                                                                                        <option value="SP">SP</option>
+                                                                                                                        <option value="RJ">RJ</option>
+                                                                                                                        <option value="MT">MT</option>
+                                                                                                                        <option value="PE">PE</option>
+                                                                                                                        <option value="MA">MA</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Pais</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>Brasil</option>
+                                                                                                                        <option value="SP">Estados Unidos</option>
+                                                                                                                        <option value="RJ">Inglaterra</option>
+                                                                                                                        <option value="MT">Portugal</option>
+                                                                                                                        <option value="PE">Suécia</option>
+                                                                                                                        <option value="MA">África do Sul</option>
+
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Email</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="ghuerrenagc@fab.mil.br" placeholder="Email" class="form-control"
+                                                                                                                           type="email">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <h4>Responsável Finaceiro?</h4>
+                                                                                                            <div class="switch">
+                                                                                                                <div class="onoffswitch">
+                                                                                                                    <input class="onoffswitch-checkbox" id="switch_financeiro_pai" type="checkbox">
+                                                                                                                    <label class="onoffswitch-label" for="switch_financeiro_pai">
+                                                                                                                        <span class="onoffswitch-inner"></span>
+                                                                                                                        <span class="onoffswitch-switch"></span>
+                                                                                                                    </label>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <h4>Responsável Pedagógico?</h4>
+                                                                                                            <div class="switch">
+                                                                                                                <div class="onoffswitch">
+                                                                                                                    <input class="onoffswitch-checkbox" id="switch_pedagogico_pai" type="checkbox">
+                                                                                                                    <label class="onoffswitch-label" for="switch_pedagogico_pai">
+                                                                                                                        <span class="onoffswitch-inner"></span>
+                                                                                                                        <span class="onoffswitch-switch"></span>
+                                                                                                                    </label>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Mãe-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Nome da Mãe</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input disabled value="AAAAAAAAAA AA AAAAAAA AAAA" placeholder="Nome Completo"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">CPF</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled value="999999999-99" placeholder="CPF" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Telefone Fixo</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="(99) 9999-9999" placeholder="Somente números" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Telefone Celular</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="(99) 9 9999-9999" placeholder="Somente números" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">Endereço</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled id="endereco_mae" value="Esplanada dos Ministérios Bloco M" placeholder="Endereço"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">Complemento</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="Anexo - 1º andar" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">CEP</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="70045-900" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">UF</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>DF</option>
+                                                                                                                        <option value="SP">SP</option>
+                                                                                                                        <option value="RJ">RJ</option>
+                                                                                                                        <option value="MT">MT</option>
+                                                                                                                        <option value="PE">PE</option>
+                                                                                                                        <option value="MA">MA</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Pais</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>Brasil</option>
+                                                                                                                        <option value="SP">Estados Unidos</option>
+                                                                                                                        <option value="RJ">Inglaterra</option>
+                                                                                                                        <option value="MT">Portugal</option>
+                                                                                                                        <option value="PE">Suécia</option>
+                                                                                                                        <option value="MA">África do Sul</option>
+
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Email</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="ghuerrenagc@fab.mil.br" placeholder="Email" class="form-control"
+                                                                                                                           type="email">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <h4>Responsável Finaceiro?</h4>
+                                                                                                            <div class="switch">
+                                                                                                                <div class="onoffswitch">
+                                                                                                                    <input class="onoffswitch-checkbox" id="switch_financeiro_mae" type="checkbox">
+                                                                                                                    <label class="onoffswitch-label" for="switch_financeiro_mae">
+                                                                                                                        <span class="onoffswitch-inner"></span>
+                                                                                                                        <span class="onoffswitch-switch"></span>
+                                                                                                                    </label>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <h4>Responsável Pedagógico?</h4>
+                                                                                                            <div class="switch">
+                                                                                                                <div class="onoffswitch">
+                                                                                                                    <input class="onoffswitch-checkbox" id="switch_pedagogico_mae" type="checkbox">
+                                                                                                                    <label class="onoffswitch-label" for="switch_pedagogico_mae">
+                                                                                                                        <span class="onoffswitch-inner"></span>
+                                                                                                                        <span class="onoffswitch-switch"></span>
+                                                                                                                    </label>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Responsável-->
+                                                                                                <!--Responsável Financeiro-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <h4>Responsável Financeiro</h4>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Responsável Financeiro</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input disabled value="Anderson Ghuerren Costa" placeholder="Responsável Pedagógico"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">CPF</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled value="999999999-99" placeholder="CPF" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Telefone Fixo</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="(99) 9999-9999" placeholder="Somente números" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Telefone Celular</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="(99) 9 9999-9999" placeholder="Somente números" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">Endereço</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled id="endereco_responsavel_financeiro" value="Esplanada dos Ministérios Bloco M" placeholder="Endereço"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">Complemento</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="Anexo - 1º andar" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">CEP</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="70045-900" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">UF</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>DF</option>
+                                                                                                                        <option value="SP">SP</option>
+                                                                                                                        <option value="RJ">RJ</option>
+                                                                                                                        <option value="MT">MT</option>
+                                                                                                                        <option value="PE">PE</option>
+                                                                                                                        <option value="MA">MA</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Pais</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>Brasil</option>
+                                                                                                                        <option value="SP">Estados Unidos</option>
+                                                                                                                        <option value="RJ">Inglaterra</option>
+                                                                                                                        <option value="MT">Portugal</option>
+                                                                                                                        <option value="PE">Suécia</option>
+                                                                                                                        <option value="MA">África do Sul</option>
+
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Email</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="ghuerrenagc@fab.mil.br" placeholder="Email" class="form-control"
+                                                                                                                           type="email">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Responsável Pedagógico-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <h4>Responsável Pedagógico</h4>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Responsável Pedagógico</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input disabled value="Anderson Ghuerren Costa" placeholder="Responsável Pedagógico"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">CPF</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled value="999999999-99" placeholder="CPF" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Telefone Fixo</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="(99) 9999-9999" placeholder="Somente números" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-3">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Telefone Celular</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="(99) 9 9999-9999" placeholder="Somente números" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-2 control-label">Endereço</label>
+                                                                                                                <div class="col-lg-10">
+                                                                                                                    <input disabled id="endereco_responsavel_pedagogico" value="Esplanada dos Ministérios Bloco M" placeholder="Endereço"
+                                                                                                                           class="form-control" type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-5">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">Complemento</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="Anexo - 1º andar" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-3 control-label">CEP</label>
+                                                                                                                <div class="col-lg-9">
+                                                                                                                    <input disabled value="70045-900" placeholder="Orgão Emissor" class="form-control"
+                                                                                                                           type="text">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">UF</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>DF</option>
+                                                                                                                        <option value="SP">SP</option>
+                                                                                                                        <option value="RJ">RJ</option>
+                                                                                                                        <option value="MT">MT</option>
+                                                                                                                        <option value="PE">PE</option>
+                                                                                                                        <option value="MA">MA</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-2">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Pais</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select disabled data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="DF" selected>Brasil</option>
+                                                                                                                        <option value="SP">Estados Unidos</option>
+                                                                                                                        <option value="RJ">Inglaterra</option>
+                                                                                                                        <option value="MT">Portugal</option>
+                                                                                                                        <option value="PE">Suécia</option>
+                                                                                                                        <option value="MA">África do Sul</option>
+
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-4">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-lg-4 control-label">Email</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <input value="ghuerrenagc@fab.mil.br" placeholder="Email" class="form-control"
+                                                                                                                           type="email">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <!--Botões-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <a class="btn btn-default btn-responsive" href="#"><i
+                                                                                                                class="fa fa-times"></i> Cancelar</a>
+                                                                                                        <a class="btn btn-primary btn-responsive" href="#"><i
+                                                                                                                class="fa fa-check"></i> Salvar</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </form>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+
+                                                                                <button type="button" class="btn btn-white hide" data-dismiss="modal"></button>
+                                                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
