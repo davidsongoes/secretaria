@@ -2355,12 +2355,96 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="ibox-content">
-                                                                        <!--Botão Imprimir Idiomas-->
+                                                                        <div class="row">
+                                                                            <div class="col-lg-12">
+                                                                                <!--Botão Cadastrar Idioma-->
+                                                                                <div class="btn-group" style="float: right;">
+                                                                                    <a class="btn btn-primary btn-responsive" data-toggle="modal" data-target="#modalCadastrarIdioma"><i class="fa fa-plus"></i>
+                                                                                        Cadastrar Idioma</a>
+                                                                                </div>
+                                                                                <!--Modal de Cadastro de Área Técnica-->
+                                                                                <div class="modal inmodal fade" id="modalCadastrarIdioma" tabindex="-1" role="dialog"  aria-hidden="true">
+                                                                                    <div class="modal-dialog modal-responsive">
+                                                                                        <div class="modal-content">
+                                                                                            <div class="modal-header">
+                                                                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                                                                <h4 class="modal-title">Cadastrar Idioma</h4>
+                                                                                            </div>
+                                                                                            <div class="modal-body">
+                                                                                                <form role="form">
+                                                                                                    <!--Primeira Linha-->
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-lg-12">
+                                                                                                            <div class="col-lg-3">
+                                                                                                                <div class="form-group"><label class="col-lg-4 control-label">Idioma</label>
+                                                                                                                    <div class="col-lg-8"><input type="text" placeholder="Idioma" class="form-control"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-lg-3">
+                                                                                                                <div class="form-group"><label class="col-lg-4 control-label">Tdie</label>
+                                                                                                                    <div class="col-lg-8"><input type="text" placeholder="Tdie" class="form-control"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-lg-3">
+                                                                                                                <div class="form-group"><label class="col-lg-4 control-label">Compreensão Oral</label>
+                                                                                                                    <div class="col-lg-8"><input type="text" placeholder="Compreensão Oral" class="form-control"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-lg-3">
+                                                                                                                <div class="form-group"><label class="col-lg-4 control-label">Compreensão Escrita</label>
+                                                                                                                    <div class="col-lg-8"><input type="text" placeholder="Compreensão Escrita" class="form-control"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-lg-12">
+                                                                                                            <div class="col-lg-3">
+                                                                                                                <div class="form-group"><label class="col-lg-4 control-label">Expressão Oral</label>
+                                                                                                                    <div class="col-lg-8"><input type="text" placeholder="Expressão Oral" class="form-control"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-lg-3">
+                                                                                                                <div class="form-group"><label class="col-lg-4 control-label">Expressão Escrita</label>
+                                                                                                                    <div class="col-lg-8"><input type="text" placeholder="Expressão Escrita" class="form-control"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-lg-3">
+                                                                                                                <div class="form-group"><label class="col-lg-4 control-label">Diploma</label>
+                                                                                                                    <div class="col-lg-8"><input type="text" placeholder="Diploma" class="form-control"></div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-lg-3">
+                                                                                                                <div class="form-group" id="data_validade_idioma">
+                                                                                                                    <label class="col-lg-4 control-label">Validade</label>
+                                                                                                                    <div class="col-lg-8 input-group date">
+                                                                                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control">
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </form>
+                                                                                            </div>
+                                                                                            <div class="modal-footer">
+                                                                                                <button type="button" class="btn btn-white hide "></button>
+                                                                                                <button type="button" class="btn btn-white" data-dismiss="modal">Fechar</button>
+                                                                                                <button type="button" class="btn btn-primary">Salvar</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hr-line-dashed"></div>
+                                                                        <!--Botão Imprimir Idiomas/Exportar PDF-->
                                                                         <div class="row">
                                                                             <div class="col-lg-12">
                                                                                 <div class="form-group" style="float: right;">
-                                                                                    <a class="btn btn-primary btn-responsive" href=""><i class="fa fa-print"></i>
-                                                                                        Imprimir idiomas</a>
+                                                                                    <a class="btn btn-primary btn-responsive" href=""><i class="fa fa-file-pdf-o"></i>
+                                                                                        PDF idiomas</a>
+                                                                                    <!--<a class="btn btn-primary btn-responsive" href=""><i class="fa fa-file-pdf-o"></i>-->
+                                                                                        <!--Exportar PDF</a>-->
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2370,6 +2454,7 @@
                                                                                 <thead>
                                                                                 <tr>
                                                                                     <th>Idiomas<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                                                                    <th>Tdie<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Compreensão Oral<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Compreensão Escrita<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Expressão Oral<a style="float: right;"><i class="fa fa-sort"></i></a></th>
@@ -2377,12 +2462,12 @@
                                                                                     <th>Diploma<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Validade<a style="float: right;"><i class="fa fa-sort"></i></a></th>
                                                                                     <th>Ações</i></a></th>
-                                                                                    <th></th>
                                                                                 </tr>
                                                                                 </thead>
                                                                                 <tbody>
                                                                                 <tr>
                                                                                     <td>Inglês</td>
+                                                                                    <td>B2</td>
                                                                                     <td>B2</td>
                                                                                     <td>B2</td>
                                                                                     <td>B2l</td>
@@ -2391,22 +2476,29 @@
                                                                                     <td>30/12/2019</td>
                                                                                     <td>
                                                                                         <div class="form-group">
-                                                                                            <div class="col-lg-12">
-                                                                                                <div class="input-group-sm">
-                                                                                                    <button data-toggle="dropdown" class="btn btn-white dropdown-toggle"
-                                                                                                            type="button">Ações <span
-                                                                                                            class="caret"></span></button>
-                                                                                                    <ul class="dropdown-menu">
-                                                                                                        <li><a href="#"><i class="fa fa-search"></i> Detalhar</a></li>
-                                                                                                        <!--<li><a><i class="fa fa-pencil"></i> Editar</a></li>-->
-                                                                                                    </ul>
-                                                                                                </div>
-                                                                                            </div>
+                                                                                            <a class="btn btn-danger btn-responsive" href="#"><i class="fa fa-trash"></i>
+                                                                                            </a>
                                                                                         </div>
                                                                                     </td>
+                                                                                    <!--<td>-->
+                                                                                        <!--<div class="form-group">-->
+                                                                                            <!--<div class="col-lg-12">-->
+                                                                                                <!--<div class="input-group-sm">-->
+                                                                                                    <!--<button data-toggle="dropdown" class="btn btn-white dropdown-toggle"-->
+                                                                                                            <!--type="button">Ações <span-->
+                                                                                                            <!--class="caret"></span></button>-->
+                                                                                                    <!--<ul class="dropdown-menu">-->
+                                                                                                        <!--<li><a href="#"><i class="fa fa-search"></i> Detalhar</a></li>-->
+                                                                                                        <!--&lt;!&ndash;<li><a><i class="fa fa-pencil"></i> Editar</a></li>&ndash;&gt;-->
+                                                                                                    <!--</ul>-->
+                                                                                                <!--</div>-->
+                                                                                            <!--</div>-->
+                                                                                        <!--</div>-->
+                                                                                    <!--</td>-->
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td>Espanhol</td>
+                                                                                    <td>B1</td>
                                                                                     <td>B1</td>
                                                                                     <td>B1</td>
                                                                                     <td>B2l</td>
@@ -2415,20 +2507,26 @@
                                                                                     <td>30/10/2017</td>
                                                                                     <td>
                                                                                         <div class="form-group">
-                                                                                            <div class="col-lg-12">
-                                                                                                <div class="input-group-sm">
-                                                                                                    <button data-toggle="dropdown" class="btn btn-white dropdown-toggle"
-                                                                                                            type="button">Ações <span
-                                                                                                            class="caret"></span></button>
-                                                                                                    <ul class="dropdown-menu">
-                                                                                                        <li><a href="#"><i class="fa fa-search"></i> Detalhar</a></li>
-                                                                                                        <!--<li><a><i class="fa fa-pencil"></i> Editar</a></li>-->
-
-                                                                                                    </ul>
-                                                                                                </div>
-                                                                                            </div>
+                                                                                            <a class="btn btn-danger btn-responsive" href="#"><i class="fa fa-trash"></i>
+                                                                                            </a>
                                                                                         </div>
                                                                                     </td>
+                                                                                    <!--<td>-->
+                                                                                        <!--<div class="form-group">-->
+                                                                                            <!--<div class="col-lg-12">-->
+                                                                                                <!--<div class="input-group-sm">-->
+                                                                                                    <!--<button data-toggle="dropdown" class="btn btn-white dropdown-toggle"-->
+                                                                                                            <!--type="button">Ações <span-->
+                                                                                                            <!--class="caret"></span></button>-->
+                                                                                                    <!--<ul class="dropdown-menu">-->
+                                                                                                        <!--<li><a href="#"><i class="fa fa-search"></i> Detalhar</a></li>-->
+                                                                                                        <!--&lt;!&ndash;<li><a><i class="fa fa-pencil"></i> Editar</a></li>&ndash;&gt;-->
+
+                                                                                                    <!--</ul>-->
+                                                                                                <!--</div>-->
+                                                                                            <!--</div>-->
+                                                                                        <!--</div>-->
+                                                                                    <!--</td>-->
                                                                                 </tr>
                                                                                 </tbody>
                                                                             </table>
@@ -2478,8 +2576,8 @@
                                                                                     </div>
                                                                                     <div class="form-group" style="float: right;">
                                                                                         <a class="btn btn-primary btn-responsive" href="#"><i
-                                                                                                class="fa fa-print"></i>
-                                                                                            Imprimir Histórico de Cursos</a>
+                                                                                                class="fa fa-file-pdf-o"></i>
+                                                                                            PDF Histórico de Cursos</a>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -2834,8 +2932,8 @@
                                                                                                                                  style="float: right;">
                                                                                                                                 <a class="btn btn-primary btn-responsive"
                                                                                                                                    href="#"><i
-                                                                                                                                        class="fa fa-print"></i>
-                                                                                                                                    Imprimir
+                                                                                                                                        class="fa fa-file-pdf-o"></i>
+                                                                                                                                    PDF
                                                                                                                                     Histórico de Status</a>
                                                                                                                             </div>
                                                                                                                         </div>
@@ -3157,8 +3255,8 @@
                                                                                                                                  style="float: right;">
                                                                                                                                 <a class="btn btn-primary btn-responsive"
                                                                                                                                    href="#"><i
-                                                                                                                                        class="fa fa-print"></i>
-                                                                                                                                    Imprimir
+                                                                                                                                        class="fa fa-file-pdf-o"></i>
+                                                                                                                                    PDF
                                                                                                                                     Histórico de Status</a>
                                                                                                                             </div>
                                                                                                                         </div>
@@ -3471,8 +3569,8 @@
                                                                                                                                  style="float: right;">
                                                                                                                                 <a class="btn btn-primary btn-responsive"
                                                                                                                                    href="#"><i
-                                                                                                                                        class="fa fa-print"></i>
-                                                                                                                                    Imprimir
+                                                                                                                                        class="fa fa-file-pdf-o"></i>
+                                                                                                                                    PDF
                                                                                                                                     Histórico de Status</a>
                                                                                                                             </div>
                                                                                                                         </div>
@@ -3756,8 +3854,8 @@
                                                                                                                                  style="float: right;">
                                                                                                                                 <a class="btn btn-primary btn-responsive"
                                                                                                                                    href="#"><i
-                                                                                                                                        class="fa fa-print"></i>
-                                                                                                                                    Imprimir
+                                                                                                                                        class="fa fa-file-pdf-o"></i>
+                                                                                                                                    PDF
                                                                                                                                     Histórico de Status</a>
                                                                                                                             </div>
                                                                                                                         </div>
@@ -4362,8 +4460,8 @@
                                                                                             class="fa fa-plus"></i>
                                                                                         Cadastrar Tutor</a>
                                                                                     <a class="btn btn-primary btn-responsive" href="#"><i
-                                                                                            class="fa fa-print"></i>
-                                                                                        Imprimir Histórico de Tutores</a>
+                                                                                            class="fa fa-file-pdf-o"></i>
+                                                                                        PDF Histórico de Tutores</a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -5516,7 +5614,6 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="hr-line-dashed"></div>
-
                                                                     <div class="row">
                                                                         <div class="col-md-6">
                                                                             <p><strong>Funções desempenhadas no CC/CA</strong></p>
@@ -5558,10 +5655,8 @@
                                                                             <div class="row">
                                                                                 <div class="col-lg-12">
                                                                                     <div class="form-group" style="float: right;">
-                                                                                        <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-print"></i>
-                                                                                            Imprimir</a>
                                                                                         <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-file-pdf-o"></i>
-                                                                                            Exportar PDF</a>
+                                                                                            PDF</a>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -5692,7 +5787,6 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-
                                                                     </div>
                                                                     <div class="hr-line-dashed"></div>
                                                                     <!--Histórico-->
@@ -5702,10 +5796,8 @@
                                                                             <div class="row">
                                                                                 <div class="col-lg-12">
                                                                                     <div class="form-group" style="float: right;">
-                                                                                        <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-print"></i>
-                                                                                            Imprimir</a>
-                                                                                        <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-file-pdf-o"></i>
-                                                                                            Exportar PDF</a>
+                                                                                        <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-pdf"></i>
+                                                                                            PDF</a>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -5998,10 +6090,8 @@
                                                                         <div class="row">
                                                                             <div class="col-lg-12">
                                                                                 <div class="form-group" style="float: right;">
-                                                                                    <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-print"></i>
-                                                                                        Imprimir Histórico de Subturmas</a>
                                                                                     <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-file-pdf-o"></i>
-                                                                                        Exportar PDF</a>
+                                                                                        PDF Histórico de Subturmas</a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -6749,6 +6839,16 @@
             calendarWeeks: true,
             autoclose: true
         });
+
+        $('#data_validade_idioma .input-group.date').datepicker({
+            todayBtn: "linked",
+            language: 'pt',
+            format: 'dd/mm/yyyy',
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        }).datepicker('setDate', 'today');
 
         $('#data_validade_identidade .input-group.date').datepicker({
             todayBtn: "linked",
