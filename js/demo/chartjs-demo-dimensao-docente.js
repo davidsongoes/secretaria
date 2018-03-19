@@ -312,7 +312,7 @@ $(function () {
 
     // Gráfico 5 - Barra
     var barData5 = {
-        labels: ["CL Ghuerren", "1T Aline","2T Ferraz", "Prof. Dra. Fabiana", "Prof. Me. Juliano" ,  "Prof. Orlando"],
+        labels: ["CL Marcelo", "Prof. Dra. Fabiana","2T Ferraz", "1T Aline", "Prof. Me. Juliano" ,  "Prof. Orlando"],
         datasets: [
             {
                 label: "Carga Horária Efetiva",
