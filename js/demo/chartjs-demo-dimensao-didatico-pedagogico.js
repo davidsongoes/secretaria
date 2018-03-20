@@ -150,21 +150,28 @@ $(function () {
                 backgroundColor: colorFunction('yellow-low'),
                 pointBackgroundColor: colorFunction('yellow-high'),
                 borderColor: 'rgba(103, 106, 108, 0.5)',
-                data: [5, 6, 7, 4, 9]
+                data: [7, 6, 3, 4, 9]
             },
             {
                 label: "2º Ano",
-                backgroundColor: colorFunction('navy-low'),
-                pointBackgroundColor: colorFunction('navy-high'),
+                backgroundColor: colorFunction('lazur-low'),
+                pointBackgroundColor: colorFunction('lazur-high'),
                 borderColor: 'rgba(103, 106, 108, 0.5)',
-                data: [7, 5, 6, 3, 10]
+                data: [7, 5, 4, 3, 6]
             },
             {
                 label: "3º Ano",
+                backgroundColor: colorFunction('navy-low'),
+                pointBackgroundColor: colorFunction('navy-high'),
+                borderColor: 'rgba(103, 106, 108, 0.5)',
+                data: [7, 5, 4, 3, 7]
+            },
+            {
+                label: "4º Ano",
                 backgroundColor: colorFunction('red-low'),
                 pointBackgroundColor: colorFunction('red-high'),
                 borderColor: 'rgba(103, 106, 108, 0.5)',
-                data: [6, 4, 8, 5, 7]
+                data: [8, 6, 5, 2, 5]
             }
         ]
     };
@@ -188,33 +195,33 @@ $(function () {
                 borderColor: colorFunction('yellow-low'),
                 pointBackgroundColor: colorFunction('yellow-high'),
                 pointBorderColor: "#fff",
-                data: [130, 110]
+                data: [140, 112]
             }, {
                 label: "2º Ano",
                 backgroundColor: colorFunction('lazur-low'),
                 borderColor: colorFunction('lazur-low'),
                 pointBackgroundColor: colorFunction('lazur-high'),
-                data: [130, 115, 105]
+                data: [140, 115, 105]
             }, {
                 label: "3º Ano",
                 backgroundColor: colorFunction('navy-low'),
                 borderColor: colorFunction('navy-low'),
                 pointBackgroundColor: colorFunction('navy-high'),
-                data: [130, 120, 110, 102]
+                data: [140, 120, 116, 102]
             },
             {
                 label: "4º Ano",
                 backgroundColor: colorFunction('red-low'),
                 borderColor: colorFunction('red-low'),
                 pointBackgroundColor: colorFunction('red-high'),
-                data: [125, 118, 108, 105, 98]
+                data: [130, 110, 108, 100, 90]
             },
             {
                 label: "Meta COMGEP",
                 backgroundColor: colorFunction('gray-low'),
                 borderColor: 'rgba(103, 106, 108, 0.7)',
                 pointBackgroundColor: colorFunction('gray-high'),
-                data: [130, 124, 116, 108, 100]
+                data: [130, 123, 116, 108, 100]
             }
         ]
     };
@@ -236,7 +243,7 @@ $(function () {
         labels: ["Matriculados", "A pedido", "Decisão Judicial", "Saúde", "Ensino", "Formados"],
         datasets: [
             {
-                label: "Turma 2016 - Subturma BCT",
+                label: "Turma 2016",
                 backgroundColor: colorFunction('lazur-mid'),
                 borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
@@ -244,9 +251,17 @@ $(function () {
                 data: [100, 3, 1, 3, 10, 73]
             },
             {
-                label: "Turma 2017 - Subturma BCT",
+                label: "Turma 2017",
                 backgroundColor: colorFunction('yellow-mid'),
                 borderColor: colorFunction('yellow-mid'),
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [110, 4, 3, 7, 15, 81]
+            },
+            {
+                label: "Turma 2018",
+                backgroundColor: colorFunction('red-mid'),
+                borderColor: colorFunction('red-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [110, 4, 3, 7, 15, 81]

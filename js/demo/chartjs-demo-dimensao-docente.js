@@ -143,7 +143,7 @@ $(function () {
 
     // Gráfico 1 - Barra
     var barData1 = {
-        labels: ["Bacharelado", "Licenciatura", "Pós-Graduação", "Mestrado", "Doutorado"],
+        labels: ["Bacharelado", "Pós-Graduação", "Mestrado", "Doutorado"],
         datasets: [
             {
                 label: "Militar",
@@ -151,15 +151,15 @@ $(function () {
                 borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [30, 3, 20, 10, 8]
+                data: [100, 80, 50, 40]
             },
             {
                 label: "Civil",
-                backgroundColor: colorFunction('yellow-mid'),
-                borderColor: colorFunction('yellow-mid'),
+                backgroundColor: colorFunction('red-mid'),
+                borderColor: colorFunction('red-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [25, 10, 16, 8, 2]
+                data: [100, 90, 30, 20]
             }
         ]
     };
@@ -185,7 +185,7 @@ $(function () {
     };
 
     var ctx1 = document.getElementById("chartDocente1").getContext("2d");
-    new Chart(ctx1, {type: 'horizontalBar', data: barData1, options: barOptions1});
+    new Chart(ctx1, {type: 'bar', data: barData1, options: barOptions1});
 
     // Gráfico 2 - Barra
     var barData2 = {
@@ -201,8 +201,8 @@ $(function () {
             },
             {
                 label: "Civil",
-                backgroundColor: colorFunction('yellow-mid'),
-                borderColor: colorFunction('yellow-mid'),
+                backgroundColor: colorFunction('red-mid'),
+                borderColor: colorFunction('red-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
                 data: [25, 10, 16, 8, 2]
@@ -217,7 +217,7 @@ $(function () {
                     beginAtZero: true,
                     steps: 10,
                     stepValue: 5,
-                    max: 100
+                    max: 30
                 }
             }]
         },
@@ -230,23 +230,31 @@ $(function () {
 
     // Gráfico 3 - Barra
     var barData3 = {
-        labels: ["Português", "Matemática", "Geografia"],
+        labels: ["Português", "Matemática", "Inglês"],
         datasets: [
             {
-                label: "Militar",
+                label: "AFA",
                 backgroundColor: colorFunction('lazur-mid'),
                 borderColor: colorFunction('lazur-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [3, 2, 2]
+                data: [3, 5, 3]
             },
             {
-                label: "Civil",
+                label: "EPCAR",
+                backgroundColor: colorFunction('red-mid'),
+                borderColor: colorFunction('red-mid'),
+                pointBackgroundColor: "rgba(26,179,148,1)",
+                pointBorderColor: "#fff",
+                data: [2, 6, 4]
+            },
+            {
+                label: "EEAR",
                 backgroundColor: colorFunction('yellow-mid'),
                 borderColor: colorFunction('yellow-mid'),
                 pointBackgroundColor: "rgba(26,179,148,1)",
                 pointBorderColor: "#fff",
-                data: [2, 3, 4]
+                data: [2, 5, 2]
             }
         ]
     };

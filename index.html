@@ -397,16 +397,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <p class="text-center"><strong>1 - Motivos de desligamentos (nº)</strong></p>
-                                                            <p class="text-center"><strong>EPCAR</strong></p>
-                                                            <canvas id="chartDidatico1" height="100"></canvas>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <p class="text-center"><strong>2 - Evolução do Efetivo (nº)</strong></p>
+                                                            <p class="text-center"><strong>1 - Evolução do Efetivo (nº)</strong></p>
                                                             <p class="text-center"><strong>AFA</strong></p>
                                                             <p class="text-center"><strong>QFOAV</strong></p>
                                                             <canvas id="chartDidatico2" height="100"></canvas>
@@ -416,8 +407,18 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
+                                                            <p class="text-center"><strong>2 - Motivos de desligamentos (nº)</strong></p>
+                                                            <p class="text-center"><strong>AFA - CFOAV</strong></p>
+                                                            <canvas id="chartDidatico1" height="100"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
                                                             <p class="text-center"><strong>3 - Status dos Alunos (nº)</strong></p>
-                                                            <p class="text-center"><strong>EEAR</strong></p>
+                                                            <p class="text-center"><strong>AFA - CFOAV/INT/INF</strong></p>
                                                             <canvas id="chartDidatico3" height="100"></canvas>
                                                         </div>
                                                     </div>
@@ -448,11 +449,11 @@
                                             <div class="ibox-content">
                                                 <div class="row">
                                                     <div class="form-group"></div>
-                                                    <div class="col-lg-6">
-                                                        <p class="text-center"><strong>1 - Pesquisa de Qualidade - Instrutor Manoel Joaquim (%)</strong></p>
-                                                        <canvas id="chartDiscente1" height="100"></canvas>
-                                                    </div>
-                                                    <div class="col-lg-6">
+                                                    <!--<div class="col-lg-6">-->
+                                                        <!--<p class="text-center"><strong>1 - Pesquisa de Qualidade - Instrutor Manoel Joaquim (%)</strong></p>-->
+                                                        <!--<canvas id="chartDiscente1" height="100"></canvas>-->
+                                                    <!--</div>-->
+                                                    <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <p class="text-center"><strong>2 - Exame Final, Segunda Época e Reprovados por disciplina (nº)</strong></p>
                                                             <p class="text-center"><strong>QFOAV</strong></p>
@@ -487,53 +488,55 @@
                                             <div class="ibox-content">
                                                 <div class="row">
                                                     <div class="form-group"></div>
-                                                    <div class="col-lg-6">
-                                                        <p class="text-center"><strong>1 - Professores e Graus Acadêmicos (nº)</strong></p>
+                                                    <div class="col-lg-12">
+                                                        <p class="text-center"><strong>1 - Professores e Graus Acadêmicos (%)</strong></p>
                                                         <p class="text-center"><strong>AFA</strong></p>
                                                         <canvas id="chartDocente1" height="100"></canvas>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <p class="text-center"><strong>2 - Professores e Graus Acadêmicos (nº)</strong></p>
-                                                            <p class="text-center"><strong>EPCAR</strong></p>
-                                                            <canvas id="chartDocente2" height="100"></canvas>
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-lg-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <p class="text-center"><strong>3 - Professores por Disciplina (nº)</strong></p>
-                                                            <p class="text-center"><strong>AFA</strong></p>
-                                                            <canvas id="chartDocente3" height="100"></canvas>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <p class="text-center"><strong>4 - Carga Horária dos Professores por Disciplina (h)</strong></p>
-                                                            <p class="text-center"><strong>AFA</strong></p>
-                                                            <canvas id="chartDocente4" height="100"></canvas>
+                                                            <p class="text-center"><strong>2 - Carga Horária da Disciplina e Carga Horária dos Professores Disponíveis (h)</strong></p>
+                                                            <p class="text-center"><strong>EPCAR</strong></p>
+                                                            <canvas id="chartDocente6" height="100"></canvas>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <p class="text-center"><strong>5 - Carga Horária da Disciplina e Carga Horária Professor (h)</strong></p>
+                                                            <p class="text-center"><strong>3 - Carga Horária da Disciplina e Carga Horária Professor (h)</strong></p>
                                                             <p class="text-center"><strong>EPCAR</strong></p>
                                                             <canvas id="chartDocente5" height="100"></canvas>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-md-12">
+                                                    <div class="col-lg-12">
                                                         <div class="form-group">
-                                                            <p class="text-center"><strong>6 - Carga Horária da Disciplina e Carga Horária dos Professores Disponíveis (h)</strong></p>
-                                                            <p class="text-center"><strong>AFA</strong></p>
-                                                            <canvas id="chartDocente6" height="100"></canvas>
+                                                            <p class="text-center"><strong>4 - Necessidade de Professores (nº)</strong></p>
+                                                            <!--<p class="text-center"><strong>Português</strong></p>-->
+                                                            <canvas id="chartDocente3" height="100"></canvas>
                                                         </div>
                                                     </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <p class="text-center"><strong>5 - Necessidade de Professores (h)</strong></p>
+                                                            <p class="text-center"><strong>Inglês</strong></p>
+                                                            <canvas id="chartDocente4" height="100"></canvas>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <p class="text-center"><strong>6 - Necessidade de Professores (nº)</strong></p>
+                                                        <p class="text-center"><strong>Matemática</strong></p>
+                                                        <canvas id="chartDocente2" height="100"></canvas>
+                                                    </div>
                                                 </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>

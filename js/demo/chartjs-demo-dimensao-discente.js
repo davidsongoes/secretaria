@@ -139,43 +139,43 @@ $(function () {
 
 
     // Gráfico 1 - Barra
-    var barData1 = {
-        labels: ["Excelente", "Ótimo", "Bom", "Ruím", "Péssimo"],
-        datasets: [
-            {
-                backgroundColor: [colorFunction('navy-mid'),colorFunction('yellow-mid'), colorFunction('red-mid'), colorFunction('lazur-mid'), colorFunction('gray-mid')],
-                borderColor: graphOutlines1,
-                pointBackgroundColor: "rgba(26,179,148,1)",
-                hoverBackgroundColor: 'rgba(103, 106, 108, 0.7)',
-                pointBorderColor: "#fff",
-                data: [60, 20, 10, 5, 5]
-            }
-        ]
-    };
-
-    var barOptions1 = {
-        scales: {
-            xAxes: [{
-                ticks: {
-                    beginAtZero: true,
-                    steps: 10,
-                    stepValue: 5,
-                    max: 100
-                }
-            }],
-            yAxes: [{
-                stacked: true
-            }]
-        },
-        legend: {
-            display: false
-        },
-        responsive: true
-    };
-
-
-    var ctx1 = document.getElementById("chartDiscente1").getContext("2d");
-    new Chart(ctx1, {type: 'horizontalBar', data: barData1, options: barOptions1});
+    // var barData1 = {
+    //     labels: ["Excelente", "Ótimo", "Bom", "Ruím", "Péssimo"],
+    //     datasets: [
+    //         {
+    //             backgroundColor: [colorFunction('navy-mid'),colorFunction('yellow-mid'), colorFunction('red-mid'), colorFunction('lazur-mid'), colorFunction('gray-mid')],
+    //             borderColor: graphOutlines1,
+    //             pointBackgroundColor: "rgba(26,179,148,1)",
+    //             hoverBackgroundColor: 'rgba(103, 106, 108, 0.7)',
+    //             pointBorderColor: "#fff",
+    //             data: [60, 20, 10, 5, 5]
+    //         }
+    //     ]
+    // };
+    //
+    // var barOptions1 = {
+    //     scales: {
+    //         xAxes: [{
+    //             ticks: {
+    //                 beginAtZero: true,
+    //                 steps: 10,
+    //                 stepValue: 5,
+    //                 max: 100
+    //             }
+    //         }],
+    //         yAxes: [{
+    //             stacked: true
+    //         }]
+    //     },
+    //     legend: {
+    //         display: false
+    //     },
+    //     responsive: true
+    // };
+    //
+    //
+    // var ctx1 = document.getElementById("chartDiscente1").getContext("2d");
+    // new Chart(ctx1, {type: 'horizontalBar', data: barData1, options: barOptions1});
 
     // Gráfico 2 - Barra
     var barData2 = {
