@@ -185,7 +185,7 @@ $(function () {
     };
 
     var ctx1 = document.getElementById("chartDocente1").getContext("2d");
-    new Chart(ctx1, {type: 'bar', data: barData1, options: barOptions1});
+    new Chart(ctx1, {type: 'horizontalBar', data: barData1, options: barOptions1});
 
     // Gráfico 2 - Barra
     var barData2 = {
