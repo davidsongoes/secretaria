@@ -1297,8 +1297,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--Tabela-->
+                            <!--Tabela/Emitir Documentos/Upload arquivo MEC-->
                             <div class="row">
+                                <!--Tabela-->
                                 <div class="col-md-9">
                                     <table class="table table-striped table-responsive">
                                         <thead>
@@ -1410,8 +1411,8 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                <!--Tabela para emitir documentos/Upload Arquivo MEC-->
                                 <div class="col-md-3">
-                                    <!--Tabela para emitir documentos-->
                                     <div class="row">
                                         <div class="panel panel-default">
                                             <div class="panel-body">
@@ -1484,6 +1485,32 @@
                                                                 <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-print"></i>
                                                                     Imprimir</a>
                                                             </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <div class="container-fluid">
+                                                    <!--título-->
+                                                    <div class="row">
+                                                        <div class="title"><strong>Upload Arquivo MEC</strong></div>
+                                                        <div class="hr-line-dashed"></div>
+                                                    </div>
+                                                    <!--Botões Emitir e Imprimir-->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <br>
+                                                            <div class="fileinput fileinput-new align-centro" data-provides="fileinput">
+    <span class="btn btn-primary btn-file"><span class="fileinput-new">Upload</span>
+    <span class="fileinput-exists">Modificar</span><input type="file" name="..."/></span>
+                                                                <span class="fileinput-filename"></span>
+                                                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
+                                                            </div>
+                                                            <br>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1571,8 +1598,8 @@
     $(document).ready(function () {
 
         //Notificação
-        toastr.options.progressBar= true;
-        toastr.options.closeButton= true;
+        toastr.options.progressBar = true;
+        toastr.options.closeButton = true;
         toastr['warning']('Algumas funcionalidades não funcionam', 'Página Protótipo');
 
         $('.chosen-select').chosen({width: "100%"});
