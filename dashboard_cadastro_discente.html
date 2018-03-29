@@ -2347,7 +2347,7 @@
                                                                                     <a class="btn btn-primary btn-responsive" data-toggle="modal" data-target="#modalCadastrarIdioma"><i class="fa fa-plus"></i>
                                                                                         Cadastrar Idioma</a>
                                                                                 </div>
-                                                                                <!--Modal de Cadastro de Área Técnica-->
+                                                                                <!--Modal Cadastrar Idioma-->
                                                                                 <div class="modal inmodal fade" id="modalCadastrarIdioma" tabindex="-1" role="dialog"  aria-hidden="true">
                                                                                     <div class="modal-dialog modal-responsive">
                                                                                         <div class="modal-content">
@@ -6210,7 +6210,7 @@
                                                                                                     <select data-placeholder="Motivo" class="chosen-select" tabindex="2">
                                                                                                         <option value="">Selecione</option>
                                                                                                         <option value="inspecao_saude">Inspeção de Saúde</option>
-                                                                                                        <option value="edital">Edital</option>
+                                                                                                        <option value="edital">Documentação</option>
                                                                                                         <option value="idade">Idade</option>
                                                                                                         <option value="sexo">Sexo</option>
                                                                                                         <option value="antecendetes_criminais">Antecedentes Criminais</option>
@@ -6279,6 +6279,15 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-4">
+                                                                                            <div class="form-group"><label class="col-lg-4 control-label">Observações</label>
+                                                                                                <div class="col-lg-8">
+                                                                                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
                                                                                 <div class="col-lg-2">
                                                                                     <!--Tabela Status da Decisão Provisória-->
@@ -6312,17 +6321,6 @@
                                                                                                         </label>
                                                                                                     </div>
                                                                                                 </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>Confirmada</td>
-                                                                                                <td>
-                                                                                                    <div class="radio">
-                                                                                                        <input name="radio1" id="radio3" value="option1" type="radio">
-                                                                                                        <label for="radio1">
-                                                                                                        </label>
-                                                                                                    </div>
-                                                                                                </td>
-
                                                                                             </tr>
                                                                                             </tbody>
                                                                                         </table>
@@ -6430,75 +6428,75 @@
                                                             </div>
                                                         </div>
                                                         <!--Detalhamento da Liminar-->
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div id="div_detalhamento_liminar" class="ibox collapsed">
-                                                                    <div class="ibox-title">
-                                                                        <h5>Detalhamento da Liminar</h5>
-                                                                        <div class="ibox-tools">
-                                                                            <!--<a class="collapse-link">-->
-                                                                            <!--<i class="fa fa-chevron-up"></i>-->
-                                                                            <!--</a>-->
-                                                                            <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">-->
-                                                                            <!--<i class="fa fa-wrench"></i>-->
-                                                                            <!--</a>-->
-                                                                            <ul class="dropdown-menu dropdown-user">
-                                                                                <li><a href="#">Config option 1</a>
-                                                                                </li>
-                                                                                <li><a href="#">Config option 2</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="ibox-content">
-                                                                        <!--Botões para impressão detalhamento da decisão provisória-->
-                                                                        <div class="row">
-                                                                            <div class="col-lg-12">
-                                                                                <div class="form-group" style="float: right;">
-                                                                                    <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-print"></i>
-                                                                                        Imprimir Histórico de Liminares</a>
-                                                                                    <a class="btn btn-primary btn-responsive" href="#"><i
-                                                                                            class="fa fa-file-text-o"></i>
-                                                                                        Exportar PDF</a>
-                                                                                    <a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-table"></i>
-                                                                                        Exportar XLS</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!--Tabela de detalahemento da decisão provisória-->
-                                                                        <div class="row table-responsive">
-                                                                            <table class="table table-striped">
-                                                                                <thead>
-                                                                                <tr>
-                                                                                    <th>Curso<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Turma<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Nº do Processo<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Data da Decisão Provisória<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Motivo da Decisão Provisória<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Vara Federal<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Estado da Federação<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th>Status<a style="float: right;"><i class="fa fa-sort"></i></a></th>
-                                                                                    <th></th>
-                                                                                </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                <tr>
-                                                                                    <td>CFOAV</td>
-                                                                                    <td>2001</td>
-                                                                                    <td>2017895689</td>
-                                                                                    <td>14/02/2001</td>
-                                                                                    <td>Inspeção de Saúde</td>
-                                                                                    <td>TJDFT</td>
-                                                                                    <td>RJ</td>
-                                                                                    <td>Válida</td>
-                                                                                </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        <!--<div class="row">-->
+                                                            <!--<div class="col-lg-12">-->
+                                                                <!--<div id="div_detalhamento_liminar" class="ibox collapsed">-->
+                                                                    <!--<div class="ibox-title">-->
+                                                                        <!--<h5>Detalhamento da Liminar</h5>-->
+                                                                        <!--<div class="ibox-tools">-->
+                                                                            <!--&lt;!&ndash;<a class="collapse-link">&ndash;&gt;-->
+                                                                            <!--&lt;!&ndash;<i class="fa fa-chevron-up"></i>&ndash;&gt;-->
+                                                                            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                                                            <!--&lt;!&ndash;<a class="dropdown-toggle" data-toggle="dropdown" href="#">&ndash;&gt;-->
+                                                                            <!--&lt;!&ndash;<i class="fa fa-wrench"></i>&ndash;&gt;-->
+                                                                            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                                                            <!--<ul class="dropdown-menu dropdown-user">-->
+                                                                                <!--<li><a href="#">Config option 1</a>-->
+                                                                                <!--</li>-->
+                                                                                <!--<li><a href="#">Config option 2</a>-->
+                                                                                <!--</li>-->
+                                                                            <!--</ul>-->
+                                                                        <!--</div>-->
+                                                                    <!--</div>-->
+                                                                    <!--<div class="ibox-content">-->
+                                                                        <!--&lt;!&ndash;Botões para impressão detalhamento da decisão provisória&ndash;&gt;-->
+                                                                        <!--<div class="row">-->
+                                                                            <!--<div class="col-lg-12">-->
+                                                                                <!--<div class="form-group" style="float: right;">-->
+                                                                                    <!--<a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-print"></i>-->
+                                                                                        <!--Imprimir Histórico de Liminares</a>-->
+                                                                                    <!--<a class="btn btn-primary btn-responsive" href="#"><i-->
+                                                                                            <!--class="fa fa-file-text-o"></i>-->
+                                                                                        <!--Exportar PDF</a>-->
+                                                                                    <!--<a class="btn btn-primary btn-responsive" href="#"><i class="fa fa-table"></i>-->
+                                                                                        <!--Exportar XLS</a>-->
+                                                                                <!--</div>-->
+                                                                            <!--</div>-->
+                                                                        <!--</div>-->
+                                                                        <!--&lt;!&ndash;Tabela de detalahemento da decisão provisória&ndash;&gt;-->
+                                                                        <!--<div class="row table-responsive">-->
+                                                                            <!--<table class="table table-striped">-->
+                                                                                <!--<thead>-->
+                                                                                <!--<tr>-->
+                                                                                    <!--<th>Curso<a style="float: right;"><i class="fa fa-sort"></i></a></th>-->
+                                                                                    <!--<th>Turma<a style="float: right;"><i class="fa fa-sort"></i></a></th>-->
+                                                                                    <!--<th>Nº do Processo<a style="float: right;"><i class="fa fa-sort"></i></a></th>-->
+                                                                                    <!--<th>Data da Decisão Provisória<a style="float: right;"><i class="fa fa-sort"></i></a></th>-->
+                                                                                    <!--<th>Motivo da Decisão Provisória<a style="float: right;"><i class="fa fa-sort"></i></a></th>-->
+                                                                                    <!--<th>Vara Federal<a style="float: right;"><i class="fa fa-sort"></i></a></th>-->
+                                                                                    <!--<th>Estado da Federação<a style="float: right;"><i class="fa fa-sort"></i></a></th>-->
+                                                                                    <!--<th>Status<a style="float: right;"><i class="fa fa-sort"></i></a></th>-->
+                                                                                    <!--<th></th>-->
+                                                                                <!--</tr>-->
+                                                                                <!--</thead>-->
+                                                                                <!--<tbody>-->
+                                                                                <!--<tr>-->
+                                                                                    <!--<td>CFOAV</td>-->
+                                                                                    <!--<td>2001</td>-->
+                                                                                    <!--<td>2017895689</td>-->
+                                                                                    <!--<td>14/02/2001</td>-->
+                                                                                    <!--<td>Inspeção de Saúde</td>-->
+                                                                                    <!--<td>TJDFT</td>-->
+                                                                                    <!--<td>RJ</td>-->
+                                                                                    <!--<td>Válida</td>-->
+                                                                                <!--</tr>-->
+                                                                                <!--</tbody>-->
+                                                                            <!--</table>-->
+                                                                        <!--</div>-->
+                                                                    <!--</div>-->
+                                                                <!--</div>-->
+                                                            <!--</div>-->
+                                                        <!--</div>-->
                                                         <!--Botões-->
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -6605,38 +6603,161 @@
                                                                 </div>
                                                                 <div class="ibox-content">
                                                                     <div class="row">
-                                                                        <form role="form">
-                                                                            <!--Primeira Linha-->
-                                                                            <div class="row">
-                                                                                <div class="col-md-4">
-                                                                                    <div class="form-group">
-                                                                                        <label for="discente_estrangeiro_pais_origem"
-                                                                                               class="">País de Origem</label>
-                                                                                        <input disabled type="text" placeholder="País de Origem"
-                                                                                               id="discente_estrangeiro_pais_origem"
-                                                                                               class="form-control" value="Brasil">
-                                                                                    </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group">
+                                                                                    <label for="discente_estrangeiro_pais_origem"
+                                                                                           class="">País de Origem</label>
+                                                                                    <input disabled type="text" placeholder="País de Origem"
+                                                                                           id="discente_estrangeiro_pais_origem"
+                                                                                           class="form-control" value="Brasil">
                                                                                 </div>
-                                                                                <div class="col-md-4">
-                                                                                    <div class="form-group">
-                                                                                        <label for="discente_estrangeiro_nota_exame_admissao"
-                                                                                               class="">Nota no Exame de Admissão</label>
-                                                                                        <input disabled type="text" placeholder="Nota no Exame de Admissão"
-                                                                                               id="discente_estrangeiro_nota_exame_admissao"
-                                                                                               class="form-control" value="10,0000">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-md-4">
-                                                                                    <div class="form-group">
-                                                                                        <label for="discente_estrangeiro_numero_acordo_emaer"
-                                                                                               class="">Número Acordo EMAER</label>
-                                                                                        <input disabled type="text" placeholder="Número Acordo EMAER"
-                                                                                               id="discente_estrangeiro_numero_acordo_emaer"
-                                                                                               class="form-control" value="99999999-99/EMAER">
+                                                                            </div>
+                                                                            <div class="btn-group" style="float: right;">
+                                                                                <br>
+                                                                                <a class="btn btn-primary btn-responsive" data-toggle="modal" data-target="#modalCadastrarCursoEstrangeiro"><i class="fa fa-plus"></i>
+                                                                                    Cadastrar Curso</a>
+                                                                            </div>
+                                                                            <!--Modal Cadastrar Curso Estrangeiro-->
+                                                                            <div class="modal inmodal fade" id="modalCadastrarCursoEstrangeiro" tabindex="-1" role="dialog"  aria-hidden="true">
+                                                                                <div class="modal-dialog modal-lg">
+                                                                                    <div class="modal-content">
+                                                                                        <div class="modal-header">
+                                                                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                                                            <h4 class="modal-title">Cadastrar Curso</h4>
+                                                                                        </div>
+                                                                                        <div class="modal-body">
+                                                                                            <form role="form">
+                                                                                                <!--Primeira Linha-->
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-6">
+                                                                                                            <div class="form-group"><label class="col-lg-4 control-label">Curso</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="cfoav">CFOAV</option>
+                                                                                                                        <option value="cfoint">CFOINT</option>
+                                                                                                                        <option value="cfoinf">CFOINF</option>
+                                                                                                                        <option value="cfs">CFS</option>
+                                                                                                                        <option value="eags">EAGS</option>
+                                                                                                                        <option value="cas">CAS</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-6">
+                                                                                                            <div class="form-group"><label class="col-lg-4 control-label">Turma</label>
+                                                                                                                <div class="col-lg-8">
+                                                                                                                    <select data-placeholder="Escolha a UF" class="chosen-select" tabindex="2">
+                                                                                                                        <option value="">Selecione</option>
+                                                                                                                        <option value="2003">2003</option>
+                                                                                                                        <option value="2004">2004</option>
+                                                                                                                        <option value="2005">2005</option>
+                                                                                                                        <option value="2006">2006</option>
+                                                                                                                        <option value="2008-1">2008-1</option>
+                                                                                                                        <option value="2008-2">2008-2</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hr-line-dashed"></div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="col-lg-6">
+                                                                                                            <div class="form-group"><label class="col-lg-4 control-label">Nota</label>
+                                                                                                                <div class="col-lg-8"><input type="text" placeholder="Nota" class="form-control"></div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-lg-6">
+                                                                                                            <div class="form-group"><label class="col-lg-4 control-label">Nº Acordo EMAER</label>
+                                                                                                                <div class="col-lg-8"><input type="text" placeholder="Nº Acordo EMAER" class="form-control"></div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                        <div class="modal-footer">
+                                                                                            <button type="button" class="btn btn-white hide "></button>
+                                                                                            <button type="button" class="btn btn-white" data-dismiss="modal">Fechar</button>
+                                                                                            <button type="button" class="btn btn-primary">Salvar</button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </form>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hr-line-dashed"></div>
+                                                                    <div class="row">
+                                                                        <!--Tabela Estrangeiro-->
+                                                                        <div class="row table-responsive">
+                                                                            <table class="table table-striped">
+                                                                                <thead>
+                                                                                <tr>
+                                                                                    <th>Curso<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                                                                    <th>Turma<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                                                                    <th>Nota<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                                                                    <th>Nº Acordo EMAER<a style="float: right;"><i class="fa fa-sort"></i></a></th>
+                                                                                    <th>Ações</th>
+                                                                                </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td>CPCAR</td>
+                                                                                    <td>2001</td>
+                                                                                    <td>9.879</td>
+                                                                                    <td>12545.6658/2001</td>
+                                                                                    <td>
+                                                                                        <div class="form-group">
+                                                                                            <div class="col-lg-12">
+                                                                                                <div class="input-group-btn">
+                                                                                                    <button data-toggle="dropdown"
+                                                                                                            class="btn btn-white dropdown-toggle"
+                                                                                                            type="button">Ações <span
+                                                                                                            class="caret"></span></button>
+                                                                                                    <ul class="dropdown-menu">
+                                                                                                        <li><a><i class="fa fa-search"></i> Detalhar</a>
+                                                                                                        </li>
+                                                                                                        <li><a data-toggle="modal" data-target="#model1"><i
+                                                                                                                class="fa fa-pencil"></i>
+                                                                                                            Editar</a></li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>CFOAV</td>
+                                                                                    <td>2001</td>
+                                                                                    <td>8.800</td>
+                                                                                    <td>98745.4321/2003</td>
+                                                                                    <td>
+                                                                                        <div class="form-group">
+                                                                                            <div class="col-lg-12">
+                                                                                                <div class="input-group-btn">
+                                                                                                    <button data-toggle="dropdown"
+                                                                                                            class="btn btn-white dropdown-toggle"
+                                                                                                            type="button">Ações <span
+                                                                                                            class="caret"></span></button>
+                                                                                                    <ul class="dropdown-menu">
+                                                                                                        <li><a><i class="fa fa-search"></i> Detalhar</a>
+                                                                                                        </li>
+                                                                                                        <li><a data-toggle="modal" data-target="#model1"><i
+                                                                                                                class="fa fa-pencil"></i>
+                                                                                                            Editar</a></li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -6669,8 +6790,12 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="form-group">
-                                                    <!--/-->
+                                                <div class="col-md-12">
+                                                    <div class="form-group text-center">
+                                                        <strong class="">Nº na Turma</strong>
+                                                        <input placeholder="Nº na Turma" class="form-control"
+                                                               type="text" data-mask="999999/99">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row">
